@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  
+    <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        footer { font-size: 11px; text-align: center; position: fixed; bottom: 1em;}
+        footer a { color: hsl(228, 45%, 44%); }
+
+        html, body {
+            block-size: 100%;
+            font-size: 15px;         
+        }
+
+        main {
+            background-color: #d5e1ef;
+            block-size: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #card {
+            background-color: white;
+            inline-size: 17em;
+            block-size: fit-content;
+            border-radius: 1em;
+            padding: 1em;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            /* font-size: 15px; */
+        }
+
+        #card img {
+            inline-size: 100%;
+            border-radius: 0.7em;
+        }
+
+        .big-font {
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+
+        .small-font {
+            font-weight: 400;
+            color: hsl(220, 15%, 55%);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="card">
+            <img src="./images/image-qr-code.png" alt="qrcode with link to frontendmentor">
+            <p class="big-font">Improve your front-end skills by building projects</p>
+            <p class="small-font">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+        </div>
+        <footer>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/KorneyChervonenko">Korney Chervonenko</a>.
+        </footer>        
+    </main>  
+
+</body>
+</html>
