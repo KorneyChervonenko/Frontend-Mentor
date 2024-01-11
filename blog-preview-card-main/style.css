@@ -1,0 +1,77 @@
+html, body {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+main {
+    background-color: gold;
+    block-size: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Figtree', sans-serif;
+}
+
+footer { 
+    position: fixed; 
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+}
+
+footer a { color: hsl(228, 45%, 44%); }
+
+.card {
+    background-color: white;
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 2px;
+    inline-size: 21em;
+    block-size: fit-content;   
+    padding: 1em;
+    box-shadow: 0.5em 0.5em 0 0 black;
+}
+
+.card .gold_button {
+    background-color: gold;
+    /* line-height: 2em; */
+    inline-size: fit-content;
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: bold;
+    border-radius: 0.3em;
+}
+
+.card img {
+    border-radius: 1em;
+}
+
+.card .gray_text {
+    color:darkgray;
+}
+
+.card h2:hover,
+.card h2:focus {
+    color: gold;
+    cursor: pointer;
+}
+
+.card:has(h2:hover),
+.card:has(h2:focus) {
+    box-shadow: 1em 1em;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    font-weight: bold;
+}
+
+.author img {
+    block-size: 2.5em;
+}
+
+
