@@ -1,0 +1,126 @@
+html {box-sizing: border-box;}
+*, *:before, *:after { box-sizing: inherit;}
+
+html, body {
+    block-size: 100%;
+    inline-size: 100%;
+    font-family: 'Outfit', sans-serif;
+    --primaryCyanColor: hsl(178, 100%, 50%);
+}
+
+.white-font { color: white; }
+
+main {
+    background-color: hsl(217, 54%, 11%);
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(215, 51%, 70%);
+    border-radius: 1em;
+    inline-size: 22em;
+    padding: 1.5em;
+}
+
+.card .illustration {
+    block-size: 19em;
+    inline-size: 19em;
+    background-color: var(--primaryCyanColor);
+    background-image: url(images/icon-view.svg);
+    background-size: 3em;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card .illustration img {
+    margin: 0;
+    block-size: 100%;
+    inline-size: 100%;
+    border-radius: 0.5em;
+}
+
+
+.card .illustration img:hover,
+.card .illustration img:focus {
+    opacity: 0.4;
+}
+
+.card h1 { font-size: x-large; }
+
+.white-font:focus,
+.white-font:hover { 
+    color: var(--primaryCyanColor); 
+}
+
+
+.card .first-line {
+    font-size: large;
+}
+
+.card .second-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .second-line p:first-of-type {
+    background-image: url(images/icon-ethereum.svg);
+    color: var(--primaryCyanColor);
+}
+
+.card .second-line p:last-of-type {
+    background-image: url(images/icon-clock.svg);
+}
+
+.card .second-line p {
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+}
+
+hr {
+    inline-size: 100%;
+    block-size: 1px;
+    background-color: hsl(215, 51%, 70%);
+    border: none;
+}
+
+.card .third-line {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    align-items: center;
+    block-size: 2em;
+}
+
+
+.card .third-line img {
+    block-size: 2em;
+    border-style: solid;
+    border-radius: 2em;
+    border-color: white;
+    border-width: 1px;
+}
+
+
+footer { 
+    position: fixed; 
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: gray;
+}
+
+footer a { color:darkcyan;}
