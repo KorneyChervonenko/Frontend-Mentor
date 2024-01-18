@@ -54,13 +54,15 @@ main {
 .card .illustration img:hover,
 .card .illustration img:focus {
     opacity: 0.4;
+    cursor: pointer;
 }
 
 .card h1 { font-size: x-large; }
 
 .white-font:focus,
 .white-font:hover { 
-    color: var(--primaryCyanColor); 
+    color: var(--primaryCyanColor);
+    cursor: pointer;
 }
 
 
