@@ -1,0 +1,145 @@
+html {box-sizing: border-box;}
+*, *:before, *:after { box-sizing: inherit;}
+
+html, body {
+    block-size: 100%;
+    inline-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --pale-blue: hsl(225, 100%, 94%);
+}
+
+main {
+    block-size: 100%;
+    inline-size: 100%;
+    background-color: var(--pale-blue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: repeat-x;
+    margin: 0;
+    padding: 0;
+}
+
+@media (width >= 375px) {
+    main { background-image: url(images/pattern-background-desktop.svg);}
+  }
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    background-color: white;
+    border-radius: 1em;
+    inline-size: 22em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.card h1 { font-weight: 900;}
+
+.card button {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.card .first-line {
+    /* background-color: aqua; */
+    inline-size: 80%;
+    color: var(--desaturated-blue);
+}
+
+.card .second-line {
+    background-color: var(--very-pale-blue);
+    inline-size: 80%;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: fit-content 11em 6em;
+    justify-items: center;
+    
+}
+.card .second-line * {
+    border-style: none;
+    background-color: var(--very-pale-blue);
+}
+
+.card .second-line img {
+    grid-area: 2 / 1 / 5 / 2;
+    align-self: center;
+}
+
+.card .second-line button {
+    grid-area: 3 / 3 / 4 / 4;
+    padding: 0;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.card .second-line button:where(:hover, :focus) {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+.card .second-line div {
+    justify-self: flex-start;
+}
+
+.card .second-line div:first-of-type {
+    grid-area: 2 / 2 / 3 / 3;
+    font-weight: 700;
+}
+
+.card .second-line div:last-of-type {
+    grid-area: 4 / 2 / 5 / 3;
+    color: var(--desaturated-blue);
+}
+
+.card > button {
+    inline-size: 80%;
+    block-size: 3.5em;
+    border-style: none;
+}
+
+.card > button:first-of-type {
+    background-color: var(--bright-blue);
+    box-shadow: 0 1em 1em -0.3em #DCD8FB;
+    color: white;
+    border-radius: 0.5em;
+}
+
+.card > button:first-of-type:where(:hover, :focus) {
+    background-color: #766cf1;
+}
+
+.card > button:last-of-type {
+    margin-bottom: 2em;
+    background-color: inherit;
+    color: var(--desaturated-blue);
+}
+
+.card > button:last-of-type:where(:hover, :focus) {
+    color: black;
+}
+
+footer { 
+    position: fixed; 
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+}
+
+.card > img {
+    inline-size: 100%;
+    border-radius: 1em 1em 0 0;
+}
