@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    block-size: 100%;
+    inline-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --DarkGrey: hsl(0, 0%, 12%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+
+main {
+    block-size: 100%;
+    inline-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--OffBlack);
+    font-size: 14px;
+}
+
+/* @media (width >= 375px) {
+    main { background-image: url(images/pattern-background-desktop.svg);}
+  } */
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--White);
+    background-color: var(--DarkGrey);
+
+    border-radius: 1em;
+    inline-size: 22em;
+    /* block-size: 30em; */
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1em; */
+}
+
+.card > img {
+    --avatar-size: 6em;
+    inline-size: var(--avatar-size);
+    border-radius: var(--avatar-size);
+    margin: 2em;
+}
+
+.card h1 {
+    font-size: 1.8em;
+    /* background-color: aqua; */
+    font-weight: 500;
+    margin: 0;
+}
+
+.card div:first-of-type {
+    color: var(--Green);
+    margin: 0.5em;
+}
+
+.card div:nth-of-type(2) {
+    font-size: 0.8em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.card .button-bar {
+    inline-size: 80%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.card > .button-bar > button {
+    block-size: 3.5em;
+    border-style: none;
+    border-radius: 0.5em;
+    color: var(--White);
+    background-color: var(--Grey);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card > .button-bar > button:where(:hover, :focus) {
+    background-color: var(--Green);
+    color: var(--OffBlack);
+}
+
+footer {
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: darkgray;
+}
+
+footer a {
+    color: var(--Green);
+}
