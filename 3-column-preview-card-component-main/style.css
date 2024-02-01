@@ -1,0 +1,153 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body,
+main {
+    block-size: 100%;
+    inline-size: 100%;
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --brdr-rad: 0.5em;
+}
+
+main {
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+}
+
+/* vertical */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    inline-size: 21em;
+    block-size: 87em;
+}
+
+/* horizontal */
+@media (375px < width) {
+    .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        inline-size: 60em;
+        block-size: 33em;
+    }
+}
+
+/* vertical */
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    block-size: 33%;
+    inline-size: 100%;
+    row-gap: 2em;
+    padding: 3em;
+    color: var(--Transparent-white);
+}
+
+/* horizontal */
+@media (375px < width) {
+    section {
+        block-size: 100%;
+        inline-size: 33%;
+    }
+}
+
+section.sedan {
+    background-color: var(--Bright-orange);
+}
+
+section.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+section.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+section img {
+    inline-size: 4em;
+}
+
+section h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: var(--Very-light-gray);
+}
+
+section span {
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5em;
+}
+
+section button {
+    margin-top: auto;
+    inline-size: 10em;
+    block-size: 3em;
+    border-style: none;
+    border-radius: 3em;
+    font-size: medium;
+    background-color: var(--Very-light-gray);
+}
+
+section.sedan button {
+    color: var(--Bright-orange);
+}
+
+section.suvs button {
+    color: var(--Dark-cyan);
+}
+
+section.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+section button:focus,
+section button:hover {
+    cursor: pointer;
+    font-weight: normal;
+    color: inherit;
+    background-color: inherit;
+    border-style: solid;
+    border-color: white;
+}
+
+footer {
+    display: none;
+}
+
+/* horizontal */
+@media (375px < width) {
+    footer {
+        display: initial;
+        position: fixed;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8em;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+}
