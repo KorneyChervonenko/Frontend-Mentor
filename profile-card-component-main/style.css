@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body,
+main {
+    block-size: 100%;
+    inline-size: 100%;
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+main {
+    background-color: var(--Dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100vw 100vh, 100vw 100vh;
+    background-position: -50vw -50vh, 50vw 50vh;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    inline-size: 19em;
+    block-size: 21em;
+
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    align-items: center;
+
+    background-color: white;
+    background-image: url('images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card img.portrait {
+    inline-size: 30%;
+    margin-top: 5em;
+    border-radius: 5em;
+    border-style: solid;
+    border-width: 0.3em;
+    border-color: white;
+}
+.card hr {
+    block-size: 1px;
+    inline-size: 100%;
+    border-style: none;
+    background-color: var(--Dark-gray);
+}
+
+.card div.statistic {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.weight700 {
+    font-weight: 700;
+}
+
+.weight500 {
+    font-weight: 400;
+}
+
+.small {
+    font-size: x-small;
+    letter-spacing: 0.2em;
+}
+
+.gray {
+    color: var(--Dark-gray);
+}
