@@ -1,0 +1,185 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+/* vertical */
+main {
+    background-color: var(--Violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    inline-size: 22rem;
+    text-align: center;
+    padding: 2.2rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
+
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section.text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    margin-bottom: 0.6rem;
+}
+
+section.text article p {
+    font-size: 0.92rem;
+    line-height: 1.4rem;
+}
+
+section.text button {
+    inline-size: 12rem;
+    block-size: 2.4rem;
+    color: var(--Violet);
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px black;
+    border-style: none;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+
+section.text button:where(:focus, :hover) {
+    color: white;
+    background-color: var(--Soft-Magenta);
+}
+
+section.logo {
+    align-self: flex-start;
+}
+
+section.logo img {
+    inline-size: 7rem;
+}
+
+section.illustration img {
+    inline-size: 17rem;
+}
+
+section.links {
+    inline-size: 10rem;
+    block-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.links a {
+    margin: 0.2rem;
+    --icon-radius: 2.4rem;
+    inline-size: var(--icon-radius);
+    block-size: var(--icon-radius);
+    background-size: contain;
+}
+
+section.links a:first-child {
+    background-image: url(images/facebook-logo.png);
+}
+
+section.links a:nth-child(2) {
+    background-image: url(images/twitter-logo.png);
+}
+
+section.links a:last-child {
+    background-image: url(images/instagram-logo.png);
+}
+
+section.links a:first-child:where(:focus, :hover) {
+    background-image: url(images/facebook-magenta-logo.png);
+}
+
+section.links a:nth-child(2):where(:focus, :hover) {
+    background-image: url(images/twitter-magenta-logo.png);
+}
+
+section.links a:last-child:where(:focus, :hover) {
+    background-image: url(images/instagram-magenta-logo.png);
+}
+
+/* horizontal */
+@media (375px < width) {
+    main {
+        inline-size: 90rem;
+        block-size: 50rem;
+        background-image: url(images/bg-desktop.svg);
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        text-align: start;
+    }
+
+    section.logo {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        justify-self: flex-start;
+    }
+
+    section.logo img {
+        inline-size: 13rem;
+    }
+
+    section.illustration {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        padding: 2rem;
+    }
+
+    section.illustration img {
+        inline-size: 44rem;
+    }
+
+    section.text {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        padding: 3rem;
+    }
+
+    section.text h1 {
+        font-size: 2.5rem;
+    }
+
+    section.text article p {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    section.text button {
+        inline-size: 12rem;
+        block-size: 3.5rem;
+        border-radius: 2rem;
+        font-size: larger;
+    }
+
+    section.links {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        justify-self: flex-end;
+    }
+}
