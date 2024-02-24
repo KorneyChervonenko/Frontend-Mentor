@@ -1,0 +1,183 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    block-size: 100%;
+    inline-size: 100%;
+    font-size: 16px;
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: URL('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: URL('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+/* mobile */
+main {
+    background-color: var(--White);
+    inline-size: 24rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+hr {
+    border-style: solid;
+    inline-size: 80%;
+    border-color: var(--Light-Grey);
+}
+
+header img {
+    inline-size: 100%;
+}
+
+h1,
+h2 {
+    font-family: 'Young Serif', 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--Nutmeg);
+    font-size: 1.7rem;
+}
+
+li {
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+section {
+    inline-size: 80%;
+}
+
+section.intro article {
+    line-height: 1.6rem;
+}
+
+section.preparation-time {
+    padding: 1rem;
+    background-color: var(--Rose-White);
+    border-radius: 1rem;
+}
+
+section.preparation-time h3 {
+    color: var(--Dark-Raspberry);
+}
+
+section.instructions li {
+    line-height: 1.4rem;
+}
+
+section.instructions li::marker {
+    color: var(--Dark-Raspberry);
+    font-weight: bold;
+}
+
+section.nutrition {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+section.nutrition table {
+    border-collapse: collapse;
+}
+
+section.nutrition table td {
+    inline-size: 50%;
+    block-size: 3rem;
+}
+
+section.nutrition table td:first-of-type {
+    text-indent: 2rem;
+}
+
+section.nutrition table td:last-of-type {
+    color: var(--Dark-Raspberry);
+    font-weight: bold;
+}
+
+section.nutrition table tr {
+    border-style: solid;
+    border-color: var(--Light-Grey);
+    border-width: 0 0 1px 0;
+}
+
+section.nutrition table tr:last-of-type {
+    border-width: 0;
+}
+
+@media (375px < width) {
+    body {
+        background-color: var(--Eggshell);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%); */
+
+        inline-size: 46rem;
+        border-radius: 2rem;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        inline-size: 90%;
+        border-radius: 2rem;
+        margin-top: 2rem;
+    }
+
+    section {
+        inline-size: 90%;
+    }
+
+    section.nutrition {
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        inline-size: 90%;
+    }
+}
