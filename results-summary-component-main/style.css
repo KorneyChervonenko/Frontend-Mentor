@@ -1,0 +1,239 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+@font-face {
+	font-family: 'Hanken Grotesk';
+	src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+html,
+body {
+	block-size: 100%;
+	inline-size: 100%;
+	font-size: 18px;
+	font-family: 'Hanken Grotesk';
+
+	/* Primary */
+	--Light-red: hsl(0, 100%, 67%);
+	--Light-red-pale: hsla(0, 100%, 67%, 0.1);
+	--Orangey-yellow: hsl(39, 100%, 56%);
+	--Orangey-yellow-pale: hsl(39, 100%, 56%, 0.1);
+	--Green-teal: hsl(166, 100%, 37%);
+	--Green-teal-pale: hsl(166, 100%, 37%, 0.1);
+	--Cobalt-blue: hsl(234, 85%, 45%);
+	--Cobalt-blue-pale: hsl(234, 85%, 45%, 0.1);
+
+	/* Gradients */
+	/* background */
+	--Light-slate-blue: hsl(252, 100%, 67%);
+	--Light-royal-blue: hsl(241, 81%, 54%);
+	/* circle */
+	--Violet-blue: hsla(256, 72%, 46%, 1);
+	--Persian-blue: hsla(241, 72%, 46%, 0);
+
+	/* Neutral */
+	--White: hsl(0, 0%, 100%);
+	--Pale-blue: hsl(221, 100%, 96%);
+	--Light-lavender: hsl(241, 100%, 89%);
+	--Dark-gray-blue: hsl(224, 30%, 27%);
+	--main-border-radius: 2rem;
+}
+
+main {
+	border-color: aqua;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section {
+	inline-size: 21rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	align-items: center;
+	padding-bottom: 2rem;
+}
+
+section#result {
+	padding-top: 2rem;
+	color: white;
+	background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+	border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+}
+
+section#result h1 {
+	font-size: large;
+	color: var(--Light-lavender);
+}
+
+section#result #text {
+	inline-size: 70%;
+	font-size: medium;
+	color: var(--Light-lavender);
+}
+
+div#percentage {
+	border-radius: 8rem;
+	inline-size: 8rem;
+	block-size: 8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+}
+
+div#percentage div:first-of-type {
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+div#percentage div:last-of-type {
+	color: var(--Light-lavender);
+}
+
+section#summary {
+	padding-top: 1rem;
+	font-weight: bold;
+}
+
+section#summary h1 {
+	inline-size: 80%;
+	font-size: large;
+	text-align: start;
+}
+
+section#summary ul {
+	inline-size: 80%;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	align-items: center;
+}
+
+li {
+	font-size: medium;
+	border-radius: 0.5rem;
+	inline-size: 100%;
+	block-size: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.field-name img {
+	position: relative;
+	top: 0.25rem;
+	right: 0.25rem;
+}
+
+.reaction {
+	background-color: var(--Light-red-pale);
+}
+
+.reaction .field-name {
+	color: var(--Light-red);
+}
+
+.memory {
+	background-color: var(--Orangey-yellow-pale);
+}
+
+.memory .field-name {
+	color: var(--Orangey-yellow);
+}
+
+.verbal {
+	background-color: var(--Green-teal-pale);
+}
+.verbal .field-name {
+	color: var(--Green-teal);
+}
+
+.visual {
+	background-color: var(--Cobalt-blue-pale);
+}
+
+.visual .field-name {
+	color: var(--Cobalt-blue);
+}
+
+#summary .value span {
+	color: gray;
+}
+
+button {
+	inline-size: 80%;
+	block-size: 3rem;
+	border-style: none;
+	border-radius: 2rem;
+	color: white;
+	background-color: var(--Dark-gray-blue);
+	font-size: medium;
+}
+
+button:where(:focus, :hover) {
+	background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+/* horizontal */
+@media (375px < width) {
+	main {
+		border-style: none;
+		border-radius: var(--main-border-radius);
+		display: flex;
+		box-shadow: 5px 5px 30px 0 var(--Light-lavender);
+	}
+	section#result,
+	section {
+		border-style: none;
+		block-size: 28rem;
+		border-radius: var(--main-border-radius);
+	}
+
+	section#result h1 {
+		font-size: x-large;
+	}
+
+	section#result h2 {
+		font-size: xx-large;
+	}
+
+	section#result #text {
+		font-size: large;
+	}
+
+	div#percentage {
+		border-radius: 11rem;
+		inline-size: 11rem;
+		block-size: 11rem;
+	}
+
+	div#percentage div:first-of-type {
+		font-size: 4rem;
+	}
+
+	section#summary h1 {
+		font-size: x-large;
+		padding-bottom: 1rem;
+	}
+
+	section#summary ul {
+		padding-bottom: 1rem;
+	}
+}
