@@ -1,0 +1,43 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Mentor | Intro component with sign up form</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<main>
+			<section id="text">
+				<h1>Learn to code by watching others</h1>
+				See how experienced developers solve problems in real-time. Watching scripted tutorials is
+				great, but understanding how developers think is invaluable.
+			</section>
+			<section id="card">
+				<div id="promo"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
+				<form novalidate>
+					<fieldset>
+						<input type="text" name="fname" id="first-name" placeholder="First Name" required />
+						<em class="hidden">First Name cannot be empty</em>
+						<input type="text" name="lname" id="last-name" placeholder="Last Name" required />
+						<em class="hidden">Last Name cannot be empty</em>
+						<input type="email" name="email" id="email" placeholder="Email Address" required />
+						<em class="hidden">Looks like this is not an email</em>
+						<input type="password" name="password" id="password" placeholder="Password" required />
+						<em class="hidden">Password cannot be empty</em>
+					</fieldset>
+					<button type="submit">Claim your free trial</button>
+					<div id="remark">
+						By clicking the button, you are agreeing to our <b>Terms and Services</b>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,189 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html,
+body {
+	block-size: 100%;
+	inline-size: 100%;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+
+	--Red: hsl(0, 100%, 74%);
+	--Green: hsl(154, 59%, 51%);
+	--Blue: hsl(248, 32%, 49%);
+	--Dark-Blue: hsl(249, 10%, 26%);
+	--Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+/* body {background-color: black;} */
+input,
+button {
+	font-family: inherit;
+}
+
+/* vertical */
+main {
+	background-color: var(--Red);
+	background-image: url(images/bg-intro-mobile.png);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	inline-size: 100%;
+	block-size: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	inline-size: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+
+section#text {
+	color: white;
+	padding-bottom: 4rem;
+}
+
+section#text h1 {
+	font-size: 1.7rem;
+	line-height: 2.4rem;
+	margin-bottom: 1.5rem;
+}
+
+section#card #promo {
+	inline-size: 100%;
+	block-size: 5.3rem;
+	padding-top: 1rem;
+	padding-left: 4.5rem;
+	padding-right: 4.5rem;
+	border-radius: 0.5rem;
+	background-color: var(--Blue);
+	color: white;
+	margin-bottom: 1.8rem;
+	box-shadow: 0 0.5rem 0.2rem 0 #964228;
+}
+
+section#card form {
+	inline-size: 100%;
+	border-radius: 0.5rem;
+	background-color: white;
+	padding: 1.5rem;
+	box-shadow: 0 0.5rem 0.2rem 0 #964228;
+}
+
+section#card fieldset {
+	border-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section#card fieldset > input {
+	inline-size: 100%;
+	border-radius: 0.5rem;
+	border-style: solid;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+}
+
+section#card fieldset > em {
+	align-self: flex-end;
+	font-size: x-small;
+	font-weight: bold;
+	color: var(--Red);
+
+	position: relative;
+	top: -1rem;
+}
+
+section#card form > button {
+	inline-size: 100%;
+	block-size: 3.4rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border-style: none;
+	background-color: var(--Green);
+	color: white;
+	text-transform: uppercase;
+	font-size: medium;
+	letter-spacing: 0.1rem;
+	box-shadow: 0 0.2rem 0.2rem 0 darkgreen;
+}
+
+section#card form > button:where(:hover, :focus) {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+section#card #remark {
+	margin-top: 1rem;
+	font-size: small;
+	color: var(--Grayish-Blue);
+}
+
+section#card #remark > b {
+	color: var(--Red);
+}
+
+.error-sign {
+	background-image: url(images/icon-error.svg);
+	background-repeat: no-repeat;
+	background-position-x: right 1rem;
+	background-position-y: center;
+	color: var(--Red);
+	border-color: var(--Red);
+}
+
+.hidden {
+	display: none;
+}
+
+/* horizontal  */
+@media (375px < width) {
+	main {
+		background-image: url(images/bg-intro-desktop.png);
+		flex-direction: row;
+	}
+
+	section {
+		inline-size: 34rem;
+	}
+
+	section#text {
+		text-align: left;
+	}
+
+	section#text h1 {
+		font-size: 3rem;
+		line-height: 3.2rem;
+	}
+
+	section#card #promo {
+		block-size: 3.5rem;
+	}
+
+	section#card form {
+		padding: 3rem;
+	}
+}
