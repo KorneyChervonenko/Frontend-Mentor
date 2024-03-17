@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html,
+body,
+main {
+	block-size: 100%;
+	inline-size: 100%;
+}
+
+/* vertical */
+main {
+	background-color: var(--Dark-Slate-Grey);
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+
+	--Tomato: hsl(4, 100%, 67%);
+	--Tomato-transparent: hsla(4, 100%, 67%, 0.2);
+	--Dark-Slate-Grey: hsl(234, 29%, 20%);
+	--Charcoal-Grey: hsl(235, 18%, 26%);
+	--Grey: hsl(231, 7%, 60%);
+	--White: hsl(0, 0%, 100%);
+}
+
+h1 {
+	font-size: 2.3rem;
+}
+
+section {
+	outline: solid;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	inline-size: 23rem;
+	block-size: 52rem;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-bottom: 2.6rem;
+
+	background-color: var(--White);
+	background-repeat: no-repeat;
+}
+
+section#stage1 {
+	row-gap: 2rem;
+	justify-content: flex-end;
+
+	background-image: url(assets/images/illustration-sign-up-mobile.svg);
+	background-size: contain;
+	background-position: top center;
+}
+
+section#stage2 {
+	background-image: url(assets/images/icon-success.svg);
+	background-position: left 1.5rem top 10rem;
+	background-size: 4rem;
+	justify-content: center;
+}
+
+section#stage2 button {
+	position: relative;
+	top: 16rem;
+}
+
+section#stage2 div {
+	line-height: 1.5rem;
+}
+
+ul {
+	/* outline: solid; */
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.2rem;
+	list-style: none;
+}
+
+li {
+	/* outline: solid; */
+	min-block-size: 1.5rem;
+	padding-left: 2.4rem;
+	background-image: url(assets/images/icon-list.svg);
+	background-repeat: no-repeat;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+
+label {
+	/* outline: solid; */
+	position: relative;
+	bottom: -1rem;
+	font-size: small;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+label > span {
+	color: var(--Tomato);
+}
+
+input,
+button {
+	block-size: 3.5rem;
+	border-style: solid;
+	border-radius: 0.5rem;
+}
+
+input {
+	padding-left: 1rem;
+}
+
+button {
+	background-color: var(--Dark-Slate-Grey);
+	color: var(--White);
+}
+
+button:where(:hover, :focus) {
+	cursor: pointer;
+	/* background-color: var(--Tomato); todo gradient */
+	background: rgb(255, 83, 83);
+	background: linear-gradient(90deg, rgba(255, 83, 83, 1) 50%, rgba(254, 154, 60, 1) 100%);
+}
+
+section#stage2 img {
+	inline-size: 3rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.error {
+	background-color: var(--Tomato-transparent);
+	color: red;
+	border-color: var(--Tomato);
+}
+
+/* horizontal  */
+@media (375px < width) {
+	section {
+		border-radius: 2rem;
+	}
+
+	section#stage1 {
+		/* outline: solid; */
+		inline-size: 58rem;
+		block-size: 40rem;
+		justify-content: center;
+
+		padding-left: 4rem;
+		padding-right: 30rem;
+
+		background-image: url(assets/images/illustration-sign-up-desktop.svg);
+		background-size: auto 92%;
+		background-repeat: no-repeat;
+		background-position: right 1.6rem center;
+	}
+
+	section#stage2 {
+		inline-size: 32rem;
+		block-size: 32rem;
+
+		justify-content: center;
+		row-gap: 2rem;
+		padding-top: 8rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		background-position: left 4rem top 3rem;
+		background-size: 4rem;
+	}
+
+	section#stage2 button {
+		position: static;
+	}
+
+	h1 {
+		font-size: 3.4rem;
+	}
+
+	ul {
+		row-gap: 0.7rem;
+	}
+
+	form {
+		row-gap: 1.2rem;
+	}
+}
