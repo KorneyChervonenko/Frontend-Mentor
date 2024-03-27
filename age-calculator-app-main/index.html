@@ -1,0 +1,52 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<title>Frontend Mentor | Age calculator app</title>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<main>
+			<section id="input">
+				<form novalidate>
+					<fieldset>
+						<label id="day-field">
+							<em></em>
+							<!-- <em>no error</em> -->
+							<input
+								type="tel"
+								name="day"
+								pattern="(?:^0?[1-9]$)|(?:^[1-2]\d$)|(?:^3[01]$)"
+								placeholder="DD"
+								required
+							/>
+							DAY
+						</label>
+						<label id="month-field">
+							<em></em>
+							<!-- <em>no error</em> -->
+							<input type="tel" name="month" pattern="(?:^0?[1-9]$)|(?:^1[0-2]$)" placeholder="MM" required />
+							MONTH
+						</label>
+						<label id="year-field">
+							<em></em>
+							<!-- <em>no error</em> -->
+							<!-- pattern="(?:19|20)\d{2}" -->
+							<input type="tel" pattern="\d{1,4}" name="year" placeholder="YYYY" required />
+							YEAR
+						</label>
+					</fieldset>
+					<button aria-label="Submit"><img src="assets\images\icon-arrow.svg" /></button>
+				</form>
+			</section>
+			<hr />
+			<section id="output">
+				<p><span id="years">--</span> years</p>
+				<p><span id="months">--</span> months</p>
+				<p><span id="days">--</span> days</p>
+			</section>
+		</main>
+	</body>
+</html>

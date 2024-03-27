@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	background-color: var(--Light-grey);
+
+	--Purple: hsl(259, 100%, 65%);
+	--Light-red: hsl(0, 100%, 67%);
+	--White: hsl(0, 0%, 100%);
+	--Off-white: hsl(0, 0%, 94%);
+	--Light-grey: hsl(0, 0%, 86%);
+	--Smokey-grey: hsl(0, 1%, 44%);
+	--Off-black: hsl(0, 0%, 8%);
+}
+
+/* vertical */
+main {
+	/* outline: solid; */
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-family: 'Poppins', sans-serif;
+	font-size: 32px;
+
+	inline-size: 22rem;
+	block-size: 30rem;
+
+	padding: 1.5rem;
+
+	border-radius: 2rem 2rem 5rem 2rem;
+	background-color: var(--White);
+
+	--input-width: 5.4rem;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+fieldset {
+	margin-top: 1rem;
+	border-style: none;
+	display: flex;
+	flex-direction: row;
+	column-gap: 1rem;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+label {
+	display: flex;
+	flex-direction: column-reverse;
+	font-size: small;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	color: var(--Smokey-grey);
+}
+
+label > em {
+	color: var(--Light-red);
+	font-size: xx-small;
+	inline-size: var(--input-width);
+}
+
+input {
+	inline-size: var(--input-width);
+	block-size: 3rem;
+	border-radius: 0.5rem;
+	border-style: solid;
+	font-size: large;
+	font-weight: bold;
+	padding-left: 0.8rem;
+}
+
+input::placeholder {
+	color: var(--Smokey-grey);
+}
+
+hr {
+	inline-size: 100%;
+	block-size: 2px;
+	background-color: var(--Light-grey);
+	border-style: none;
+}
+
+button {
+	position: relative;
+	top: 2rem;
+	inline-size: 4rem;
+	block-size: 4rem;
+	background-color: var(--Purple);
+	border-radius: 2rem;
+	border-style: none;
+}
+
+button:hover {
+	background-color: var(--Off-black);
+}
+
+button > img {
+	inline-size: 40%;
+	block-size: 40%;
+}
+
+section#output {
+	margin-top: 3rem;
+	font-size: 3.4rem;
+	font-weight: 800;
+	font-style: italic;
+	line-height: 3.6rem;
+}
+
+section#output > p > span {
+	color: var(--Purple);
+}
+
+.red-font {
+	color: var(--Light-red);
+}
+
+.red-border {
+	border-color: var(--Light-red);
+}
+
+/* horizontal  */
+/* @media (375px < width) */
+@media (850px < width) {
+	main {
+		inline-size: 52rem;
+		block-size: 41rem;
+
+		border-radius: 2rem 2rem 10rem 2rem;
+		padding: 3rem;
+
+		--input-width: 10rem;
+	}
+
+	form {
+		inline-size: 100%;
+		block-size: 9rem;
+		align-items: flex-start;
+	}
+
+	fieldset {
+		margin-top: 0;
+		border-style: none;
+		display: flex;
+		flex-direction: row;
+		column-gap: 2rem;
+	}
+
+	label {
+		font-size: small;
+		font-weight: bold;
+		letter-spacing: 0.2rem;
+	}
+
+	label > em {
+		font-weight: 400;
+		font-size: small;
+		letter-spacing: 0.02rem;
+	}
+
+	input {
+		inline-size: var(--input-width);
+		block-size: 4.5rem;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	button {
+		/* position: relative; */
+		position: fixed;
+		top: 9rem;
+		align-self: flex-end;
+		inline-size: 5.5rem;
+		block-size: 5.5rem;
+		border-radius: 3rem;
+	}
+
+	section#output {
+		margin-top: 2rem;
+		font-size: 6rem;
+		font-weight: 800;
+		line-height: 7rem;
+	}
+}
