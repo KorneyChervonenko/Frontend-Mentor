@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--Red: hsl(0, 100%, 66%); /* input errors */
+	--White: hsl(0, 0%, 100%);
+	--Light-grayish-violet: hsl(270, 3%, 87%);
+	--Dark-grayish-violet: hsl(279, 6%, 55%);
+	--Very-dark-violet: hsl(278, 68%, 11%);
+
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.hidden {
+	display: none !important;
+}
+
+/* html, */
+body {
+	/* inline-size: 100%; */
+	/* block-size: 100%; */
+	inline-size: 100vw;
+	block-size: 100vh;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	background-color: cadetblue;
+}
+
+/* vertical */
+main {
+	/* outline: solid; */
+
+	inline-size: 21rem;
+	block-size: 40rem;
+
+	background-image: url(images/bg-main-mobile.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: white;
+}
+
+form {
+	/* outline: solid; */
+	inline-size: 21rem;
+	block-size: 23rem;
+
+	padding: 1.4rem;
+	display: grid;
+	row-gap: 1.2rem;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+
+	margin-top: 3rem;
+	/* justify-items: stretch; */
+	/* align-items: stretch; */
+}
+
+fieldset {
+	grid-row: 1 / 4;
+	grid-column: 1 / 5;
+
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-template-rows: subgrid;
+
+	border-style: none;
+}
+
+label {
+	/* outline: solid; */
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.3rem;
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+}
+
+label > input {
+	block-size: 2.6rem;
+	font-size: large;
+	border-style: solid;
+	border-width: thin;
+	border-radius: 0.3rem;
+	padding-left: 1rem;
+}
+
+label:has(input[name='cardholder-name']) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 5;
+	/* inline-size: 18rem; */
+}
+
+label:has(input[name='card-number']) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 5;
+	/* inline-size: 18rem; */
+	/* background-color: aqua; */
+}
+
+label:has(input[name='month']) {
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+	inline-size: 4.2rem;
+}
+
+label:has(input[name='year']) {
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	inline-size: 4.2rem;
+}
+
+label:has(input[name='cvc']) {
+	grid-row: 3 / 4;
+	grid-column: 3 / 5;
+	inline-size: 9rem;
+	justify-self: flex-end;
+}
+
+form > button {
+	grid-row: 4 / 5;
+	grid-column: 1 / 5;
+	/* inline-size: 18rem; */
+	block-size: 2.8rem;
+	border-radius: 0.5rem;
+	border-style: none;
+	background-color: var(--Very-dark-violet);
+	color: var(--White);
+}
+
+section.card {
+	/* outline: solid; */
+	inline-size: 21rem;
+	block-size: 14rem;
+
+	position: relative;
+	top: 2rem;
+}
+
+section.card-front {
+	inline-size: 16rem;
+	block-size: 9rem;
+
+	background-image: url(images/bg-card-front.png);
+	background-repeat: no-repeat;
+	/* background-size: contain; */
+	background-size: 100% 100%;
+	color: var(--White);
+	padding: 1.2rem;
+
+	position: absolute;
+	top: 5rem;
+	left: 1rem;
+}
+
+section.card-front > img {
+	inline-size: 3rem;
+	margin-bottom: 1.6rem;
+}
+
+section.card-front .card-number {
+	letter-spacing: 0.1rem;
+	margin-bottom: 1rem;
+}
+
+section.card-front .name-date {
+	text-transform: uppercase;
+	font-size: x-small;
+	letter-spacing: 0.05rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+section.card-back {
+	inline-size: 16rem;
+	block-size: 9rem;
+
+	background-image: url(images/bg-card-back.png);
+	background-repeat: no-repeat;
+	/* background-size: contain; */
+	background-size: 100% 100%;
+
+	position: absolute;
+
+	right: 1rem;
+}
+
+section.card-back .cvc {
+	font-size: x-small;
+	color: var(--White);
+	position: relative;
+	left: 13rem;
+	top: 3.7rem;
+}
+
+section.thanx {
+	/* outline: solid;
+	background-color: aqua; */
+
+	inline-size: 21rem;
+	block-size: 20rem;
+
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+section.thanx > h1 {
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+}
+
+section.thanx > h2 {
+	font-size: large;
+	color: var(--Dark-grayish-violet);
+}
+
+section.thanx > button {
+	inline-size: 18rem;
+	block-size: 2.8rem;
+	border-radius: 0.5rem;
+	border-style: none;
+	background-color: var(--Very-dark-violet);
+	color: var(--White);
+}
+
+.error-msg {
+	font-size: x-small;
+	letter-spacing: 0;
+	color: var(--Red);
+}
+
+/* horizontal */
+/* @media (769px < width)  */
+@media (1024px < width) {
+	main {
+		/* outline: solid; */
+
+		inline-size: 90%;
+		block-size: 90%;
+
+		background-image: url(images/bg-main-desktop.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		column-gap: 6rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+	form {
+		inline-size: 24rem;
+		block-size: 23rem;
+		/* block-size: 24rem; */
+		/* padding: 1.4rem; */
+		margin-top: 0;
+		/* justify-items: stretch; */
+		/* align-items: stretch; */
+	}
+
+	section.card {
+		/* outline: solid; */
+		inline-size: 30rem;
+		block-size: 30rem;
+
+		position: relative;
+		top: 0;
+	}
+
+	section.card-front {
+		inline-size: 25rem;
+		block-size: 13.5rem;
+
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+
+		padding: 1.9rem;
+	}
+
+	section.card-front > img {
+		inline-size: 4.5rem;
+		margin-bottom: 3rem;
+	}
+
+	section.card-front .card-number {
+		font-size: 1.5rem;
+		letter-spacing: 0.2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	section.card-front .name-date {
+		font-size: 0.8rem;
+		letter-spacing: 0.1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	section.card-back {
+		inline-size: 25rem;
+		block-size: 13.5rem;
+
+		position: absolute;
+		right: 0;
+		top: 16rem;
+		bottom: 0rem;
+	}
+
+	section.card-back .cvc {
+		letter-spacing: 0.1rem;
+		font-size: medium;
+
+		position: relative;
+		/* position: static; */
+		left: 20rem;
+		top: 6rem;
+	}
+
+	section.thanx {
+		/* outline: solid;
+		background-color: aqua; */
+		inline-size: 35rem;
+		/* block-size: 20rem; */
+
+		margin-top: 0rem;
+	}
+
+	section.thanx > button {
+		inline-size: 21rem;
+		block-size: 3rem;
+	}
+}
+
+.error-mark {
+	/* background-color: aqua; */
+	border-color: var(--Red);
+}
