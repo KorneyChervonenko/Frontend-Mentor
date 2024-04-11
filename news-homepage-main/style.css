@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('reset.css');
+
+:root {
+	--Soft-orange: hsl(35, 77%, 62%);
+	--Soft-red: hsl(5, 85%, 63%);
+	--Off-white: hsl(36, 100%, 99%);
+	--Grayish-blue: hsl(233, 8%, 79%);
+	--Dark-grayish-blue: hsl(236, 13%, 42%);
+	--Very-dark-blue: hsl(240, 100%, 5%);
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
+
+html {
+	inline-size: 100%;
+	block-size: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: cadetblue;
+	background-color: var(--Very-dark-blue);
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+/* vertical */
+@media (width < 1280px) {
+	body {
+		/* outline: solid; */
+		inline-size: 25rem;
+		block-size: fit-content;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+	}
+
+	header {
+		/* outline: solid; */
+		inline-size: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		position: relative;
+	}
+
+	header > img {
+		inline-size: 3rem;
+	}
+
+	header > img[role='button'] {
+		inline-size: 2.7rem;
+		block-size: 1.2rem;
+	}
+
+	header > img[role='button']:hover {
+		cursor: pointer;
+		background-color: var(--Soft-red);
+	}
+
+	nav {
+		display: none;
+		position: absolute;
+		background-color: white;
+		inline-size: 17rem;
+		top: -1rem;
+		right: -1rem;
+		padding: 1rem;
+		box-shadow: 0 0 0 1000px rgba(117, 117, 117, 0.5);
+	}
+
+	nav > img {
+		display: block;
+		margin-left: auto;
+	}
+
+	nav > ul {
+		/* outline: solid; */
+		display: flex;
+		flex-direction: column;
+		row-gap: 2rem;
+		font-size: large;
+		padding: 1rem;
+	}
+
+	header > nav > ul > li > a:hover {
+		color: var(--Soft-red);
+	}
+
+	main {
+		/* outline: solid; */
+		inline-size: 100%;
+	}
+
+	article {
+		/* outline: solid; */
+		inline-size: 100%;
+		margin-bottom: 4rem;
+	}
+
+	article > img {
+		content: url(assets/images/image-web-3-mobile.jpg);
+		inline-size: 100%;
+		margin-bottom: 2rem;
+	}
+
+	article > h1 {
+		font-size: 2.7rem;
+		font-weight: 800;
+		line-height: 2.7rem;
+		margin-bottom: 1rem;
+	}
+
+	article > div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	article > div > p {
+		line-height: 1.7em;
+		margin-bottom: 1.4rem;
+	}
+
+	article > div > a {
+		/* outline: solid; */
+		inline-size: 12rem;
+		block-size: 3rem;
+		background-color: var(--Soft-red);
+		color: var(--Off-white);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		letter-spacing: 0.15rem;
+	}
+
+	article > div > a:hover {
+		background-color: var(--Very-dark-blue);
+	}
+
+	aside {
+		/* outline: solid; */
+		background-color: var(--Very-dark-blue);
+		color: var(--Grayish-blue);
+		inline-size: 100%;
+		block-size: 32rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		padding: 1rem;
+		line-height: 1.8rem;
+		margin-bottom: 4.5rem;
+	}
+
+	aside > h2 {
+		color: var(--Soft-orange);
+		font-size: xx-large;
+	}
+
+	aside > section > h3 {
+		color: var(--Off-white);
+	}
+
+	aside > section > h3 > a:hover {
+		color: var(--Soft-orange);
+	}
+
+	footer {
+		/* outline: solid; */
+		inline-size: 100%;
+		block-size: 30rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	footer > section {
+		/* outline: solid; */
+		inline-size: 100%;
+		display: flex;
+		flex-direction: row;
+		column-gap: 1.6rem;
+	}
+
+	footer > section > img {
+		block-size: 8.6rem;
+	}
+
+	footer > section > div {
+		/* outline: solid; */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		line-height: 1.8rem;
+	}
+
+	footer > section > div > h3 {
+		font-size: xx-large;
+		color: var(--Grayish-blue);
+	}
+
+	footer > section > div > h4 {
+		font-size: large;
+		font-weight: 800;
+	}
+
+	footer > section > div > h4 > a:hover {
+		color: var(--Soft-red);
+	}
+
+	footer > section > div > span {
+		color: var(--Dark-grayish-blue);
+	}
+}
+
+/* desktop */
+@media (1280px <= width) {
+	/* html {		align-items: center;	} */
+
+	body {
+		outline: solid;
+		block-size: fit-content;
+		display: grid;
+		grid-template-rows: 8rem repeat(3, auto) 12rem;
+		grid-template-columns: repeat(3, auto);
+
+		column-gap: 2rem;
+		row-gap: 1rem;
+		background-color: white;
+		padding: 2rem;
+	}
+
+	header {
+		/* outline: solid; */
+		grid-row: 1 / 2;
+		grid-column: 1 / 4;
+
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+		align-items: center;
+	}
+
+	nav {
+		grid-row: 1 / 2;
+		grid-column: 2 / 4;
+
+		display: flex !important;
+		flex-direction: column;
+		justify-content: center;
+
+		/* background-color: cornflowerblue; */
+	}
+
+	nav > img {
+		display: none;
+	}
+
+	nav > ul {
+		/* outline: solid; */
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		column-gap: 2rem;
+		list-style: none;
+	}
+
+	header > nav > ul > li > a:hover {
+		color: var(--Soft-red);
+	}
+
+	header > img[role='button'] {
+		display: none;
+	}
+
+	main {
+		/* outline: solid; */
+		inline-size: 59rem;
+		block-size: 34rem;
+		grid-row: 2 / 5;
+		grid-column: 1 / 4;
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+	}
+
+	article {
+		/* outline: solid; */
+		inline-size: 48rem;
+		block-size: 34rem;
+		grid-row: 1 / 4;
+		grid-column: 1 / 3;
+
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: auto auto;
+		row-gap: 0rem;
+	}
+
+	article > img {
+		content: url(assets/images/image-web-3-desktop.jpg);
+		grid-row: 1 / 2;
+		grid-column: 1 / 3;
+		inline-size: 48rem;
+	}
+
+	article > h1 {
+		/* outline: solid; */
+		inline-size: 23rem;
+		grid-row: 2 / 3;
+		grid-column: 1 / 2;
+		font-weight: 800;
+		font-size: 3.7rem;
+		line-height: 3.4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	article > div {
+		/* background-color: yellowgreen; */
+		inline-size: 23rem;
+		grid-row: 2 / 3;
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	article > div > p {
+		line-height: 1.5rem;
+		margin-top: 1rem;
+	}
+
+	article > div > a {
+		/* outline: solid; */
+		background-color: var(--Soft-red);
+		inline-size: 12rem;
+		block-size: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--Off-white);
+		font-weight: bold;
+		letter-spacing: 0.15rem;
+	}
+
+	article > div > a:hover {
+		background-color: var(--Very-dark-blue);
+	}
+
+	aside {
+		/* outline: solid; */
+		inline-size: 23rem;
+		block-size: 34rem;
+
+		background-color: var(--Very-dark-blue);
+		color: var(--Grayish-blue);
+		grid-row: 1 / 4;
+		grid-column: 3 / 4;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-evenly;
+		padding: 1.5rem;
+		line-height: 1.8rem;
+	}
+
+	aside > h2 {
+		color: var(--Soft-orange);
+		font-size: 2.6rem;
+	}
+
+	aside > section > h3 {
+		color: var(--Off-white);
+	}
+
+	aside > section > h3 > a:hover {
+		color: var(--Soft-orange);
+	}
+
+	aside > hr {
+		inline-size: 100%;
+	}
+
+	footer {
+		/* outline: solid; */
+		grid-row: 5 / 6;
+		grid-column: 1 / 4;
+
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+
+		align-items: flex-end;
+	}
+
+	footer > section {
+		/* outline: solid; */
+		background-color: white;
+		inline-size: 23rem;
+		block-size: 8.4rem;
+		display: flex;
+	}
+
+	footer > section > img {
+		/* inline-size: 6rem; */
+		block-size: 100%;
+	}
+
+	footer > section > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-left: 1.4rem;
+	}
+
+	footer > section > div > h3 {
+		font-size: xx-large;
+		color: var(--Grayish-blue);
+	}
+
+	footer > section > div > h4 {
+		font-size: large;
+	}
+
+	footer > section > div > h4 > a:hover {
+		color: var(--Soft-red);
+	}
+
+	footer > section > div > span {
+		line-height: 1.6rem;
+		color: var(--Dark-grayish-blue);
+	}
+}
+
+.hidden {
+	display: none !important;
+}
