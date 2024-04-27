@@ -1,0 +1,506 @@
+@import 'reset.css';
+@import 'hide-spin-control.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+	--Strong-cyan: hsl(172, 67%, 45%);
+	--Very-dark-cyan: hsl(183, 100%, 15%);
+	--Dark-grayish-cyan: hsl(186, 14%, 43%);
+	--Grayish-cyan: hsl(184, 14%, 56%);
+	--Light-grayish-cyan: hsl(185, 41%, 84%);
+	--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--White: hsl(0, 0%, 100%);
+	font-size: 24px;
+	font-family: 'Space Mono', monospace;
+}
+
+.full-space() {
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.rounded-block(@width) {
+	border-style: none;
+	inline-size: @width;
+	block-size: 2rem;
+	border-radius: 0.2rem;
+
+	display: flex;
+	align-items: center;
+	font-size: x-large;
+}
+
+html {
+	.full-space();
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+
+body {
+	.full-space();
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--Light-grayish-cyan);
+}
+
+#input-form > button[type='submit'] {
+	inline-size: 0;
+	block-size: 0;
+	visibility: collapse;
+}
+
+/* horizontal */
+// @media (1024px <= width)
+@media (min-width: 1024px) {
+	// body {
+	// 	// .full-space();
+	// }
+
+	header {
+		position: relative;
+		top: -3rem;
+	}
+
+	main {
+		inline-size: 38rem;
+		block-size: 20rem;
+		background-color: white;
+		padding: 1.4rem;
+		display: flex;
+		flex-direction: row;
+		border-radius: 1rem;
+	}
+
+	section {
+		inline-size: 50%;
+		block-size: 100%;
+		border-radius: 0.5rem;
+	}
+
+	section.input {
+		padding-right: 1.4rem;
+
+		form {
+			// outline: solid;
+			.full-space();
+			min-inline-size: 16rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			font-size: medium;
+
+			label:has(input[type='number']) {
+				display: flex;
+				flex-direction: column;
+				row-gap: 0.5rem;
+
+				> .label-and-error {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					> .error-message {
+						color: red;
+					}
+				}
+
+				input[type='number'] {
+					.rounded-block(100%);
+					text-align: right;
+					padding-right: 0.6rem;
+					background-color: var(--Light-grayish-cyan);
+					background-repeat: no-repeat;
+					background-position: left 1rem center;
+				}
+
+				input[type='number']:focus {
+					outline-color: var(--Strong-cyan);
+					outline-style: solid;
+					outline-width: 0.1rem;
+					color: var(--Very-dark-cyan);
+					font-weight: bold;
+				}
+
+				input[name='bill-sum'] {
+					background-image: url(images/icon-dollar.svg);
+				}
+
+				input[name='number-people'] {
+					background-image: url(images/icon-person.svg);
+				}
+			}
+
+			fieldset {
+				// outline: solid;
+				border-style: none;
+				legend {
+					margin-bottom: 0.5rem;
+					inline-size: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					> .error-message {
+						color: red;
+					}
+				}
+
+				ul {
+					inline-size: 100%;
+					block-size: fit-content;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: repeat(2, 1fr);
+					gap: 0.6rem;
+				}
+
+				// hide radio-buttons
+				input[type='radio'] {
+					.hidden;
+				}
+
+				.percent-field() {
+					.rounded-block(5rem);
+					justify-content: center;
+				}
+
+				// label:has(input[type='radio'])
+				label.predefined-percent {
+					// outline: solid;
+					.percent-field();
+					background-color: var(--Very-dark-cyan);
+					color: white;
+				}
+
+				// label:has(input[type='radio']:checked)
+				label.predefined-percent:has(input:checked) {
+					background-color: var(--Strong-cyan);
+					color: var(--Very-dark-cyan);
+				}
+
+				label.custom-percent {
+					.percent-field();
+
+					span {
+						.percent-field();
+						background-color: var(--Light-grayish-cyan);
+						color: var(--Dark-grayish-cyan);
+					}
+
+					input.custom-percent-input {
+						.hidden;
+					}
+				}
+
+				// label.custom-percent:has(input:checked)
+				label.custom-percent:has(input[type='radio']:checked) {
+					span {
+						.hidden;
+					}
+
+					input[type='radio'] {
+						// display: none;
+						.hidden;
+					}
+
+					input.custom-percent-input {
+						.percent-field();
+					}
+
+					input.custom-percent-input::placeholder {
+						color: var(--Dark-grayish-cyan);
+					}
+				}
+			}
+		}
+	}
+
+	section.output {
+		background-color: var(--Very-dark-cyan);
+		display: flex;
+		flex-direction: column;
+		padding: 1.7rem;
+
+		.output-fields {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1rem;
+
+			.field {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.field-name {
+					display: flex;
+					flex-direction: column;
+					font-size: medium;
+					font-weight: bold;
+
+					.first-line {
+						color: var(--White);
+					}
+
+					.second-line {
+						color: var(--Grayish-cyan);
+					}
+				}
+
+				.sum {
+					color: var(--Strong-cyan);
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
+		}
+
+		button[type='reset'] {
+			.rounded-block(100%);
+			background-color: var(--Strong-cyan);
+			color: var(--Very-dark-cyan);
+			font-size: x-large;
+			font-weight: bold;
+			justify-content: center;
+			margin-top: auto;
+		}
+
+		button[type='reset']:where(:focus, :hover) {
+			background-color: var(--Light-grayish-cyan);
+			cursor: pointer;
+		}
+	}
+}
+
+// vertical
+// @media (width < 1024px)
+@media (max-width: 1024px) {
+	body {
+		// .full-space();
+		inline-size: 16rem;
+	}
+
+	header {
+		position: relative;
+		top: -1rem;
+	}
+
+	main {
+		inline-size: 16rem;
+		background-color: white;
+		padding: 1.4rem;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		border-radius: 1rem;
+	}
+
+	section {
+		// outline: solid;
+		inline-size: 100%;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.5rem;
+	}
+
+	section.input {
+		form {
+			// outline: solid;
+			display: flex;
+			flex-direction: column;
+			row-gap: 1rem;
+			font-size: medium;
+			label:has(input[type='number']) {
+				// outline: solid;
+				display: flex;
+				flex-direction: column;
+				row-gap: 0.5rem;
+
+				> .label-and-error {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					> .error-message {
+						color: red;
+					}
+				}
+
+				input[type='number'] {
+					// outline: solid;
+					.rounded-block(100%);
+					text-align: right;
+					padding-right: 0.6rem;
+					background-color: var(--Light-grayish-cyan);
+					background-repeat: no-repeat;
+					background-position: left 1rem center;
+				}
+
+				input[type='number']:focus {
+					outline-color: var(--Strong-cyan);
+					outline-style: solid;
+					outline-width: 0.1rem;
+					color: var(--Very-dark-cyan);
+					font-weight: bold;
+				}
+
+				input[name='bill-sum'] {
+					background-image: url(images/icon-dollar.svg);
+				}
+
+				input[name='number-people'] {
+					background-image: url(images/icon-person.svg);
+				}
+			}
+
+			fieldset {
+				// outline: solid;
+				border-style: none;
+				legend {
+					margin-bottom: 0.5rem;
+
+					inline-size: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					> .error-message {
+						color: red;
+					}
+				}
+
+				ul {
+					inline-size: 100%;
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(3, 1fr);
+					gap: 0.6rem;
+					justify-items: center;
+					align-items: center;
+				}
+
+				// hide radio-buttons
+				input[type='radio'] {
+					.hidden;
+				}
+
+				.percent-field() {
+					.rounded-block(6rem);
+					justify-content: center;
+				}
+
+				// label:has(input[type='radio'])
+				label.predefined-percent {
+					// outline: solid;
+					.percent-field();
+					background-color: var(--Very-dark-cyan);
+					color: white;
+				}
+
+				// label:has(input[type='radio']:checked)
+				label.predefined-percent:has(input:checked) {
+					background-color: var(--Strong-cyan);
+					color: var(--Very-dark-cyan);
+				}
+
+				label.custom-percent {
+					.percent-field();
+
+					span {
+						.percent-field();
+						background-color: var(--Light-grayish-cyan);
+						color: var(--Dark-grayish-cyan);
+						text-align: center;
+					}
+
+					input.custom-percent-input {
+						// display: none;
+						.hidden;
+					}
+				}
+
+				// label.custom-percent:has(input:checked)
+				label.custom-percent:has(input[type='radio']:checked) {
+					span {
+						.hidden;
+					}
+
+					input[type='radio'] {
+						.hidden;
+					}
+
+					input.custom-percent-input {
+						.percent-field();
+					}
+
+					input.custom-percent-input::placeholder {
+						color: var(--Dark-grayish-cyan);
+					}
+				}
+			}
+		}
+	}
+
+	section.output {
+		background-color: var(--Very-dark-cyan);
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		padding: 1rem;
+
+		.output-fields {
+			// background-color: chocolate;
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: column;
+			row-gap: 1rem;
+
+			.field {
+				// outline: solid;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.field-name {
+					display: flex;
+					flex-direction: column;
+					font-size: medium;
+					font-weight: bold;
+
+					.first-line {
+						color: var(--White);
+					}
+
+					.second-line {
+						color: var(--Grayish-cyan);
+					}
+				}
+
+				.sum {
+					color: var(--Strong-cyan);
+					font-size: xx-large;
+					font-weight: bold;
+				}
+			}
+		}
+
+		button[type='reset'] {
+			.rounded-block(100%);
+			background-color: var(--Strong-cyan);
+			color: var(--Very-dark-cyan);
+			font-size: x-large;
+			font-weight: bold;
+			justify-content: center;
+			margin-top: auto;
+		}
+
+		button[type='reset']:where(:focus, :hover) {
+			background-color: var(--Light-grayish-cyan);
+			cursor: pointer;
+		}
+	}
+}

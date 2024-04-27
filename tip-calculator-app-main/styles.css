@@ -1,0 +1,483 @@
+@import 'reset.css';
+@import 'hide-spin-control.css';
+@font-face {
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dNIFZifjKcF5UAWdDRYER8QA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dSIFZifjKcF5UAWdDRYERE_FeaGw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRUEY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dMIFZifjKcF5UAWdDRaPpZYFI.ttf) format('truetype');
+}
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+.hidden {
+  display: none;
+}
+html {
+  inline-size: 100%;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+body {
+  inline-size: 100%;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-grayish-cyan);
+}
+#input-form > button[type='submit'] {
+  inline-size: 0;
+  block-size: 0;
+  visibility: collapse;
+}
+/* horizontal */
+@media (min-width: 1024px) {
+  header {
+    position: relative;
+    top: -3rem;
+  }
+  main {
+    inline-size: 38rem;
+    block-size: 20rem;
+    background-color: white;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+  }
+  section {
+    inline-size: 50%;
+    block-size: 100%;
+    border-radius: 0.5rem;
+  }
+  section.input {
+    padding-right: 1.4rem;
+  }
+  section.input form {
+    inline-size: 100%;
+    block-size: 100%;
+    min-inline-size: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: medium;
+  }
+  section.input form label:has(input[type='number']) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  section.input form label:has(input[type='number']) > .label-and-error {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.input form label:has(input[type='number']) > .label-and-error > .error-message {
+    color: red;
+  }
+  section.input form label:has(input[type='number']) input[type='number'] {
+    border-style: none;
+    inline-size: 100%;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    text-align: right;
+    padding-right: 0.6rem;
+    background-color: var(--Light-grayish-cyan);
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+  }
+  section.input form label:has(input[type='number']) input[type='number']:focus {
+    outline-color: var(--Strong-cyan);
+    outline-style: solid;
+    outline-width: 0.1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+  }
+  section.input form label:has(input[type='number']) input[name='bill-sum'] {
+    background-image: url(images/icon-dollar.svg);
+  }
+  section.input form label:has(input[type='number']) input[name='number-people'] {
+    background-image: url(images/icon-person.svg);
+  }
+  section.input form fieldset {
+    border-style: none;
+  }
+  section.input form fieldset legend {
+    margin-bottom: 0.5rem;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.input form fieldset legend > .error-message {
+    color: red;
+  }
+  section.input form fieldset ul {
+    inline-size: 100%;
+    block-size: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+  section.input form fieldset input[type='radio'] {
+    display: none;
+  }
+  section.input form fieldset label.predefined-percent {
+    border-style: none;
+    inline-size: 5rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+    background-color: var(--Very-dark-cyan);
+    color: white;
+  }
+  section.input form fieldset label.predefined-percent:has(input:checked) {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  }
+  section.input form fieldset label.custom-percent {
+    border-style: none;
+    inline-size: 5rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+  }
+  section.input form fieldset label.custom-percent span {
+    border-style: none;
+    inline-size: 5rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+  }
+  section.input form fieldset label.custom-percent input.custom-percent-input {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) span {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input[type='radio'] {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input.custom-percent-input {
+    border-style: none;
+    inline-size: 5rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input.custom-percent-input::placeholder {
+    color: var(--Dark-grayish-cyan);
+  }
+  section.output {
+    background-color: var(--Very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    padding: 1.7rem;
+  }
+  section.output .output-fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  section.output .output-fields .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.output .output-fields .field .field-name {
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    font-weight: bold;
+  }
+  section.output .output-fields .field .field-name .first-line {
+    color: var(--White);
+  }
+  section.output .output-fields .field .field-name .second-line {
+    color: var(--Grayish-cyan);
+  }
+  section.output .output-fields .field .sum {
+    color: var(--Strong-cyan);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  section.output button[type='reset'] {
+    border-style: none;
+    inline-size: 100%;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: auto;
+  }
+  section.output button[type='reset']:where(:focus, :hover) {
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    inline-size: 16rem;
+  }
+  header {
+    position: relative;
+    top: -1rem;
+  }
+  main {
+    inline-size: 16rem;
+    background-color: white;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-radius: 1rem;
+  }
+  section {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+  }
+  section.input form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: medium;
+  }
+  section.input form label:has(input[type='number']) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  section.input form label:has(input[type='number']) > .label-and-error {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.input form label:has(input[type='number']) > .label-and-error > .error-message {
+    color: red;
+  }
+  section.input form label:has(input[type='number']) input[type='number'] {
+    border-style: none;
+    inline-size: 100%;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    text-align: right;
+    padding-right: 0.6rem;
+    background-color: var(--Light-grayish-cyan);
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+  }
+  section.input form label:has(input[type='number']) input[type='number']:focus {
+    outline-color: var(--Strong-cyan);
+    outline-style: solid;
+    outline-width: 0.1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+  }
+  section.input form label:has(input[type='number']) input[name='bill-sum'] {
+    background-image: url(images/icon-dollar.svg);
+  }
+  section.input form label:has(input[type='number']) input[name='number-people'] {
+    background-image: url(images/icon-person.svg);
+  }
+  section.input form fieldset {
+    border-style: none;
+  }
+  section.input form fieldset legend {
+    margin-bottom: 0.5rem;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section.input form fieldset legend > .error-message {
+    color: red;
+  }
+  section.input form fieldset ul {
+    inline-size: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.6rem;
+    justify-items: center;
+    align-items: center;
+  }
+  section.input form fieldset input[type='radio'] {
+    display: none;
+  }
+  section.input form fieldset label.predefined-percent {
+    border-style: none;
+    inline-size: 6rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+    background-color: var(--Very-dark-cyan);
+    color: white;
+  }
+  section.input form fieldset label.predefined-percent:has(input:checked) {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  }
+  section.input form fieldset label.custom-percent {
+    border-style: none;
+    inline-size: 6rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+  }
+  section.input form fieldset label.custom-percent span {
+    border-style: none;
+    inline-size: 6rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+    text-align: center;
+  }
+  section.input form fieldset label.custom-percent input.custom-percent-input {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) span {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input[type='radio'] {
+    display: none;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input.custom-percent-input {
+    border-style: none;
+    inline-size: 6rem;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    justify-content: center;
+  }
+  section.input form fieldset label.custom-percent:has(input[type='radio']:checked) input.custom-percent-input::placeholder {
+    color: var(--Dark-grayish-cyan);
+  }
+  section.output {
+    background-color: var(--Very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+  section.output .output-fields {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  section.output .output-fields .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.output .output-fields .field .field-name {
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    font-weight: bold;
+  }
+  section.output .output-fields .field .field-name .first-line {
+    color: var(--White);
+  }
+  section.output .output-fields .field .field-name .second-line {
+    color: var(--Grayish-cyan);
+  }
+  section.output .output-fields .field .sum {
+    color: var(--Strong-cyan);
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  section.output button[type='reset'] {
+    border-style: none;
+    inline-size: 100%;
+    block-size: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: auto;
+  }
+  section.output button[type='reset']:where(:focus, :hover) {
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+  }
+}

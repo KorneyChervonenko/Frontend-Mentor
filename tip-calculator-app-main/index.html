@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Tip calculator app</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script>
+			less = { env: 'development' };
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<!-- LOGO -->
+			<img src="images/logo.svg" alt="splitter logo" />
+		</header>
+		<main>
+			<section class="input">
+				<form id="input-form" novalidate>
+					<label>
+						<div class="label-and-error">Bill<span class="error-message"></span></div>
+						<input name="bill-sum" type="number" placeholder="0" min="0" step="0.01" required />
+					</label>
+
+					<fieldset>
+						<legend>Select Tip %<span class="error-message"></span></legend>
+						<ul>
+							<li>
+								<label class="predefined-percent">5%<input name="percent" type="radio" value="5" /></label>
+							</li>
+							<li>
+								<label class="predefined-percent">10%<input name="percent" type="radio" value="10" /></label>
+							</li>
+							<li>
+								<label class="predefined-percent">15%<input name="percent" type="radio" value="15" /></label>
+							</li>
+							<li>
+								<label class="predefined-percent">25%<input name="percent" type="radio" value="25" /></label>
+							</li>
+							<li>
+								<label class="predefined-percent">50%<input name="percent" type="radio" value="50" /></label>
+							</li>
+							<li>
+								<label class="custom-percent">
+									<span>Custom</span>
+									<input name="percent" type="radio" value="custom" />
+									<input class="custom-percent-input" name="percent" type="number" min="0" placeholder="Custom" />
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<label>
+						<div class="label-and-error">Number of People<span class="error-message"></span></div>
+						<input name="number-people" type="number" placeholder="0" min="1" required />
+					</label>
+
+					<!-- <button type="submit" style="visibility: hidden"></button> -->
+					<button type="submit"></button>
+				</form>
+			</section>
+
+			<section class="output">
+				<div class="output-fields">
+					<div class="field tip-amount">
+						<div class="field-name">
+							<div class="first-line">Tip Amount</div>
+							<div class="second-line">/ person</div>
+						</div>
+						<div class="sum">$0.00</div>
+					</div>
+					<div class="field total">
+						<div class="field-name">
+							<div class="first-line">Total</div>
+							<div class="second-line">/ person</div>
+						</div>
+						<div class="sum">$0.00</div>
+					</div>
+				</div>
+				<button type="reset" form="input-form">RESET</button>
+			</section>
+		</main>
+	</body>
+</html>
