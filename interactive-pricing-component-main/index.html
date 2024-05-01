@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Interactive pricing component</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
+		<!-- <script>less = {env: 'development',};</script> -->
+		<!-- <script src="less.min.js" type="text/javascript"></script> -->
+		<!-- <script src="less.js" type="text/javascript"></script> -->
+		<!-- <script>less.watch();</script> -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Simple, traffic-based pricing</h1>
+			<p>Sign-up for our 30-day trial. No credit card required.</p>
+		</header>
+		<main>
+			<form>
+				<div class="order-volume">
+					<span>100K PAGEVIEWS</span>
+					<input type="range" name="month-number" />
+					<span><b>$16.00</b>/month</span>
+				</div>
+
+				<div class="billing-type">
+					<span>Monthly Billing</span>
+					<label>
+						<input type="checkbox" />
+						<span class="toggle"></span>
+					</label>
+					<span>Yearly Billing</span>
+					<span>
+						<!-- 25% discount -->
+					</span>
+				</div>
+
+				<hr />
+
+				<div class="start-button">
+					<ul>
+						<li>Unlimited websites</li>
+						<li>100% data ownership</li>
+						<li>Email reports</li>
+					</ul>
+					<button type="submit">Start my trial</button>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
