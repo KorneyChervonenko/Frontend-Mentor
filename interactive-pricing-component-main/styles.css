@@ -77,6 +77,10 @@ html body {
   background-size: contain;
   inline-size: 100%;
   block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 640px) {
   html body {
@@ -86,7 +90,6 @@ html body {
   html header {
     inline-size: 36rem;
     block-size: 11rem;
-    margin: auto;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
@@ -105,7 +108,6 @@ html body {
     inline-size: 36rem;
     block-size: 26rem;
     border-radius: 1rem;
-    margin: auto;
     box-shadow: 0px 5px 15px 0px var(--Grayish-Blue);
   }
   html main form {
@@ -135,6 +137,7 @@ html body {
   }
   html main form .order-volume .slider-runnable-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -144,8 +147,9 @@ html body {
   }
   html main form .order-volume .slider-range-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
@@ -160,10 +164,12 @@ html body {
   }
   html main form .order-volume input[type='range'] {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
   }
   html main form .order-volume input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -173,8 +179,9 @@ html body {
   }
   html main form .order-volume input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
@@ -189,6 +196,7 @@ html body {
   }
   html main form .order-volume input[type='range']::-moz-range-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -198,8 +206,9 @@ html body {
   }
   html main form .order-volume input[type='range']::-moz-range-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
@@ -326,7 +335,6 @@ html body {
   html header {
     inline-size: 22rem;
     block-size: 16rem;
-    margin: auto;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
@@ -354,7 +362,6 @@ html body {
     inline-size: 22rem;
     block-size: 32rem;
     border-radius: 1rem;
-    margin: auto;
     box-shadow: 0px 5px 15px 0px var(--Grayish-Blue);
   }
   html main form {
@@ -382,6 +389,7 @@ html body {
   }
   html main form .order-volume .slider-runnable-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -391,8 +399,9 @@ html body {
   }
   html main form .order-volume .slider-range-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
@@ -407,10 +416,12 @@ html body {
   }
   html main form .order-volume input[type='range'] {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
   }
   html main form .order-volume input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -420,8 +431,9 @@ html body {
   }
   html main form .order-volume input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
@@ -436,6 +448,7 @@ html body {
   }
   html main form .order-volume input[type='range']::-moz-range-track {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     inline-size: 100%;
@@ -445,8 +458,9 @@ html body {
   }
   html main form .order-volume input[type='range']::-moz-range-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    cursor: pointer;
+    cursor: grab;
     inline-size: 2.6rem;
     block-size: 2.6rem;
     border-radius: 2.6rem;
