@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Social media dashboard with theme switcher</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>Social Media Dashboard</h1>
+				Total Followers: 23,004
+			</div>
+			<hr />
+			<div class="toggle-switch">
+				<!-- Dark \ Light Mode -->
+				<span class="toggle-label"></span>
+				<label>
+					<!-- <span class="toggle-label"></span> -->
+					<input type="checkbox" aria-checked="false" aria-label="color theme toggle switch" />
+					<span class="toggle-lever"></span>
+				</label>
+			</div>
+		</header>
+		<main>
+			<div class="followers">
+				<div class="social-media-data">
+					<div class="nickname">
+						<img src="images/icon-facebook.svg" alt="facebook logo" />
+						@nathanf
+					</div>
+					<div class="number-total">
+						1987
+						<p>FOLLOWERS</p>
+					</div>
+
+					<div class="changes-number-total">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>12 Today</p>
+					</div>
+				</div>
+
+				<div class="social-media-data">
+					<div class="nickname">
+						<img src="images/icon-twitter.svg" alt="twitter logo" />
+						@nathanf
+					</div>
+
+					<div class="number-total">
+						1044
+						<p>FOLLOWERS</p>
+					</div>
+
+					<div class="changes-number-total">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>99 Today</p>
+					</div>
+				</div>
+
+				<div class="social-media-data">
+					<div class="nickname">
+						<img src="images/icon-instagram.svg" alt="instagram logo" />
+						@realnathanf
+					</div>
+					<div class="number-total">
+						11k
+						<p>FOLLOWERS</p>
+					</div>
+
+					<div class="changes-number-total">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>1099 Today</p>
+					</div>
+				</div>
+
+				<div class="social-media-data">
+					<div class="nickname">
+						<img src="images/icon-youtube.svg" alt="youtube logo" />
+						Nathan F.
+					</div>
+					<div class="number-total">
+						8239
+						<p>SUBSCRIBERS</p>
+					</div>
+					<div class="changes-number-total">
+						<img src="images/icon-down.svg" alt="down arrow" />
+						<p>144 Today</p>
+					</div>
+				</div>
+			</div>
+			<h2>Overview - Today</h2>
+			<div class="interactions">
+				<div class="action-data">
+					<div class="action-type">Page Views</div>
+					<img src="images/icon-facebook.svg" alt="facebook logo" />
+					<div class="number-today">87</div>
+					<div class="changes-percent">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>3%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Likes</div>
+					<img src="images/icon-facebook.svg" alt="facebook logo" />
+					<div class="number-today">52</div>
+					<div class="changes-percent">
+						<img src="images/icon-down.svg" alt="down arrow" />
+						<p>2%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Likes</div>
+					<img src="images/icon-instagram.svg" alt="instagram logo" />
+					<div class="number-today">5462</div>
+					<div class="changes-percent">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>2257%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Profile Views</div>
+					<img src="images/icon-instagram.svg" alt="instagram logo" />
+					<div class="number-today">52k</div>
+					<div class="changes-percent">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>1375%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Retweets</div>
+					<img src="images/icon-twitter.svg" alt="twitter logo" />
+					<div class="number-today">117</div>
+					<div class="changes-percent">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>303%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Likes</div>
+					<img src="images/icon-twitter.svg" alt="twitter logo" />
+					<div class="number-today">507</div>
+					<div class="changes-percent">
+						<img src="images/icon-up.svg" alt="up arrow" />
+						<p>553%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Likes</div>
+					<img src="images/icon-youtube.svg" alt="youtube logo" />
+					<div class="number-today">107</div>
+					<div class="changes-percent">
+						<img src="images/icon-down.svg" alt="down arrow" />
+						<p>19%</p>
+					</div>
+				</div>
+
+				<div class="action-data">
+					<div class="action-type">Total views</div>
+					<img src="images/icon-youtube.svg" alt="youtube logo" />
+					<div class="number-today">1407</div>
+					<div class="changes-percent">
+						<img src="images/icon-down.svg" alt="down arrow" />
+						<p>12%</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

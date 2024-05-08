@@ -1,0 +1,530 @@
+@import 'reset.css';
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYMZg.ttf) format('truetype');
+}
+.light-theme {
+  --main-bg-color: hsl(0, 0%, 100%);
+  --main-top-bg-color: hsl(225, 100%, 98%);
+  --card-bg-color: hsl(227, 47%, 96%);
+  --card-active-bg: hsl(228, 34%, 90%);
+  --pale-text-color: hsl(228, 12%, 44%);
+  --text-color: hsl(230, 17%, 14%);
+  --toggle-lever-color: hsl(0, 0%, 100%);
+}
+.dark-theme {
+  --main-bg-color: hsl(230, 17%, 14%);
+  --main-top-bg-color: hsl(232, 19%, 15%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --card-active-bg: hsl(231, 35%, 37%);
+  --pale-text-color: hsl(228, 34%, 66%);
+  --text-color: hsl(0, 0%, 100%);
+  --toggle-lever-color: hsl(230, 17%, 14%);
+}
+:root {
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  --Facebook-border-color: hsl(208, 92%, 53%);
+  --Twitter-border-color: hsl(203, 89%, 53%);
+  --Instagram-border-color: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+  --YouTube-border-color: hsl(348, 97%, 39%);
+  --toggle-bg-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  --main-bg-color: hsl(0, 0%, 100%);
+  --main-top-bg-color: hsl(225, 100%, 98%);
+  --card-bg-color: hsl(227, 47%, 96%);
+  --card-active-bg: hsl(228, 34%, 90%);
+  --pale-text-color: hsl(228, 12%, 44%);
+  --text-color: hsl(230, 17%, 14%);
+  --toggle-lever-color: hsl(0, 0%, 100%);
+}
+:root:has(input:checked) {
+  --main-bg-color: hsl(230, 17%, 14%);
+  --main-top-bg-color: hsl(232, 19%, 15%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --card-active-bg: hsl(231, 35%, 37%);
+  --pale-text-color: hsl(228, 34%, 66%);
+  --text-color: hsl(0, 0%, 100%);
+  --toggle-lever-color: hsl(230, 17%, 14%);
+}
+.hidden {
+  display: none;
+}
+html {
+  inline-size: 100%;
+  block-size: 100%;
+}
+@media (min-width: 641px) {
+  body {
+    max-inline-size: 79rem;
+    margin: 1rem auto;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+  }
+  body header {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pale-text-color);
+    font-weight: bold;
+  }
+  body header h1 {
+    color: var(--text-color);
+  }
+  body header hr {
+    visibility: collapse;
+  }
+  body header .toggle-switch {
+    inline-size: 10rem;
+    block-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header .toggle-switch .toggle-label::before {
+    content: 'Light Mode';
+  }
+  body header .toggle-switch label {
+    border-style: none;
+    inline-size: 3.3rem;
+    block-size: 1.5rem;
+    border-radius: 1.6rem;
+    background-image: var(--toggle-bg-image);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body header .toggle-switch label input {
+    appearance: none;
+  }
+  body header .toggle-switch label .toggle-lever {
+    border-style: none;
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+    border-radius: 1.2rem;
+    background-color: var(--toggle-lever-color);
+    margin: 2px;
+  }
+  body header .toggle-switch label:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  body header .toggle-switch label:has(input:checked) {
+    justify-content: flex-end;
+  }
+  body header .toggle-switch:has(input:checked) .toggle-label::before {
+    content: 'Dark Mode';
+  }
+  body main .followers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
+    column-gap: 2rem;
+    justify-content: center;
+  }
+  body main .followers .social-media-data {
+    border-style: none;
+    inline-size: 18rem;
+    block-size: 15rem;
+    border-radius: 0.4rem;
+    background-color: var(--card-bg-color);
+    border-top: solid;
+    border-top-width: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  body main .followers .social-media-data .nickname {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    font-size: small;
+    font-weight: 500;
+    color: var(--pale-text-color);
+  }
+  body main .followers .social-media-data .number-total {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  body main .followers .social-media-data .number-total p {
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+    color: var(--pale-text-color);
+  }
+  body main .followers .social-media-data .changes-number-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
+    font-size: small;
+    font-weight: bold;
+  }
+  body main .followers .social-media-data .changes-number-total img {
+    block-size: 0.3rem;
+  }
+  body main .followers .social-media-data .changes-number-total img[alt='up arrow'] + p {
+    color: var(--Lime-Green);
+  }
+  body main .followers .social-media-data .changes-number-total img[alt='down arrow'] + p {
+    color: var(--Bright-Red);
+  }
+  body main .followers .social-media-data:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--card-active-bg);
+  }
+  body main .followers .social-media-data:has(img[alt='facebook logo']) {
+    border-top-color: var(--Facebook-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='twitter logo']) {
+    border-top-color: var(--Twitter-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='instagram logo']) {
+    border-image: var(--Instagram-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='youtube logo']) {
+    border-top-color: var(--YouTube-border-color);
+  }
+  body main h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--pale-text-color);
+  }
+  body main .interactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
+    column-gap: 2rem;
+  }
+  body main .interactions .action-data {
+    border-style: none;
+    inline-size: 18rem;
+    block-size: 9rem;
+    border-radius: 0.5rem;
+    background-color: var(--card-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  body main .interactions .action-data .action-type {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-weight: 600;
+    color: var(--pale-text-color);
+  }
+  body main .interactions .action-data img {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  body main .interactions .action-data .number-today {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    font-size: xx-large;
+    font-weight: 700;
+  }
+  body main .interactions .action-data .changes-percent {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.3rem;
+    font-size: small;
+    font-weight: 700;
+  }
+  body main .interactions .action-data .changes-percent img {
+    block-size: 0.3rem;
+  }
+  body main .interactions .action-data .changes-percent img[alt='up arrow'] + p {
+    color: var(--Lime-Green);
+  }
+  body main .interactions .action-data .changes-percent img[alt='down arrow'] + p {
+    color: var(--Bright-Red);
+  }
+  body main .interactions .action-data:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--card-active-bg);
+  }
+}
+@media (max-width: 640px) {
+  body {
+    max-inline-size: 27rem;
+    margin: 1rem auto;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+  }
+  body header {
+    block-size: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    color: var(--pale-text-color);
+    font-weight: bold;
+  }
+  body header h1 {
+    color: var(--text-color);
+  }
+  body header hr {
+    block-size: 1px;
+    border-style: none;
+    background-color: var(--pale-text-color);
+  }
+  body header .toggle-switch {
+    block-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body header .toggle-switch .toggle-label::before {
+    content: 'Light Mode';
+  }
+  body header .toggle-switch label {
+    border-style: none;
+    inline-size: 3.3rem;
+    block-size: 1.5rem;
+    border-radius: 1.6rem;
+    background-image: var(--toggle-bg-image);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body header .toggle-switch label input {
+    appearance: none;
+  }
+  body header .toggle-switch label .toggle-lever {
+    border-style: none;
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+    border-radius: 1.2rem;
+    background-color: var(--toggle-lever-color);
+    margin: 2px;
+  }
+  body header .toggle-switch label:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  body header .toggle-switch label:has(input:checked) {
+    justify-content: flex-end;
+  }
+  body header .toggle-switch:has(input:checked) .toggle-label::before {
+    content: 'Dark Mode';
+  }
+  body main .followers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
+    column-gap: 2rem;
+    justify-content: center;
+  }
+  body main .followers .social-media-data {
+    border-style: none;
+    inline-size: 23rem;
+    block-size: 15rem;
+    border-radius: 0.4rem;
+    background-color: var(--card-bg-color);
+    border-top: solid;
+    border-top-width: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  body main .followers .social-media-data .nickname {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    font-size: small;
+    font-weight: 500;
+    color: var(--pale-text-color);
+  }
+  body main .followers .social-media-data .number-total {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  body main .followers .social-media-data .number-total p {
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+    color: var(--pale-text-color);
+  }
+  body main .followers .social-media-data .changes-number-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
+    font-size: small;
+    font-weight: bold;
+  }
+  body main .followers .social-media-data .changes-number-total img {
+    block-size: 0.3rem;
+  }
+  body main .followers .social-media-data .changes-number-total img[alt='up arrow'] + p {
+    color: var(--Lime-Green);
+  }
+  body main .followers .social-media-data .changes-number-total img[alt='down arrow'] + p {
+    color: var(--Bright-Red);
+  }
+  body main .followers .social-media-data:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--card-active-bg);
+  }
+  body main .followers .social-media-data:has(img[alt='facebook logo']) {
+    border-top-color: var(--Facebook-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='twitter logo']) {
+    border-top-color: var(--Twitter-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='instagram logo']) {
+    border-image: var(--Instagram-border-color);
+  }
+  body main .followers .social-media-data:has(img[alt='youtube logo']) {
+    border-top-color: var(--YouTube-border-color);
+  }
+  body main h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--pale-text-color);
+  }
+  body main .interactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
+    column-gap: 2rem;
+  }
+  body main .interactions .action-data {
+    border-style: none;
+    inline-size: 23rem;
+    block-size: 9rem;
+    border-radius: 0.5rem;
+    background-color: var(--card-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  body main .interactions .action-data .action-type {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-weight: 600;
+    color: var(--pale-text-color);
+  }
+  body main .interactions .action-data img {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  body main .interactions .action-data .number-today {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    font-size: xx-large;
+    font-weight: 700;
+  }
+  body main .interactions .action-data .changes-percent {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.3rem;
+    font-size: small;
+    font-weight: 700;
+  }
+  body main .interactions .action-data .changes-percent img {
+    block-size: 0.3rem;
+  }
+  body main .interactions .action-data .changes-percent img[alt='up arrow'] + p {
+    color: var(--Lime-Green);
+  }
+  body main .interactions .action-data .changes-percent img[alt='down arrow'] + p {
+    color: var(--Bright-Red);
+  }
+  body main .interactions .action-data:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--card-active-bg);
+  }
+}
