@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Fylo data storage component</title>
+		<link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<!-- <script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<img src="images/logo.svg" alt="fylo logo" />
+			<menu>
+				<li>
+					<button type="button"><img src="images/icon-document.svg" alt="document icon" /></button>
+				</li>
+				<li>
+					<button type="button"><img src="images/icon-folder.svg" alt="folder icon" /></button>
+				</li>
+				<li>
+					<button type="button"><img src="images/icon-upload.svg" alt="upload icon" /></button>
+				</li>
+			</menu>
+		</header>
+		<main>
+			<p>You’ve used <span>815 GB</span> of your storage</p>
+			<div class="progress">
+				<meter min="0" value="815" max="1000" title="GB"></meter>
+				<div class="range">
+					<span>0 GB</span>
+					<span>1000 GB</span>
+				</div>
+			</div>
+			<div class="popup"><span>185</span>GB LEFT</div>
+		</main>
+	</body>
+</html>

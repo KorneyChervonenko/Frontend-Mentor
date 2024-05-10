@@ -1,0 +1,410 @@
+@import 'reset.css';
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjNPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4ejMPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4TbMPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4VrMPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4bbLPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4Y_LPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4ejLPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4cHLPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao4CP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoooCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVsEpYCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pYCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtapYCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpYCP.ttf) format('truetype');
+}
+:root {
+  --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+* {
+  outline-width: 1px;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 66rem) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+  }
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 2rem;
+  }
+  body header {
+    background-color: var(--Dark-Blue);
+    border-style: none;
+    inline-size: 25rem;
+    block-size: 14rem;
+    border-radius: 1rem;
+    border-top-right-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 3rem;
+  }
+  body header > img {
+    inline-size: 10rem;
+  }
+  body header > menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 1.4rem;
+  }
+  body header > menu > li {
+    background-color: var(--Very-Dark-Blue);
+    border-style: none;
+    inline-size: 3.4rem;
+    block-size: 3.4rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body header > menu > li > button {
+    background-color: var(--Dark-Blue);
+    border-style: none;
+  }
+  body main {
+    background-color: var(--Dark-Blue);
+    color: var(--Pale-Blue);
+    border-style: none;
+    inline-size: 38.5rem;
+    block-size: 11rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 3rem;
+    position: relative;
+  }
+  body main > p span {
+    font-size: medium;
+    font-weight: bold;
+  }
+  body main > .progress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  body main > .progress > meter {
+    border-radius: 1rem;
+    background: none;
+    background-color: var(--Very-Dark-Blue);
+    inline-size: 100%;
+    block-size: 1.4rem;
+    padding: 2px;
+  }
+  body main > .progress > meter::-webkit-meter-bar {
+    background-color: var(--Very-Dark-Blue);
+    border-style: none;
+    block-size: 1.4rem;
+    padding: 2px;
+  }
+  body main > .progress > meter::-webkit-meter-optimum-value {
+    border-radius: 1rem;
+    background-image: var(--Gradient);
+  }
+  body main > .progress > meter::-moz-meter-bar {
+    background-image: var(--Gradient);
+    border-radius: 1rem;
+  }
+  body main > .progress > .range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: bold;
+  }
+  body main .popup {
+    position: absolute;
+    right: 3rem;
+    top: -3rem;
+    border-style: none;
+    inline-size: 13.5rem;
+    block-size: 5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--Grayish-Blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: bold;
+    font-size: small;
+  }
+  body main .popup > span {
+    color: black;
+    font-size: 3rem;
+  }
+  body main .popup::after {
+    position: absolute;
+    right: -0.2rem;
+    bottom: -2.5rem;
+    content: '◥';
+    font-size: 3rem;
+    color: white;
+  }
+}
+@media (max-width: 65.9rem) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 1rem;
+  }
+  body header {
+    background-color: var(--Dark-Blue);
+    border-style: none;
+    inline-size: 23rem;
+    block-size: 14.5rem;
+    border-radius: 1rem;
+    border-top-right-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 3rem;
+  }
+  body header > img {
+    inline-size: 10rem;
+  }
+  body header > menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 1.4rem;
+  }
+  body header > menu > li {
+    background-color: var(--Very-Dark-Blue);
+    border-style: none;
+    inline-size: 3.4rem;
+    block-size: 3.4rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body header > menu > li > button {
+    background-color: var(--Dark-Blue);
+    border-style: none;
+  }
+  body main {
+    background-color: var(--Dark-Blue);
+    color: var(--Pale-Blue);
+    border-style: none;
+    inline-size: 23rem;
+    block-size: 11.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 3rem;
+    position: relative;
+  }
+  body main > p span {
+    font-size: medium;
+    font-weight: bold;
+  }
+  body main > .progress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  body main > .progress > meter {
+    border-radius: 1rem;
+    background: none;
+    background-color: var(--Very-Dark-Blue);
+    inline-size: 100%;
+    block-size: 1.4rem;
+    padding: 2px;
+  }
+  body main > .progress > meter::-webkit-meter-bar {
+    background-color: var(--Very-Dark-Blue);
+    border-style: none;
+    block-size: 1.4rem;
+    padding: 2px;
+  }
+  body main > .progress > meter::-webkit-meter-optimum-value {
+    border-radius: 1rem;
+    background-image: var(--Gradient);
+  }
+  body main > .progress > meter::-moz-meter-bar {
+    background-image: var(--Gradient);
+    border-radius: 1rem;
+  }
+  body main > .progress > .range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: bold;
+  }
+  body main .popup {
+    position: absolute;
+    right: 5rem;
+    bottom: -3rem;
+    border-style: none;
+    inline-size: 13.5rem;
+    block-size: 5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--Grayish-Blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: bold;
+    font-size: small;
+  }
+  body main .popup > span {
+    color: black;
+    font-size: 3rem;
+  }
+}
