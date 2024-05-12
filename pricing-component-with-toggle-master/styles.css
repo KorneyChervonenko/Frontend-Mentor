@@ -1,0 +1,342 @@
+@import 'reset.css';
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
+}
+.annual-prices {
+  --price-basic: '19.99';
+  --price-prof: '24.99';
+  --price-master: '39.99';
+}
+.month-prices {
+  --price-basic: '199.99';
+  --price-prof: '249.99';
+  --price-master: '399.99';
+}
+:root {
+  --price-basic: '199.99';
+  --price-prof: '249.99';
+  --price-master: '399.99';
+  --Gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+:root:has(header > .toggle-switch > label > input:checked) {
+  --price-basic: '19.99';
+  --price-prof: '24.99';
+  --price-master: '39.99';
+}
+* {
+  outline-width: 1px;
+}
+.hidden {
+  display: none;
+}
+html {
+  inline-size: 100%;
+  block-size: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4.4rem;
+  background-color: var(--Very-Light-Grayish-Blue);
+  background-image: url(images/bg-bottom.svg), url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+  color: var(--Grayish-Blue);
+}
+body header {
+  block-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .toggle-switch {
+  inline-size: 16rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--Light-Grayish-Blue);
+}
+body header .toggle-switch label {
+  border-style: none;
+  inline-size: 3.6rem;
+  block-size: 2rem;
+  border-radius: 2rem;
+  background-image: var(--Gradient);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px;
+}
+body header .toggle-switch label input {
+  display: none;
+}
+body header .toggle-switch label .toggle-lever {
+  border-style: none;
+  inline-size: 1.6rem;
+  block-size: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: white;
+}
+body header .toggle-switch label:has(input:checked) {
+  justify-content: flex-end;
+}
+body header .toggle-switch label:where(:hover, :focus) {
+  cursor: pointer;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section {
+  background-color: white;
+  box-shadow: 0 10px 50px 0 #cccccc;
+  border-style: none;
+  inline-size: 23rem;
+  block-size: 30rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+}
+body main section > h2 {
+  font-size: large;
+}
+body main section > .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: var(--Dark-Grayish-Blue);
+}
+body main section > .price::after {
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--Dark-Grayish-Blue);
+}
+body main section > ul {
+  inline-size: 100%;
+  block-size: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body main section > ul > hr {
+  block-size: 1px;
+  border: none;
+  background-color: var(--Light-Grayish-Blue);
+}
+body main section > ul > li {
+  text-align: center;
+}
+body main section > button {
+  border-style: none;
+  inline-size: 19rem;
+  block-size: 3rem;
+  border-radius: 0.5rem;
+  font-size: small;
+  letter-spacing: 0.1em;
+}
+body main section > button:where(:hover, :focus) {
+  cursor: pointer;
+  outline-style: solid;
+}
+body main section:first-of-type > .price::after {
+  content: var(--price-basic);
+}
+body main section:nth-of-type(2) {
+  background-image: var(--Gradient);
+  color: white;
+}
+body main section:nth-of-type(2) > .price {
+  color: white;
+}
+body main section:nth-of-type(2) > .price::after {
+  content: var(--price-prof);
+  color: white;
+}
+body main section:nth-of-type(2) > button {
+  background-image: none;
+  background-color: white;
+  color: var(--Grayish-Blue);
+  margin-bottom: 1rem;
+}
+body main section:nth-of-type(2) > button:where(:hover, :focus) {
+  background-image: var(--Gradient);
+  color: white;
+  outline-color: white;
+}
+body main section:last-of-type > .price::after {
+  content: var(--price-master);
+}
+body main section:nth-of-type(odd) > button {
+  background-image: var(--Gradient);
+  color: white;
+}
+body main section:nth-of-type(odd) > button:where(:hover, :focus) {
+  background-image: none;
+  background-color: inherit;
+  color: var(--Grayish-Blue);
+  outline-color: var(--Grayish-Blue);
+}
+@media (min-width: 70.1rem) {
+  body {
+    inline-size: 100%;
+    block-size: 100%;
+    justify-content: center;
+  }
+  body main {
+    flex-direction: row;
+  }
+  body main section:nth-of-type(2) {
+    block-size: 33rem;
+  }
+}
+@media (max-width: 70rem) {
+  body header {
+    margin-top: 3rem;
+  }
+  body main {
+    margin-bottom: 3rem;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}

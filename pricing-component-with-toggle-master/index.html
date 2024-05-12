@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Pricing component with toggle</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Our Pricing</h1>
+			<div class="toggle-switch">
+				Annually
+				<label>
+					<input type="checkbox" aria-label="price interval selector" />
+					<span class="toggle-lever"></span>
+				</label>
+				Monthly
+			</div>
+		</header>
+		<main>
+			<section>
+				<h2>Basic</h2>
+				<div class="price">$</div>
+				<ul>
+					<hr />
+					<li>500 GB Storage</li>
+					<hr />
+					<li>2 Users Allowed</li>
+					<hr />
+					<li>Send up to 3 GB</li>
+					<hr />
+				</ul>
+				<button type="button">LEARN MORE</button>
+			</section>
+
+			<section>
+				<h2>Professional</h2>
+				<div class="price">$</div>
+				<ul>
+					<hr />
+					<li>1 TB Storage</li>
+					<hr />
+					<li>5 Users Allowed</li>
+					<hr />
+					<li>Send up to 10 GB</li>
+					<hr />
+				</ul>
+				<button type="button">LEARN MORE</button>
+			</section>
+
+			<section>
+				<h2>Master</h2>
+				<div class="price">$</div>
+				<ul>
+					<hr />
+					<li>2 TB Storage</li>
+					<hr />
+					<li>10 Users Allowed</li>
+					<hr />
+					<li>Send up to 20 GB</li>
+					<hr />
+				</ul>
+				<button type="button">LEARN MORE</button>
+			</section>
+		</main>
+	</body>
+</html>
