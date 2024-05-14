@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<title>Frontend Mentor | Notifications page</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Notifications <span>3</span></h1>
+			<button type="button">Mark all as read</button>
+		</header>
+		<main>
+			<ul>
+				<li class="notification unread">
+					<img class="avatar" src="assets/images/avatar-mark-webber.webp" alt="some man photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Mark Webber</span>
+							<span class="action">reacted to your recent post</span>
+							<a>My first tournament today!</a>
+						</div>
+						<div class="time-lapse">1m ago</div>
+					</div>
+				</li>
+
+				<li class="notification unread">
+					<img class="avatar" src="assets/images/avatar-angela-gray.webp" alt="some woman photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Angela Gray</span>
+							<span class="action">reacted to your recent post</span>
+							<a>My first tournament today!</a>
+						</div>
+						<div class="time-lapse">5m ago</div>
+					</div>
+				</li>
+
+				<li class="notification unread">
+					<img class="avatar" src="assets/images/avatar-jacob-thompson.webp" alt="some man photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Jacob Thompson</span>
+							<span class="action">has joined your group</span>
+							<a class="group-name">Chess Club</a>
+						</div>
+						<div class="time-lapse">1 day ago</div>
+					</div>
+				</li>
+
+				<li class="notification">
+					<img class="avatar" src="assets/images/avatar-rizky-hasanuddin.webp" alt="some man photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Rizky Hasanuddin</span>
+							<span class="action">sent you a private message</span>
+						</div>
+						<div class="time-lapse">5 days ago</div>
+						<div class="message">
+							Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having
+							lots of fun and improving my game.
+						</div>
+					</div>
+				</li>
+
+				<li class="notification">
+					<img class="avatar" src="assets/images/avatar-kimberly-smith.webp" alt="some woman photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Kimberly Smith</span>
+							<span class="action">commented on your picture</span>
+						</div>
+						<div class="time-lapse">1 week ago</div>
+					</div>
+					<img src="assets/images/image-chess.webp" alt="woman plays chess" />
+				</li>
+
+				<li class="notification">
+					<img class="avatar" src="assets/images/avatar-nathan-peterson.webp" alt="some man photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Nathan Peterson</span>
+							<span class="action">reacted to your recent post</span>
+							<a>5 end-game strategies to increase your win rate</a>
+						</div>
+						<div class="time-lapse">2 weeks ago</div>
+					</div>
+				</li>
+
+				<li class="notification">
+					<img class="avatar" src="assets/images/avatar-anna-kim.webp" alt="some woman photo" />
+					<div>
+						<div class="short-message">
+							<span class="username">Anna Kim</span>
+							<span class="action">left the group</span>
+							<a class="group-name">Chess Club</a>
+						</div>
+						<div class="time-lapse">2 weeks ago</div>
+					</div>
+				</li>
+			</ul>
+		</main>
+	</body>
+</html>
