@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+		<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- <script defer src="script.js"></script> -->
+	</head>
+	<body>
+		<header>
+			<img src="images/logo.svg" alt="snap logo" />
+
+			<nav class="nav-horizontal">
+				<menu class="navigations">
+					<li class="features">
+						<details name="dropdown-menu">
+							<summary>Features</summary>
+							<menu class="submenu">
+								<li>Todo List</li>
+								<li>Calendar</li>
+								<li>Reminders</li>
+								<li>Planning</li>
+							</menu>
+						</details>
+					</li>
+					<li class="company">
+						<details name="dropdown-menu">
+							<summary>Company</summary>
+							<menu class="submenu">
+								<li>History</li>
+								<li>Our Team</li>
+								<li>Blog</li>
+							</menu>
+						</details>
+					</li>
+					<li>Careers</li>
+					<li>About</li>
+				</menu>
+				<menu class="authorization">
+					<li>Login</li>
+					<li>Register</li>
+				</menu>
+			</nav>
+
+			<details class="hamburger">
+				<summary></summary>
+				<!-- <img src="images/icon-menu.svg" alt="hamburger icon" /> -->
+				<nav class="nav-vertical">
+					<menu class="navigations">
+						<li class="features">
+							<details name="dropdown-menu">
+								<summary>Features</summary>
+								<menu class="submenu">
+									<li>Todo List</li>
+									<li>Calendar</li>
+									<li>Reminders</li>
+									<li>Planning</li>
+								</menu>
+							</details>
+						</li>
+						<li class="company">
+							<details name="dropdown-menu">
+								<summary>Company</summary>
+								<menu class="submenu">
+									<li>History</li>
+									<li>Our Team</li>
+									<li>Blog</li>
+								</menu>
+							</details>
+						</li>
+						<li>Careers</li>
+						<li>About</li>
+					</menu>
+					<menu class="authorization">
+						<li>Login</li>
+						<li>Register</li>
+					</menu>
+				</nav>
+			</details>
+		</header>
+
+		<main>
+			<!-- <img src="images/image-hero-desktop.png" alt="hero photo" /> -->
+			<img alt="hero photo" />
+			<section class="promo">
+				<h1>Make remote work</h1>
+				<p>
+					Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+					productivity soar.
+				</p>
+				<button type="button">Learn more</button>
+				<ul class="clients-list">
+					<li><img src="images/client-databiz.svg" alt="databiz logo" /></li>
+					<li><img src="images/client-audiophile.svg" alt="audiophile logo" /></li>
+					<li><img src="images/client-meet.svg" alt="meet logo" /></li>
+					<li><img src="images/client-maker.svg" alt="maker logo" /></li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>
