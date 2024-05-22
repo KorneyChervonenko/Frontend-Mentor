@@ -1,0 +1,397 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+	--Light-Green: hsl(148, 38%, 91%);
+	--Green: hsl(169, 82%, 27%);
+	--Red: hsl(0, 66%, 56%);
+	--White: hsl(0, 0%, 100%);
+	--Medium-Grey: hsl(186, 15%, 59%);
+	--Dark-Grey: hsl(187, 24%, 22%);
+
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+}
+
+* {
+	outline-width: 1px;
+}
+
+.full-space() {
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.flex-block(@width:auto, @height:auto, @radius:0) {
+	border: none;
+	inline-size: @width;
+	block-size: @height;
+	border-radius: @radius;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle (@radius, @color) {
+	.flex-block(@radius, @radius, @radius);
+	background-color: @color;
+}
+
+input,
+textarea {
+	padding: 1rem;
+}
+
+.errIndicator {
+	outline-color: var(--Red);
+}
+
+:where(label, input, textarea, button):where(:focus, :hover) {
+	cursor: pointer;
+}
+
+// horizontal
+@media (min-width: 47.1rem) {
+	html {
+		.flex-block(100%, 100%);
+		background-color: var(--Light-Green);
+		// justify-content: unset;
+
+		body {
+			// outline-style: solid;
+			background-color: var(--White);
+			.flex-block(46rem, fit-content, 1rem);
+			align-items: flex-start;
+			padding: 2rem;
+
+			position: relative;
+
+			.success-msg {
+				outline-style: solid;
+				align-self: center;
+				position: absolute;
+				// top: -6rem;
+				z-index: 100;
+				background-color: var(--Dark-Grey);
+				color: var(--White);
+				.flex-block(fit-content, fit-content, inherit);
+				align-items: flex-start;
+				row-gap: 1rem;
+				padding: 1.6rem;
+
+				h2 {
+					.flex-block();
+					flex-direction: row;
+					column-gap: 0.5rem;
+					font-size: large;
+					letter-spacing: 0.03rem;
+				}
+			}
+
+			> h1 {
+				margin-block-end: 2rem;
+			}
+
+			> form {
+				// outline-style: solid;
+				.flex-block(100%);
+				align-items: flex-start;
+				row-gap: 1.7rem;
+
+				> fieldset.user-name {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					flex-direction: row;
+					column-gap: 1rem;
+
+					> label {
+						// outline-style: solid;
+						.flex-block(50%);
+						align-items: flex-start;
+						row-gap: 0.7rem;
+
+						> input {
+							outline-style: solid;
+							.flex-block(100%, 3.2rem, 0.5rem);
+						}
+					}
+				}
+
+				> label.email-input {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 0.7rem;
+
+					> input[type='email'] {
+						outline-style: solid;
+						.flex-block(100%, 3.2rem, 0.5rem);
+					}
+				}
+
+				> fieldset.query-type {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 1.2rem;
+					> legend {
+						margin-block-end: 1.2rem;
+					}
+					> div {
+						.flex-block(100%);
+						flex-direction: row;
+						column-gap: 1rem;
+
+						> label {
+							outline-style: solid;
+							// .flex-block(50%);
+							.flex-block(50%, 3.2rem, 0.5rem);
+							flex-direction: row;
+							justify-content: flex-start;
+
+							> input {
+								margin-inline-start: 1.5rem;
+								transform: scale(1.8);
+								accent-color: var(--Green);
+							}
+
+							> span {
+								margin-inline-start: 1.5rem;
+							}
+						}
+
+						> label:has(input:checked) {
+							background-color: var(--Light-Green);
+						}
+					}
+				}
+
+				label.request-message {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 0.7rem;
+
+					> textarea {
+						outline-style: solid;
+						.flex-block(100%, 6.4rem, 0.5rem);
+					}
+				}
+
+				label.consent-status {
+					// outline-style: solid;
+					margin-block-start: 1rem;
+					margin-block-end: 1rem;
+					.flex-block(100%);
+					row-gap: 0.7rem;
+					align-items: flex-start;
+					> div {
+						// outline-style: solid;
+						.flex-block(100%);
+						flex-direction: row;
+						justify-content: flex-start;
+						> input {
+							margin-inline-start: 0.3rem;
+							transform: scale(1.8);
+							accent-color: var(--Green);
+						}
+
+						> span {
+							margin-inline-start: 1.5rem;
+						}
+					}
+				}
+
+				> button[type='submit'] {
+					.flex-block(100%, 3.7rem, 0.5rem);
+					background-color: var(--Green);
+					color: var(--White);
+					font-size: large;
+					font-weight: bold;
+				}
+
+				.asterisk {
+					color: var(--Green);
+				}
+
+				.error-msg {
+					color: var(--Red);
+				}
+			}
+		}
+	}
+}
+
+// vertical
+@media (max-width: 47rem) {
+	html {
+		.flex-block(100%, 100%);
+		justify-content: unset;
+
+		background-color: var(--Light-Green);
+
+		body {
+			// outline-style: solid;
+			background-color: var(--White);
+			.flex-block(21.5rem, fit-content, 1rem);
+			align-items: flex-start;
+			padding: 1.6rem;
+			position: relative;
+
+			.success-msg {
+				outline-style: solid;
+				align-self: center;
+				position: absolute;
+				z-index: 100;
+
+				background-color: var(--Dark-Grey);
+				color: var(--White);
+				.flex-block(80%, fit-content, inherit);
+				align-items: flex-start;
+				row-gap: 1rem;
+				padding: 1.6rem;
+
+				h2 {
+					.flex-block();
+					flex-direction: row;
+					column-gap: 0.5rem;
+					font-size: large;
+					letter-spacing: 0.03rem;
+				}
+			}
+
+			> h1 {
+				margin-block-end: 2rem;
+			}
+
+			> form {
+				// outline-style: solid;
+				.flex-block(100%);
+				row-gap: 1.7rem;
+
+				> fieldset.user-name {
+					// background-color: cadetblue;
+					.flex-block(100%);
+					row-gap: 1.7rem;
+					align-items: flex-start;
+
+					> label {
+						// outline-style: solid;
+						.flex-block(100%);
+						align-items: flex-start;
+						row-gap: 0.7rem;
+
+						> input {
+							outline-style: solid;
+							.flex-block(100%, 3.2rem, 0.5rem);
+						}
+					}
+				}
+
+				> label.email-input {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 0.7rem;
+
+					> input[type='email'] {
+						outline-style: solid;
+						.flex-block(100%, 3.2rem, 0.5rem);
+					}
+				}
+
+				> fieldset.query-type {
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 0.7rem;
+
+					> legend {
+						margin-block-end: 1rem;
+					}
+					> div {
+						.flex-block(100%);
+						row-gap: 1rem;
+
+						> label {
+							outline-style: solid;
+							.flex-block(100%, 3.2rem, 0.5rem);
+							flex-direction: row;
+							justify-content: flex-start;
+
+							> input {
+								margin-inline-start: 1.5rem;
+								transform: scale(1.8);
+								accent-color: var(--Green);
+							}
+
+							> span {
+								margin-inline-start: 1.5rem;
+							}
+						}
+
+						> label:has(input:checked) {
+							background-color: var(--Light-Green);
+						}
+					}
+				}
+
+				label.request-message {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					row-gap: 0.7rem;
+
+					> textarea {
+						outline-style: solid;
+						.flex-block(100%, 15rem, 0.5rem);
+					}
+				}
+
+				label.consent-status {
+					// outline-style: solid;
+					.flex-block(100%);
+					align-items: flex-start;
+					margin-block-start: 1rem;
+					margin-block-end: 1rem;
+					> div {
+						// outline-style: solid;
+						.flex-block(100%);
+						flex-direction: row;
+						justify-content: flex-start;
+						> input {
+							margin-inline-start: 0.3rem;
+							transform: scale(1.8);
+							accent-color: var(--Green);
+						}
+
+						> span {
+							margin-inline-start: 1.5rem;
+						}
+					}
+				}
+
+				> button[type='submit'] {
+					.flex-block(100%, 3.7rem, 0.5rem);
+					background-color: var(--Green);
+					color: var(--White);
+					font-size: large;
+				}
+
+				.asterisk {
+					color: var(--Green);
+				}
+
+				.error-msg {
+					color: var(--Red);
+				}
+			}
+		}
+	}
+}
+
+.hidden {
+	display: none !important;
+}
