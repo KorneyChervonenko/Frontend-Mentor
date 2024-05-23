@@ -1,0 +1,120 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+	--Light-Cyan: hsl(193, 38%, 86%);
+	--Neon-Green: hsl(150, 100%, 66%);
+	--Grayish-Blue: hsl(217, 19%, 38%);
+	--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+	--Dark-Blue: hsl(218, 23%, 16%);
+
+	font-family: 'Manrope', sans-serif;
+	font-size: 28px;
+}
+
+* {
+	outline-width: 1px;
+}
+
+.full-space() {
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.flex-block(@width:auto, @height:auto, @radius:0) {
+	border: none;
+	inline-size: @width;
+	block-size: @height;
+	border-radius: @radius;
+
+	display: flex;
+	// flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle (@radius, @color) {
+	.flex-block(@radius, @radius, @radius);
+	background-color: @color;
+}
+
+html {
+	.flex-block(100%, 100%);
+	background-color: cadetblue;
+	background-color: var(--Dark-Blue);
+
+	body {
+		// outline-style: solid;
+		background-color: var(--Dark-Grayish-Blue);
+		color: var(--Light-Cyan);
+		.flex-block(auto, auto, 0.5rem);
+
+		// justify-content: space-between;
+		// justify-content: space-evenly;
+		justify-content: center;
+		// justify-content: flex-end;
+
+		row-gap: 1rem;
+
+		position: relative;
+
+		// .flex-block(20rem, 12rem);
+		h1 {
+			// outline-style: solid;
+			color: var(--Neon-Green);
+			font-size: small;
+			letter-spacing: 0.1rem;
+		}
+
+		blockquote {
+			// outline-style: solid;
+			.flex-block(90%);
+			text-align: center;
+			font-weight: bold;
+		}
+
+		button {
+			// outline-style: solid;
+			.circle(2.3rem, var(--Neon-Green));
+			background-image: url(images/icon-dice.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			position: absolute;
+			bottom: -1rem;
+		}
+	}
+}
+
+// horizontal
+@media screen and (min-width: 600px) {
+	html {
+		body {
+			// background-color: chocolate;
+			// .flex-block(19.3rem, 12rem, 0.5rem);
+			inline-size: 19.3rem;
+			block-size: 12rem;
+			// justify-content: space-between;
+
+			> img {
+				content: url(images/pattern-divider-desktop.svg);
+			}
+		}
+	}
+}
+
+// vertical
+@media screen and (max-width: 600px) {
+	html {
+		body {
+			// background-color: bisque;
+			// .flex-block(12.3rem, 11.3rem, 0.5rem);
+			inline-size: 12.3rem;
+			block-size: 11.3rem;
+
+			> img {
+				content: url(images/pattern-divider-mobile.svg);
+			}
+		}
+	}
+}
