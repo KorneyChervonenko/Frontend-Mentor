@@ -41,47 +41,41 @@
 
 html {
 	.flex-block(100%, 100%);
-	background-color: cadetblue;
 	background-color: var(--Dark-Blue);
 
 	body {
-		// outline-style: solid;
 		background-color: var(--Dark-Grayish-Blue);
 		color: var(--Light-Cyan);
 		.flex-block(auto, auto, 0.5rem);
-
-		// justify-content: space-between;
-		// justify-content: space-evenly;
 		justify-content: center;
-		// justify-content: flex-end;
 
 		row-gap: 1rem;
 
 		position: relative;
-
-		// .flex-block(20rem, 12rem);
 		h1 {
-			// outline-style: solid;
 			color: var(--Neon-Green);
 			font-size: small;
 			letter-spacing: 0.1rem;
 		}
 
 		blockquote {
-			// outline-style: solid;
 			.flex-block(90%);
 			text-align: center;
 			font-weight: bold;
 		}
 
 		button {
-			// outline-style: solid;
 			.circle(2.3rem, var(--Neon-Green));
 			background-image: url(images/icon-dice.svg);
 			background-repeat: no-repeat;
 			background-position: center;
 			position: absolute;
 			bottom: -1rem;
+		}
+
+		button:where(:hover, :focus) {
+			cursor: pointer;
+			box-shadow: 0 0 1rem 0 var(--Neon-Green);
 		}
 	}
 }
@@ -90,11 +84,8 @@ html {
 @media screen and (min-width: 600px) {
 	html {
 		body {
-			// background-color: chocolate;
-			// .flex-block(19.3rem, 12rem, 0.5rem);
 			inline-size: 19.3rem;
 			block-size: 12rem;
-			// justify-content: space-between;
 
 			> img {
 				content: url(images/pattern-divider-desktop.svg);
@@ -107,8 +98,6 @@ html {
 @media screen and (max-width: 600px) {
 	html {
 		body {
-			// background-color: bisque;
-			// .flex-block(12.3rem, 11.3rem, 0.5rem);
 			inline-size: 12.3rem;
 			block-size: 11.3rem;
 

@@ -69,7 +69,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: cadetblue;
   background-color: var(--Dark-Blue);
 }
 html body {
@@ -118,6 +117,10 @@ html body button {
   background-position: center;
   position: absolute;
   bottom: -1rem;
+}
+html body button:where(:hover, :focus) {
+  cursor: pointer;
+  box-shadow: 0 0 1rem 0 var(--Neon-Green);
 }
 @media screen and (min-width: 600px) {
   html body {
