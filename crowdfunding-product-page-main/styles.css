@@ -1,0 +1,1261 @@
+@import 'reset.css';
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTMNcGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTENdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTJ1dGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTMNdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTPFdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTB1aGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTCRaGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTENaGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTGpaGPc.ttf) format('truetype');
+}
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+  --button-bgcolor: var(--Moderate-cyan);
+  --button-bgcolor-focus: var(--Dark-cyan);
+  font-family: 'Commissioner', sans-serif;
+  font-size: 16px;
+}
+* {
+  outline-width: 1px;
+}
+.hidden {
+  display: none !important;
+}
+.full-space {
+  inline-size: 100%;
+  block-size: 100%;
+}
+@media (min-width: 46rem) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    --block-width: 46rem;
+  }
+  html body {
+    background-color: cadetblue;
+    background-image: url(images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    inline-size: 100%;
+    block-size: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  html body header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  html body header > menu.horizontal {
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 2ch;
+    color: white;
+  }
+  html body header > .hamburger {
+    display: none;
+  }
+  html body main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: fit-content;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  html body main > section {
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+  }
+  html body main > section.intro {
+    row-gap: 1rem;
+    block-size: 17rem;
+  }
+  html body main > section.intro > img {
+    position: relative;
+    top: -1rem;
+  }
+  html body main > section.intro > h1 {
+    font-size: 1.7rem;
+  }
+  html body main > section.intro > nav {
+    margin-block-start: 1rem;
+    margin-block-end: 3rem;
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  html body main > section.intro > nav > button {
+    border: none;
+    inline-size: 12.8rem;
+    block-size: 3.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+  }
+  html body main > section.intro > nav > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body main > section.intro > nav > label {
+    background-color: lightgray;
+    border: none;
+    inline-size: fit-content;
+    block-size: 3.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-inline-size: 3.5rem;
+    flex-direction: row;
+  }
+  html body main > section.intro > nav > label > .bookmark-state:after {
+    content: 'Bookmark';
+    font-weight: bold;
+    padding: 2ch;
+  }
+  html body main > section.intro > nav > label > input {
+    display: none !important;
+  }
+  html body main > section.intro > nav > label:has(input:checked) {
+    background-color: aliceblue;
+  }
+  html body main > section.intro > nav > label:has(input:checked) > svg circle {
+    fill: var(--button-bgcolor);
+  }
+  html body main > section.intro > nav > label:has(input:checked) > svg path {
+    fill: white;
+  }
+  html body main > section.intro > nav > label:has(input:checked) > .bookmark-state:after {
+    content: 'Bookmarked';
+    color: var(--button-bgcolor);
+  }
+  html body main > section.intro > nav > label:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) {
+    background-color: aliceblue;
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) > svg circle {
+    fill: var(--button-bgcolor-focus);
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) > svg path {
+    fill: white;
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) > .bookmark-state:after {
+    content: 'Bookmarked';
+    color: var(--button-bgcolor-focus);
+  }
+  html body main > section.dashboard {
+    row-gap: 2rem;
+  }
+  html body main > section.dashboard > ul {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+  html body main > section.dashboard > ul > li {
+    flex: 1;
+  }
+  html body main > section.dashboard > ul > li > p:first-of-type {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-block-end: 0.5rem;
+  }
+  html body main > section.dashboard > ul > hr {
+    border-style: none;
+    background-color: lightgrey;
+    inline-size: 2px;
+    block-size: 100%;
+    margin-inline-end: 3rem;
+  }
+  html body main > section.dashboard > progress {
+    border-radius: 1rem;
+    background: none;
+    background-color: lightgray;
+    inline-size: 100%;
+    block-size: 1rem;
+  }
+  html body main > section.dashboard > progress::-webkit-progress-bar {
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 1rem;
+    block-size: 1rem;
+  }
+  html body main > section.dashboard > progress::-webkit-progress-value {
+    border-radius: 1rem;
+    background-color: var(--button-bgcolor);
+  }
+  html body main > section.dashboard > progress::-moz-progress-bar {
+    background-color: var(--button-bgcolor);
+    border-radius: 1rem;
+  }
+  html body main > section.about {
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    line-height: 2rem;
+  }
+  html body main > section.about > p {
+    color: grey;
+  }
+  html body main > section.about section.card {
+    outline-style: solid;
+    outline-color: grey;
+    outline-width: 0.1rem;
+    inline-size: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+  html body main > section.about section.card > h3 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-size: 1.2rem;
+  }
+  html body main > section.about section.card > h4 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    font-size: medium;
+    color: var(--button-bgcolor);
+  }
+  html body main > section.about section.card > p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    color: grey;
+  }
+  html body main > section.about section.card > .in-stock {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+  }
+  html body main > section.about section.card > .in-stock > .qty {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  html body main > section.about section.card > button {
+    border: none;
+    inline-size: 10rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+  html body main > section.about section.card > button:after {
+    content: 'Select Reward';
+  }
+  html body main > section.about section.card > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body main > section.about section.card.deactivated {
+    color: lightgrey;
+    outline-color: lightgrey;
+  }
+  html body main > section.about section.card.deactivated > h4 {
+    color: lightblue;
+  }
+  html body main > section.about section.card.deactivated > button {
+    background-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  html body main > section.about section.card.deactivated > button:after {
+    content: 'Out of Stock';
+  }
+  html body section.basket {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    box-shadow: 0 0 0 2000px rgba(50, 50, 50, 0.7);
+    outline-style: solid;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+  html body section.basket > button.close-basket {
+    background-color: inherit;
+    border-style: none;
+    position: sticky;
+    top: 2rem;
+    margin-inline-start: auto;
+  }
+  html body section.basket > button.close-basket:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body section.basket > menu {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  html body section.basket > menu > li {
+    outline-style: solid;
+    outline-color: lightgrey;
+    inline-size: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 5ch auto 10ch;
+    row-gap: 1rem;
+  }
+  html body section.basket > menu > li > input {
+    inline-size: 2ch;
+    block-size: 2ch;
+    appearance: none;
+    border-style: solid;
+    outline-style: solid;
+    outline-width: 0.2ch;
+    outline-color: lightgrey;
+    border-width: 0.4ch;
+    border-color: white;
+    border-radius: 50%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  html body section.basket > menu > li > input:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body section.basket > menu > li > input:checked {
+    outline-color: var(--button-bgcolor);
+    background-color: var(--button-bgcolor);
+  }
+  html body section.basket > menu > li > h3 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    font-size: 1rem;
+  }
+  html body section.basket > menu > li > h3 > span {
+    margin-inline-start: 1rem;
+    color: var(--button-bgcolor);
+  }
+  html body section.basket > menu > li > .in-stock {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.2rem;
+  }
+  html body section.basket > menu > li > .in-stock > .qty {
+    font-size: large;
+    font-weight: bold;
+  }
+  html body section.basket > menu > li > p {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    line-height: 1.5rem;
+  }
+  html body section.basket > menu > li > form {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+  html body section.basket > menu > li > form > hr {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    inline-size: 100%;
+    block-size: 2px;
+    background-color: lightgrey;
+    border-style: none;
+  }
+  html body section.basket > menu > li > form > label {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  html body section.basket > menu > li > form > input {
+    background-image: url(images/dollar-symbol-grey.png);
+    background-repeat: no-repeat;
+    background-size: 0.5rem;
+    background-position: center left 1rem;
+    outline-style: solid;
+    outline-color: var(--Dark-gray);
+    outline-color: lightgrey;
+    justify-self: flex-end;
+    border: none;
+    inline-size: 6rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    text-align: center;
+    appearance: textfield;
+    font-weight: bold;
+  }
+  html body section.basket > menu > li > form > input:where(:focus, :hover) {
+    cursor: pointer;
+    outline-color: var(--button-bgcolor);
+    outline-width: 0.2ch;
+  }
+  html body section.basket > menu > li > form input::-webkit-outer-spin-button,
+  html body section.basket > menu > li > form input::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  html body section.basket > menu > li > form > button {
+    background-color: var(--button-bgcolor);
+    color: white;
+    border: none;
+    inline-size: 6.6rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+  }
+  html body section.basket > menu > li > form > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body section.basket > menu > li:has(input[type='radio'][name='item']:checked) {
+    outline-color: var(--button-bgcolor);
+    outline-width: 0.2ch;
+  }
+  html body section.basket > menu > li:has(input[type='radio'][name='item']:not(:checked)) > form {
+    display: none !important;
+  }
+  html body section.basket > menu > li.deactivated {
+    color: lightgrey;
+  }
+  html body section.basket > menu > li.deactivated > h3 > span {
+    color: lightblue;
+  }
+  html body section.basket > menu > li.deactivated > input {
+    outline-color: lightgrey;
+  }
+  html body section.basket > menu > li.deactivated > form {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+  html body section.thanks {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: 34rem;
+    block-size: 28rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 0 0 0 1000px rgba(101, 101, 101, 0.5);
+  }
+  html body section.thanks > img {
+    inline-size: 5.6rem;
+    block-size: 5.6rem;
+  }
+  html body section.thanks > p {
+    color: var(--Dark-gray);
+    text-align: center;
+    line-height: 1.8rem;
+  }
+  html body section.thanks > button {
+    border: none;
+    inline-size: 7rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+  }
+  html body section.thanks > button:where(:focus, :hover) {
+    cursor: pointer;
+  }
+}
+@media (max-width: 46rem) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    --block-width: 21rem;
+  }
+  html body {
+    background-color: cadetblue;
+    background-image: url(images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-inline-size: 375px;
+    inline-size: 100%;
+    block-size: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  html body header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+  }
+  html body header > img[alt='crowdfund logo'] {
+    margin-inline-start: 1rem;
+  }
+  html body header > menu.horizontal {
+    display: none;
+  }
+  html body header > .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+  }
+  html body header > .hamburger > summary {
+    position: absolute;
+    right: 1rem;
+    inline-size: 1rem;
+    block-size: 1rem;
+    background-image: url(images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    list-style: none;
+    margin-inline-start: auto;
+  }
+  html body header > .hamburger > menu.vertical {
+    position: absolute;
+    top: 2rem;
+    right: 0.5rem;
+    border: none;
+    inline-size: 20rem;
+    block-size: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  html body header > .hamburger > menu.vertical > li {
+    border: none;
+    inline-size: 100%;
+    block-size: 4rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    padding-inline-start: 3rem;
+    font-weight: bold;
+  }
+  html body header > .hamburger > menu.vertical > hr {
+    border-style: none;
+    background-color: lightgrey;
+    inline-size: 100%;
+    block-size: 0.2ch;
+  }
+  html body header > .hamburger[open] {
+    box-shadow: 0 0 0 3000px rgba(50, 50, 50, 0.7);
+    z-index: 10;
+  }
+  html body header > .hamburger[open] > summary {
+    background-image: url(images/icon-close-menu.svg);
+  }
+  html body header > .hamburger:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  html body main > section {
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+  }
+  html body main > section.intro {
+    row-gap: 1rem;
+    block-size: 18rem;
+  }
+  html body main > section.intro > img {
+    position: relative;
+    top: -1rem;
+  }
+  html body main > section.intro > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  html body main > section.intro > p {
+    font-size: small;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+  html body main > section.intro > nav {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block-end: 4rem;
+  }
+  html body main > section.intro > nav > button {
+    border: none;
+    inline-size: 13.2rem;
+    block-size: 3.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+  }
+  html body main > section.intro > nav > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body main > section.intro > nav > label {
+    background-color: lightgray;
+    border: none;
+    inline-size: fit-content;
+    block-size: 3.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-inline-size: 3.5rem;
+    flex-direction: row;
+  }
+  html body main > section.intro > nav > label > input {
+    display: none !important;
+  }
+  html body main > section.intro > nav > label:has(input:checked) {
+    background-color: aliceblue;
+  }
+  html body main > section.intro > nav > label:has(input:checked) > svg circle {
+    fill: var(--button-bgcolor);
+  }
+  html body main > section.intro > nav > label:has(input:checked) > svg path {
+    fill: white;
+  }
+  html body main > section.intro > nav > label:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) {
+    background-color: aliceblue;
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) > svg circle {
+    fill: var(--button-bgcolor-focus);
+  }
+  html body main > section.intro > nav > label:has(input:checked):where(:focus, :hover) > svg path {
+    fill: white;
+  }
+  html body main > section.dashboard {
+    row-gap: 2rem;
+  }
+  html body main > section.dashboard > ul {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  html body main > section.dashboard > ul > li {
+    text-align: center;
+    flex: 1;
+  }
+  html body main > section.dashboard > ul > li > p:first-of-type {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-block-end: 0.5rem;
+  }
+  html body main > section.dashboard > ul > hr {
+    border-style: none;
+    background-color: lightgrey;
+    inline-size: 30%;
+    block-size: 0.1rem;
+  }
+  html body main > section.dashboard > progress {
+    border-radius: 1rem;
+    background: none;
+    background-color: lightgray;
+    inline-size: 100%;
+    block-size: 1rem;
+  }
+  html body main > section.dashboard > progress::-webkit-progress-bar {
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 1rem;
+    block-size: 1rem;
+  }
+  html body main > section.dashboard > progress::-webkit-progress-value {
+    border-radius: 1rem;
+    background-color: var(--button-bgcolor);
+  }
+  html body main > section.dashboard > progress::-moz-progress-bar {
+    background-color: var(--button-bgcolor);
+    border-radius: 1rem;
+  }
+  html body main > section.about {
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    color: grey;
+  }
+  html body main > section.about > h2 {
+    font-size: large;
+    font-weight: bold;
+  }
+  html body main > section.about section.card {
+    outline-style: solid;
+    outline-width: 0.15rem;
+    outline-color: grey;
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  html body main > section.about section.card > h3 {
+    font-size: 0.9rem;
+    color: black;
+  }
+  html body main > section.about section.card > h4 {
+    color: var(--button-bgcolor);
+  }
+  html body main > section.about section.card > p {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    line-height: 1.5rem;
+  }
+  html body main > section.about section.card > .in-stock {
+    color: black;
+    margin-block-start: 1rem;
+    margin-block-end: 2rem;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+  }
+  html body main > section.about section.card > .in-stock > .qty {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  html body main > section.about section.card > button {
+    border: none;
+    inline-size: 10rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+  }
+  html body main > section.about section.card > button:after {
+    content: 'Select Reward';
+  }
+  html body main > section.about section.card > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body main > section.about section.card.deactivated {
+    outline-color: lightgrey;
+    color: lightgrey;
+  }
+  html body main > section.about section.card.deactivated > h3 {
+    color: grey;
+  }
+  html body main > section.about section.card.deactivated > h4 {
+    color: lightblue;
+  }
+  html body main > section.about section.card.deactivated > .in-stock {
+    color: lightgrey;
+  }
+  html body main > section.about section.card.deactivated > .in-stock > .qty {
+    color: grey;
+  }
+  html body main > section.about section.card.deactivated > button {
+    background-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  html body main > section.about section.card.deactivated > button:after {
+    content: 'Out of Stock';
+  }
+  html body section.basket {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    box-shadow: 0 0 0 2000px rgba(50, 50, 50, 0.7);
+    outline-style: solid;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: white;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+  html body section.basket > h2 {
+    font-size: large;
+    font-weight: bold;
+  }
+  html body section.basket > p {
+    color: grey;
+    font-size: small;
+    line-height: 1.4rem;
+  }
+  html body section.basket > button.close-basket {
+    background-color: inherit;
+    border-style: none;
+    position: sticky;
+    margin-inline-start: auto;
+    top: 2rem;
+  }
+  html body section.basket > button.close-basket:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body section.basket > menu {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  html body section.basket > menu > li {
+    outline-style: solid;
+    outline-color: lightgrey;
+    color: grey;
+    font-size: small;
+    inline-size: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  html body section.basket > menu > li > input {
+    inline-size: 2ch;
+    block-size: 2ch;
+    appearance: none;
+    border-style: solid;
+    outline-style: solid;
+    outline-width: 0.2ch;
+    outline-color: lightgrey;
+    border-width: 0.4ch;
+    border-color: white;
+    border-radius: 50%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  html body section.basket > menu > li > input:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body section.basket > menu > li > input:checked {
+    outline-color: var(--button-bgcolor);
+    background-color: var(--button-bgcolor);
+  }
+  html body section.basket > menu > li > h3 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+    font-size: small;
+    color: black;
+  }
+  html body section.basket > menu > li > h3 > span {
+    color: var(--button-bgcolor);
+  }
+  html body section.basket > menu > li > .in-stock {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+  }
+  html body section.basket > menu > li > .in-stock > .qty {
+    font-size: large;
+    font-weight: bold;
+    color: black;
+  }
+  html body section.basket > menu > li > p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    line-height: 1.4rem;
+  }
+  html body section.basket > menu > li > form {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: space-between;
+    row-gap: 1rem;
+  }
+  html body section.basket > menu > li > form > hr {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    inline-size: 100%;
+    block-size: 0.1rem;
+    background-color: lightgrey;
+    border-style: none;
+  }
+  html body section.basket > menu > li > form > label {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+  html body section.basket > menu > li > form > input {
+    background-image: url(images/dollar-symbol-grey.png);
+    background-repeat: no-repeat;
+    background-size: 0.5rem;
+    background-position: center left 1rem;
+    outline-style: solid;
+    outline-color: var(--Dark-gray);
+    outline-color: lightgrey;
+    justify-self: flex-end;
+    border: none;
+    inline-size: 6rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    text-align: center;
+    appearance: textfield;
+    font-weight: bold;
+  }
+  html body section.basket > menu > li > form > input:where(:focus, :hover) {
+    cursor: pointer;
+    outline-color: var(--button-bgcolor);
+    outline-width: 0.2ch;
+  }
+  html body section.basket > menu > li > form input::-webkit-outer-spin-button,
+  html body section.basket > menu > li > form input::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  html body section.basket > menu > li > form > button {
+    background-color: var(--button-bgcolor);
+    color: white;
+    border: none;
+    inline-size: 7.2rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+  html body section.basket > menu > li > form > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  html body section.basket > menu > li:has(input[type='radio'][name='item']:checked) {
+    outline-color: var(--button-bgcolor);
+    outline-width: 0.2ch;
+  }
+  html body section.basket > menu > li:has(input[type='radio'][name='item']:not(:checked)) > form {
+    display: none !important;
+  }
+  html body section.basket > menu > li.deactivated {
+    color: lightgrey;
+  }
+  html body section.basket > menu > li.deactivated > h3 {
+    color: grey;
+    color: lightgrey;
+  }
+  html body section.basket > menu > li.deactivated > h3 > span {
+    color: lightblue;
+  }
+  html body section.basket > menu > li.deactivated > input {
+    outline-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  html body section.basket > menu > li.deactivated > .in-stock > .qty {
+    color: lightgrey;
+  }
+  html body section.basket > menu > li.deactivated > form {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+  html body section.thanks {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: 24rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1000px rgba(101, 101, 101, 0.5);
+    justify-content: space-evenly;
+    padding: 3rem;
+    background-color: white;
+  }
+  html body section.thanks > img {
+    inline-size: 4rem;
+    block-size: 4rem;
+  }
+  html body section.thanks > h2 {
+    font-size: large;
+  }
+  html body section.thanks > p {
+    color: var(--Dark-gray);
+    text-align: center;
+    font-size: small;
+    line-height: 1.5rem;
+  }
+  html body section.thanks > button {
+    border: none;
+    inline-size: 7rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+  }
+  html body section.thanks > button:where(:focus, :hover) {
+    cursor: pointer;
+  }
+  html body:has(header > .hamburger[open]) .basket,
+  html body:has(header > .hamburger[open]) .thanks,
+  html body:has(header > .hamburger[open]) main {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+}
