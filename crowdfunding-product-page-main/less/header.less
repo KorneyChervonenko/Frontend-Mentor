@@ -1,0 +1,93 @@
+@import "reset";
+@import "helper";
+@import "base";
+
+header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  .flex-block(var(--block-width));
+  flex-flow: unset;
+
+  margin-block-start: 3rem;
+  margin-block-end: 3rem;
+  justify-content: flex-start;
+  position: relative;
+
+  > img[alt="crowdfund logo"] {
+    margin-inline-start: 1rem;
+  }
+
+  > menu.horizontal {
+    display: none;
+
+    @media (min-width: var(--min-width)) {
+      .flex-block();
+      column-gap: 2ch;
+      color: white;
+      display: flex;
+    }
+  }
+
+  > .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+
+    > summary {
+      position: absolute;
+      right: 1rem;
+      inline-size: 1rem;
+      block-size: 1rem;
+      background-image: url(dist/images/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      list-style: none;
+      margin-inline-start: auto;
+    }
+
+    > menu.vertical {
+      position: absolute;
+      top: 2rem;
+      right: 0.5rem;
+      .flex-block(20rem, auto, 0.5rem);
+      background-color: white;
+
+      > li {
+        .flex-block(100%, 4rem);
+        align-items: flex-start;
+        padding-inline-start: 3rem;
+        font-weight: bold;
+      }
+
+      > hr {
+        border-style: none;
+        background-color: lightgrey;
+        inline-size: 100%;
+        block-size: 0.2ch;
+      }
+    }
+
+    > summary {
+      background-image: url(dist/images/icon-close-menu.svg);
+    }
+
+    :where(:focus, :hover) {
+      cursor: pointer;
+    }
+
+    @media (min-width: var(--min-width)) {
+      display: none;
+    }
+  }
+
+  > .hamburger[open] {
+    box-shadow: 0 0 0 3000px rgba(50, 50, 50, 0.7);
+    z-index: 10;
+  }
+
+  @media (min-width: var(--min-width)) {
+    .flex-block(100%);
+    justify-content: space-around;
+  }
+}

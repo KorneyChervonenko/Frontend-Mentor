@@ -1,0 +1,66 @@
+@import "reset";
+@import "reset";
+@import "helper";
+@import "base";
+@import "header";
+@import "productsDescription";
+@import "dashboard";
+@import "about";
+@import "cardProduct";
+@import "basketModal";
+@import "thanksModal";
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+
+@media (min-width: var(--min-width)) {
+  html {
+    .full-space;
+    --block-width: 46rem;
+
+    main {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+
+      .flex-block(var(--block-width), fit-content);
+      row-gap: 2rem;
+
+      > section {
+        // outline-style: solid;
+        .flex-block(100%, fit-content, 0.5rem);
+        padding: 3rem;
+        background-color: white;
+      }
+    }
+  }
+}
+
+// vertical
+@media (max-width: 46rem) {
+  html {
+    .full-space;
+    --block-width: 21rem;
+
+    main {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+
+      .flex-block(var(--block-width));
+      row-gap: 2rem;
+
+      > section {
+        // outline-style: solid;
+        .flex-block(100%, fit-content, 0.5rem);
+        padding: 2rem;
+        background-color: white;
+      }
+    }
+  }
+
+  body:has(header > .hamburger[open]) {
+    .basket,
+    .thanks,
+    main {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
