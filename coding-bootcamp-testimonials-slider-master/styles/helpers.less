@@ -1,0 +1,26 @@
+.hidden {
+	display: none !important;
+}
+
+.full-space {
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.flex-block(@width:auto, @height:auto, @radius:0) {
+	border: none;
+	inline-size: @width;
+	block-size: @height;
+	border-radius: @radius;
+
+	display: flex;
+	// flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle(@diameter, @color) {
+	.flex-block(@diameter, @diameter, calc(@diameter / 2));
+	background-color: @color;
+}
