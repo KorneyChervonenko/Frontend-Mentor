@@ -1,0 +1,27 @@
+@import "reset";
+@import "base";
+
+.hidden {
+  display: none !important;
+}
+.full-space {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.flex-block(@width:auto, @height:auto, @radius:0) {
+  border: none;
+  inline-size: @width;
+  block-size: @height;
+  border-radius: @radius;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle (@radius, @color) {
+  .flex-block(@radius, @radius, @radius);
+  background-color: @color;
+}

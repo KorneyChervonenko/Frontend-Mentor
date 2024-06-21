@@ -1,0 +1,100 @@
+@import "reset";
+@import "reset";
+@import "helper";
+
+section.intro {
+  row-gap: 1rem;
+  block-size: 18rem;
+
+  > img {
+    position: relative;
+    top: -1rem;
+  }
+
+  > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+
+    @media (min-width: var(--min-width)) {
+      font-size: 1.7rem;
+    }
+  }
+
+  > p {
+    font-size: small;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  > nav {
+    .flex-block(100%);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block-end: 4rem;
+
+    @media (min-width: var(--min-width)) {
+      margin-block-start: 1rem;
+      margin-block-end: 3rem;
+      .flex-block(100%, fit-content);
+    }
+
+    > button {
+      .flex-block(13.2rem, 3.5rem, 3.5rem);
+      background-color: var(--button-bgcolor);
+      color: white;
+
+      @media (min-width: var(--min-width)) {
+        .flex-block(12.8rem, 3.5rem, 3.5rem);
+      }
+
+      :where(:focus, :hover) {
+        cursor: pointer;
+        background-color: var(--button-bgcolor-focus);
+      }
+    }
+
+    > label {
+      background-color: lightgray;
+      .flex-block(fit-content, 3.5rem, 3.5rem);
+      min-inline-size: 3.5rem;
+      flex-direction: row;
+
+      > .bookmark-state:after {
+        @media (min-width: var(--min-width)) {
+          content: "Bookmark";
+          font-weight: bold;
+          padding: 2ch;
+        }
+      }
+
+      > input {
+        .hidden;
+      }
+
+      :where(:focus, :hover) {
+        cursor: pointer;
+      }
+
+      :has(input:checked) {
+        background-color: aliceblue;
+
+        > svg {
+          circle {
+            fill: var(--button-bgcolor);
+          }
+
+          path {
+            fill: white;
+          }
+        }
+
+        > .bookmark-state:after {
+          @media (min-width: var(--min-width)) {
+            content: "Bookmarked";
+            color: var(--button-bgcolor);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "reset";
+@import "reset";
+@import "helper";
+
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+  --button-bgcolor: var(--Moderate-cyan);
+  --button-bgcolor-focus: var(--Dark-cyan);
+  --min-width: 32rem;
+
+  font-family: "Commissioner", sans-serif;
+}
+
+* {
+  outline-width: 1px;
+}
+
+body {
+  background-color: cadetblue;
+  background-image: url(../dist/images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-inline-size: 375px;
+  inline-size: 100%;
+  block-size: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: var(--min-width)) {
+    background-image: url(../dist/images/image-hero-desktop.jpg);
+    min-inline-size: unset;
+  }
+}

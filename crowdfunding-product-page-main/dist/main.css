@@ -1,0 +1,1094 @@
+/* Box sizing rules */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li,
+menu {
+  list-style: none;
+}
+/* Make images easier to work with */
+img,
+picture {
+  /* max-width: 100%; */
+  max-inline-size: 100%;
+  block-size: auto;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+body,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+picture,
+img {
+  display: block;
+}
+.hidden {
+  display: none !important;
+}
+.full-space {
+  inline-size: 100%;
+  block-size: 100%;
+}
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: hsl(0, 0%, 48%);
+  --button-bgcolor: var(--Moderate-cyan);
+  --button-bgcolor-focus: var(--Dark-cyan);
+  --min-width: 32rem;
+  font-family: "Commissioner", sans-serif;
+}
+* {
+  outline-width: 1px;
+}
+body {
+  background-color: cadetblue;
+  background-image: url(../dist/images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-inline-size: 375px;
+  inline-size: 100%;
+  block-size: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+@media (min-width: var(--min-width)) {
+  body {
+    background-image: url(../dist/images/image-hero-desktop.jpg);
+    min-inline-size: unset;
+  }
+}
+header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border: none;
+  inline-size: var(--block-width);
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-flow: unset;
+  margin-block-start: 3rem;
+  margin-block-end: 3rem;
+  justify-content: flex-start;
+  position: relative;
+}
+header > img[alt="crowdfund logo"] {
+  margin-inline-start: 1rem;
+}
+header > menu.horizontal {
+  display: none;
+}
+@media (min-width: var(--min-width)) {
+  header > menu.horizontal {
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2ch;
+    color: white;
+    display: flex;
+  }
+}
+header > .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+header > .hamburger > summary {
+  position: absolute;
+  right: 1rem;
+  inline-size: 1rem;
+  block-size: 1rem;
+  background-image: url(dist/images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  list-style: none;
+  margin-inline-start: auto;
+}
+header > .hamburger > menu.vertical {
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+  border: none;
+  inline-size: 20rem;
+  block-size: auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+header > .hamburger > menu.vertical > li {
+  border: none;
+  inline-size: 100%;
+  block-size: 4rem;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding-inline-start: 3rem;
+  font-weight: bold;
+}
+header > .hamburger > menu.vertical > hr {
+  border-style: none;
+  background-color: lightgrey;
+  inline-size: 100%;
+  block-size: 0.2ch;
+}
+header > .hamburger > summary {
+  background-image: url(dist/images/icon-close-menu.svg);
+}
+header > .hamburger :where(:focus, :hover) {
+  cursor: pointer;
+}
+@media (min-width: var(--min-width)) {
+  header > .hamburger {
+    display: none;
+  }
+}
+header > .hamburger[open] {
+  box-shadow: 0 0 0 3000px rgba(50, 50, 50, 0.7);
+  z-index: 10;
+}
+@media (min-width: var(--min-width)) {
+  header {
+    border: none;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+section.intro {
+  row-gap: 1rem;
+  block-size: 18rem;
+}
+section.intro > img {
+  position: relative;
+  top: -1rem;
+}
+section.intro > h1 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+@media (min-width: var(--min-width)) {
+  section.intro > h1 {
+    font-size: 1.7rem;
+  }
+}
+section.intro > p {
+  font-size: small;
+  line-height: 1.4rem;
+  text-align: center;
+}
+section.intro > nav {
+  border: none;
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-block-end: 4rem;
+}
+@media (min-width: var(--min-width)) {
+  section.intro > nav {
+    margin-block-start: 1rem;
+    margin-block-end: 3rem;
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section.intro > nav > button {
+  border: none;
+  inline-size: 13.2rem;
+  block-size: 3.5rem;
+  border-radius: 3.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bgcolor);
+  color: white;
+}
+@media (min-width: var(--min-width)) {
+  section.intro > nav > button {
+    border: none;
+    inline-size: 12.8rem;
+    block-size: 3.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section.intro > nav > button :where(:focus, :hover) {
+  cursor: pointer;
+  background-color: var(--button-bgcolor-focus);
+}
+section.intro > nav > label {
+  background-color: lightgray;
+  border: none;
+  inline-size: fit-content;
+  block-size: 3.5rem;
+  border-radius: 3.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-inline-size: 3.5rem;
+  flex-direction: row;
+}
+@media (min-width: var(--min-width)) {
+  section.intro > nav > label > .bookmark-state:after {
+    content: "Bookmark";
+    font-weight: bold;
+    padding: 2ch;
+  }
+}
+section.intro > nav > label > input {
+  display: none !important;
+}
+section.intro > nav > label :where(:focus, :hover) {
+  cursor: pointer;
+}
+section.intro > nav > label :has(input:checked) {
+  background-color: aliceblue;
+}
+section.intro > nav > label :has(input:checked) > svg circle {
+  fill: var(--button-bgcolor);
+}
+section.intro > nav > label :has(input:checked) > svg path {
+  fill: white;
+}
+@media (min-width: var(--min-width)) {
+  section.intro > nav > label :has(input:checked) > .bookmark-state:after {
+    content: "Bookmarked";
+    color: var(--button-bgcolor);
+  }
+}
+section.dashboard {
+  row-gap: 2rem;
+}
+section.dashboard > ul {
+  border: none;
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+section.dashboard > ul > li {
+  flex: 1;
+  text-align: center;
+}
+section.dashboard > ul > li > p:first-of-type {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-block-end: 0.5rem;
+}
+section.dashboard > ul > hr {
+  border-style: none;
+  background-color: lightgrey;
+  inline-size: 30%;
+  block-size: 0.1rem;
+}
+@media (min-width: var(--min-width)) {
+  section.dashboard > ul > hr {
+    inline-size: 2px;
+    block-size: 100%;
+    margin-inline-end: 3rem;
+  }
+}
+@media (min-width: var(--min-width)) {
+  section.dashboard > ul {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+}
+section.dashboard > progress {
+  border-radius: 1rem;
+  background: none;
+  background-color: lightgray;
+  inline-size: 100%;
+  block-size: 1rem;
+}
+section.dashboard > progress ::-webkit-progress-bar {
+  background-color: lightgray;
+  border-style: none;
+  border-radius: 1rem;
+  block-size: 1rem;
+}
+section.dashboard > progress ::-webkit-progress-value {
+  border-radius: 1rem;
+  background-color: var(--button-bgcolor);
+}
+section.dashboard > progress ::-moz-progress-bar {
+  background-color: var(--button-bgcolor);
+  border-radius: 1rem;
+}
+section.about {
+  align-items: flex-start;
+  row-gap: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  color: grey;
+}
+section.about > h2 {
+  font-size: large;
+  font-weight: bold;
+}
+section.about section.card {
+  outline-style: solid;
+  outline-width: 0.15rem;
+  outline-color: grey;
+  border: none;
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+section.about section.card > h3 {
+  font-size: 0.9rem;
+  color: black;
+}
+section.about section.card > h4 {
+  color: var(--button-bgcolor);
+}
+section.about section.card > p {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  line-height: 1.5rem;
+}
+section.about section.card > .in-stock {
+  color: black;
+  margin-block-start: 1rem;
+  margin-block-end: 2rem;
+  border: none;
+  inline-size: auto;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 0.5rem;
+}
+section.about section.card > .in-stock > .qty {
+  font-size: xx-large;
+  font-weight: bold;
+}
+section.about section.card > button {
+  border: none;
+  inline-size: 10rem;
+  block-size: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bgcolor);
+  color: white;
+}
+section.about section.card > button:after {
+  content: "Select Reward";
+}
+section.about section.card > button:where(:focus, :hover) {
+  cursor: pointer;
+  background-color: var(--button-bgcolor-focus);
+}
+section.about section.card.deactivated {
+  outline-color: lightgrey;
+  color: lightgrey;
+}
+section.about section.card.deactivated > h3 {
+  color: grey;
+}
+section.about section.card.deactivated > h4 {
+  color: lightblue;
+}
+section.about section.card.deactivated > .in-stock {
+  color: lightgrey;
+}
+section.about section.card.deactivated > .in-stock > .qty {
+  color: grey;
+}
+section.about section.card.deactivated > button {
+  background-color: lightgrey;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+section.about section.card.deactivated > button:after {
+  content: "Out of Stock";
+}
+@media (min-width: var(--min-width)) {
+  section.about > section.about {
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    line-height: 2rem;
+  }
+  section.about > section.about > p {
+    color: grey;
+  }
+  section.about > section.about section.card {
+    outline-style: solid;
+    outline-color: grey;
+    outline-width: 0.1rem;
+    inline-size: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+  section.about > section.about section.card > h3 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-size: 1.2rem;
+  }
+  section.about > section.about section.card > h4 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    font-size: medium;
+    color: var(--button-bgcolor);
+  }
+  section.about > section.about section.card > p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    color: grey;
+  }
+  section.about > section.about section.card > .in-stock {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: auto;
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+  }
+  section.about > section.about section.card > .in-stock > .qty {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  section.about > section.about section.card > button {
+    border: none;
+    inline-size: 10rem;
+    block-size: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bgcolor);
+    color: white;
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+  section.about > section.about section.card > button:after {
+    content: "Select Reward";
+  }
+  section.about > section.about section.card > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+  section.about > section.about section.card.deactivated {
+    color: lightgrey;
+    outline-color: lightgrey;
+  }
+  section.about > section.about section.card.deactivated > h4 {
+    color: lightblue;
+  }
+  section.about > section.about section.card.deactivated > button {
+    background-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  section.about > section.about section.card.deactivated > button:after {
+    content: "Out of Stock";
+  }
+}
+.card {
+  outline-style: solid;
+  outline-color: grey;
+  outline-width: 0.1rem;
+  inline-size: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  row-gap: 1rem;
+}
+.card > h3 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  font-size: 1.2rem;
+}
+.card > h4 {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  font-size: medium;
+  color: var(--button-bgcolor);
+}
+.card > p {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  color: grey;
+}
+.card > .in-stock {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  border: none;
+  inline-size: auto;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 0.5rem;
+}
+.card > .in-stock > .qty {
+  font-size: xx-large;
+  font-weight: bold;
+}
+.card > button {
+  border: none;
+  inline-size: 10rem;
+  block-size: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bgcolor);
+  color: white;
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+.card > button:after {
+  content: "Select Reward";
+}
+.card > button:where(:focus, :hover) {
+  cursor: pointer;
+  background-color: var(--button-bgcolor-focus);
+}
+@media (min-width: var(--min-width)) {
+  color: lightgrey;
+  outline-color: lightgrey;
+   > h4 {
+    color: lightblue;
+  }
+   > button {
+    background-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+   > button:after {
+    content: "Out of Stock";
+  }
+}
+section.basket {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  box-shadow: 0 0 0 2000px rgba(50, 50, 50, 0.7);
+  outline-style: solid;
+  border: none;
+  inline-size: var(--block-width);
+  block-size: fit-content;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+section.basket > button.close-basket {
+  background-color: inherit;
+  border-style: none;
+  position: sticky;
+  top: 2rem;
+  margin-inline-start: auto;
+}
+section.basket > button.close-basket :where(:focus, :hover) {
+  cursor: pointer;
+}
+section.basket > h2 {
+  font-size: large;
+  font-weight: bold;
+}
+section.basket > p {
+  color: grey;
+  font-size: small;
+  line-height: 1.4rem;
+}
+section.basket > menu {
+  border: none;
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+section.basket > menu > li {
+  outline-style: solid;
+  outline-color: lightgrey;
+  color: grey;
+  font-size: small;
+  inline-size: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+  row-gap: 1rem;
+}
+section.basket > menu > li > input {
+  inline-size: 2ch;
+  block-size: 2ch;
+  appearance: none;
+  border-style: solid;
+  outline: lightgrey solid 0.2ch;
+  border-width: 0.4ch;
+  border-color: white;
+}
+section.basket > menu > li > input :where(:focus, :hover) {
+  cursor: pointer;
+}
+section.basket > menu > li > input > input:checked {
+  outline-color: var(--button-bgcolor);
+  background-color: var(--button-bgcolor);
+}
+section.basket > menu > li > h3 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  border: none;
+  inline-size: auto;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  color: black;
+}
+section.basket > menu > li > h3 > span {
+  color: var(--button-bgcolor);
+}
+section.basket > menu > li > .in-stock {
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
+  border: none;
+  inline-size: auto;
+  block-size: auto;
+  border-radius: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 0.2rem;
+}
+section.basket > menu > li > p {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  line-height: 1.4rem;
+}
+section.basket > menu > li > form {
+  grid-row: 4 / 5;
+  grid-column: 1 / 3;
+  display: grid;
+  justify-content: space-between;
+  row-gap: 1rem;
+}
+section.basket > menu > li > form input::-webkit-outer-spin-button,
+section.basket > menu > li > form input::-webkit-inner-spin-button {
+  appearance: none;
+}
+section.basket > menu > li > form > hr {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  inline-size: 100%;
+  block-size: 0.1rem;
+  background-color: lightgrey;
+  border-style: none;
+}
+section.basket > menu > li > form > label {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  justify-self: center;
+}
+section.basket > menu > li > form > input {
+  background-image: url(../dist/images/dollar-symbol-grey.png);
+  background-repeat: no-repeat;
+  background-size: 0.5rem;
+  background-position: center left 1rem;
+  outline-style: solid;
+  outline-color: var(--Dark-gray);
+  justify-self: flex-end;
+  border: none;
+  inline-size: 6rem;
+  block-size: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  appearance: textfield;
+  font-weight: bold;
+}
+section.basket > menu > li > form > input :where(:focus, :hover) {
+  cursor: pointer;
+  outline-color: var(--button-bgcolor);
+  outline-width: 0.2ch;
+}
+section.basket > menu > li > form > button {
+  background-color: var(--button-bgcolor);
+  color: white;
+  border: none;
+  inline-size: 7.2rem;
+  block-size: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+section.basket > menu > li > form > button :where(:focus, :hover) {
+  cursor: pointer;
+  background-color: var(--button-bgcolor-focus);
+}
+section.basket > menu > li:has(input[type="radio"][name="item"]:checked) {
+  outline-color: var(--button-bgcolor);
+  outline-width: 0.2ch;
+}
+section.basket > menu > li:has(input[type="radio"][name="item"]:not(:checked)) > form {
+  display: none !important;
+}
+section.basket > menu > li.deactivated {
+  color: lightgrey;
+}
+section.basket > menu > li.deactivated > h3 {
+  color: grey;
+}
+section.basket > menu > li.deactivated > h3 > span {
+  color: lightblue;
+}
+section.basket > menu > li.deactivated > input {
+  outline-color: lightgrey;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+section.basket > menu > li.deactivated > .in-stock > .qty {
+  color: lightgrey;
+}
+section.basket > menu > li.deactivated > form {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+@media (min-width: var(--min-width)) {
+  section.basket {
+    border: none;
+    inline-size: var(--block-width);
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+  }
+  section.basket > menu > li {
+    padding: 2rem;
+  }
+  section.basket > menu > li > h3 {
+    font-size: 1rem;
+  }
+  section.basket > menu > li > h3 > span {
+    margin-inline-start: 1rem;
+  }
+  section.basket > menu > li > .in-stock > .qty {
+    font-size: large;
+    font-weight: bold;
+  }
+  section.basket > menu > li > p {
+    line-height: 1.5rem;
+  }
+  section.basket > menu > li > form {
+    align-items: center;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+}
+section.thanks {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  border: none;
+  inline-size: var(--block-width);
+  block-size: 24rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1000px rgba(101, 101, 101, 0.5);
+  justify-content: space-evenly;
+  padding: 3rem;
+  background-color: white;
+}
+section.thanks > img {
+  inline-size: 4rem;
+  block-size: 4rem;
+}
+section.thanks > h2 {
+  font-size: large;
+}
+section.thanks > p {
+  color: var(--Dark-gray);
+  text-align: center;
+  font-size: small;
+  line-height: 1.5rem;
+}
+section.thanks > button {
+  border: none;
+  inline-size: 7rem;
+  block-size: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bgcolor);
+  color: white;
+}
+section.thanks > button :where(:focus, :hover) {
+  cursor: pointer;
+}
+@media (min-width: var(--min-width)) {
+  section.thanks {
+    border: none;
+    inline-size: 34rem;
+    block-size: 28rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section.thanks > img {
+    inline-size: 5.6rem;
+    block-size: 5.6rem;
+  }
+  section.thanks > p {
+    line-height: 1.8rem;
+  }
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTMNcGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTENdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTJ1dGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTMNdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTPFdGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTB1aGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTCRaGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTENaGPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/commissioner/v20/tDaH2o2WnlgI0FNDgduEk4jAhwgumbU1SVfU5BD8OuRL8OstC6KOhgvBYWSFJ-Mgdrgiju6fF8meZm0rk4eF-ZugTGpaGPc.ttf) format('truetype');
+}
+@media (min-width: var(--min-width)) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    --block-width: 46rem;
+  }
+  html main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: fit-content;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  html main > section {
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+  }
+}
+@media (max-width: 46rem) {
+  html {
+    inline-size: 100%;
+    block-size: 100%;
+    --block-width: 21rem;
+  }
+  html main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border: none;
+    inline-size: var(--block-width);
+    block-size: auto;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  html main > section {
+    border: none;
+    inline-size: 100%;
+    block-size: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+  }
+  body:has(header > .hamburger[open]) .basket,
+  body:has(header > .hamburger[open]) .thanks,
+  body:has(header > .hamburger[open]) main {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
