@@ -1,0 +1,63 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.how-we-work {
+	color: white;
+	background-color: var(--Dark-Violet);
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	display: flex;
+	align-items: center;
+
+	margin-block-end: var(--desktop-padding);
+
+	// vertical
+	@media (max-width: @threshold-width) {
+		background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+		inline-size: calc(100% - 2 * var(--mobile-padding));
+		block-size: 21.4rem;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 3rem;
+		text-align: center;
+	}
+
+	// horizontal
+	@media (min-width: @threshold-width) {
+		background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+		inline-size: calc(100% - 2 * var(--desktop-padding));
+		block-size: 15.6rem;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	> h2 {
+		line-height: 1em;
+		// vertical
+		@media (max-width: @threshold-width) {
+			inline-size: 90%;
+			font-size: 2.5rem;
+		}
+		// horizontal
+		@media (min-width: @threshold-width) {
+			inline-size: 45%;
+			font-size: 3.5rem;
+		}
+	}
+
+	> button {
+		.flex-block(9rem, 2.4rem);
+		border-style: solid;
+
+		background-color: inherit;
+		color: inherit;
+	}
+
+	> button:where(:focus, :hover) {
+		cursor: pointer;
+		background-color: white;
+		color: var(--Dark-Violet);
+		font-weight: bold;
+	}
+}

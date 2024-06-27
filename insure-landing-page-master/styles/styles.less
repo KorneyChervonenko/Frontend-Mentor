@@ -1,0 +1,38 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+@import 'header.less';
+@import 'intro.less';
+@import 'wearedifferent.less';
+@import 'howwework.less';
+@import 'footer.less';
+
+html {
+	.full-space;
+	background-color: cadetblue;
+
+	> body {
+		background-color: white;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+
+		display: flex;
+		flex-direction: column;
+
+		// vertical
+		@media (max-width: @threshold-width) {
+			inline-size: var(--min-screen-width);
+		}
+		// horizontal
+		@media (min-width: @threshold-width) {
+			inline-size: 100%;
+		}
+
+		> main {
+			.full-space;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}

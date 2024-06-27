@@ -1,0 +1,139 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.intro {
+	background-color: var(--Dark-Violet);
+	inline-size: 100%;
+	display: flex;
+	position: relative;
+
+	// vertical
+	@media (max-width: @threshold-width) {
+		block-size: 59rem;
+		flex-direction: column;
+	}
+	// horizontal
+	@media (min-width: @threshold-width) {
+		block-size: 37.5rem;
+		flex-direction: row;
+	}
+
+	> img.family-photo {
+		// vertical
+		@media (max-width: @threshold-width) {
+			content: url(../images/image-intro-mobile.jpg);
+		}
+		// horizontal
+		@media (min-width: @threshold-width) {
+			position: absolute;
+			content: url(../images/image-intro-desktop.jpg);
+			top: calc(2 * var(--desktop-padding) / 3);
+			right: var(--desktop-padding);
+		}
+	}
+
+	> article {
+		color: white;
+		background-color: inherit;
+		display: flex;
+		flex-direction: column;
+
+		// vertical
+		@media (max-width: @threshold-width) {
+			inline-size: 100%;
+			block-size: 31rem;
+			margin-block-start: auto;
+			align-items: center;
+			justify-content: center;
+			row-gap: 1.8rem;
+			text-align: center;
+			padding-inline-start: var(--mobile-padding);
+			padding-inline-end: var(--mobile-padding);
+		}
+		// horizontal
+		@media (min-width: @threshold-width) {
+			inline-size: 50%;
+			block-size: 100%;
+			justify-content: center;
+			row-gap: 1.8rem;
+			padding-inline-start: var(--desktop-padding);
+			padding-inline-end: var(--desktop-padding);
+		}
+
+		> hr {
+			// vertical
+			@media (max-width: @threshold-width) {
+				display: none;
+			}
+			// horizontal
+			@media (min-width: @threshold-width) {
+				inline-size: 30%;
+			}
+		}
+
+		> h2 {
+			// vertical
+			@media (max-width: @threshold-width) {
+				font-size: 2.9rem;
+				line-height: 3rem;
+			}
+			// horizontal
+			@media (min-width: @threshold-width) {
+				font-size: 4.5rem;
+				line-height: 3.8rem;
+			}
+		}
+
+		> p {
+			line-height: 1.7rem;
+		}
+
+		> button {
+			.flex-block(9rem, 2.4rem);
+			border-style: solid;
+
+			background-color: inherit;
+			color: inherit;
+		}
+
+		> button:where(:focus, :hover) {
+			cursor: pointer;
+			background-color: white;
+			color: var(--Dark-Violet);
+			font-weight: bold;
+		}
+	}
+}
+
+.intro::after {
+	position: absolute;
+	right: 0;
+
+	// vertical
+	@media (max-width: @threshold-width) {
+		content: url(../images/bg-pattern-intro-right-mobile.svg);
+		top: 85%;
+	}
+	// horizontal
+	@media (min-width: @threshold-width) {
+		content: url(../images/bg-pattern-intro-right-desktop.svg);
+		top: 0;
+	}
+}
+
+.intro::before {
+	position: absolute;
+	left: 0;
+
+	// vertical
+	@media (max-width: @threshold-width) {
+		content: url(../images/bg-pattern-intro-left-mobile.svg);
+		top: 48%;
+	}
+	// horizontal
+	@media (min-width: @threshold-width) {
+		content: url(../images/bg-pattern-intro-left-desktop.svg);
+		top: 70%;
+	}
+}
