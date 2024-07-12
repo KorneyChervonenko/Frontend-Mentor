@@ -1,0 +1,43 @@
+// @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+	// src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+// @threshold-width: 1440px;
+// @threshold-width: 63rem;
+@mobile-width: 23rem;
+@tablet-width: 45.5rem;
+@desktop-width: 63rem;
+
+@threshold-width: @desktop-width;
+
+:root {
+	--Lime: hsl(61, 70%, 52%);
+	--Red: hsl(4, 69%, 50%);
+
+	--White: hsl(0, 0%, 100%);
+	--Slate-100: hsl(202, 86%, 94%);
+	--Slate-300: hsl(203, 41%, 72%);
+	--Slate-500: hsl(200, 26%, 54%);
+	--Slate-700: hsl(200, 24%, 40%);
+	--Slate-900: hsl(202, 55%, 16%);
+
+	--results-bg-color: #0e2431;
+	--input-field-mark-color: var(--Slate-100);
+	--input-field-mark-color-active: var(--Lime);
+	--input-field-mark-color-invalid: var(--Red);
+
+	--border-radius: 2rem;
+	--desktop-padding: 3rem;
+	--mobile-padding: 1.5rem;
+	--input-field-height: 3rem;
+	--input-field-radius: 0.3rem;
+
+	font-family: 'Plus Jakarta Sans', sans-serif; // Weights: 500, 700
+}
+
+* {
+	outline-width: 1px;
+}
