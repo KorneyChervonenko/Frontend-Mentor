@@ -1,0 +1,83 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.dessert {
+	background-color: var(--main-background-color);
+	border-radius: 0.5rem;
+	inline-size: fit-content;
+	display: flex;
+	flex-direction: column;
+
+	font-weight: 600;
+
+	// // mobile
+	// @media (width < @threshold-width) {
+	// }
+
+	// // desktop
+	// @media (width > @threshold-width) {
+	// }
+
+	> picture {
+		border-color: var(--button-orange-color);
+		border-radius: inherit;
+
+		// mobile
+		@media (width < @threshold-width) {
+			inline-size: 20rem;
+		}
+
+		// desktop
+		@media (width > @threshold-width) {
+			inline-size: 15.7rem;
+		}
+
+		img {
+			border-radius: inherit;
+		}
+	}
+
+	> .control-button {
+		position: relative;
+		top: -1rem;
+		align-self: center;
+
+		> button.add-to-cart {
+			outline-style: solid;
+			background-color: var(--button-white-color);
+			// display: flex;
+			.flex-block(10rem, 2.75rem, 3rem);
+			flex-direction: row;
+		}
+
+		> .quantity-selector {
+			outline-style: solid;
+			background-color: var(--button-orange-color);
+			color: white;
+			.flex-block(10rem, 2.75rem, 3rem);
+			flex-direction: row;
+			justify-content: space-around;
+
+			> button {
+				background-color: var(--button-orange-color);
+				.flex-block(1rem, 1rem, 1rem);
+				border-style: solid;
+				border-color: white;
+				border-width: 1px;
+			}
+		}
+	}
+
+	> .dessert-category {
+		color: grey;
+	}
+
+	> .dessert-name {
+		color: black;
+	}
+
+	> .dessert-price {
+		color: var(--button-orange-color);
+	}
+}
