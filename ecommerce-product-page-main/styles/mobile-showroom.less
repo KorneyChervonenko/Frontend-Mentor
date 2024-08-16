@@ -1,0 +1,45 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.showroom-mobile {
+	background-color: aqua;
+
+	// mobile
+	@media (width < @threshold-width) {
+		inline-size: 100%;
+		position: relative;
+	}
+
+	// desktop
+	@media (width > @threshold-width) {
+		.hidden;
+	}
+
+	> button {
+		.circle(2.6rem);
+
+		position: absolute;
+		top: 50%;
+	}
+
+	> button:hover {
+		> svg {
+			> path {
+				stroke: var(--btn-bg-orange);
+			}
+		}
+	}
+
+	> button[disabled] {
+		display: none;
+	}
+
+	> button.prev-btn {
+		left: var(--mobile-padding);
+	}
+
+	> button.next-btn {
+		right: var(--mobile-padding);
+	}
+}

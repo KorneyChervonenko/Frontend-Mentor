@@ -1,0 +1,56 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.showroom-desktop {
+	background-color: white;
+
+	// mobile
+	@media (width < @threshold-width) {
+		.hidden;
+	}
+
+	// desktop
+	@media (width > @threshold-width) {
+	}
+
+	> img[alt='full product image'] {
+		inline-size: 28rem;
+		aspect-ratio: 1 / 1;
+		border-radius: var(--border-radius);
+	}
+
+	> img[alt='full product image']:hover {
+		cursor: pointer;
+	}
+
+	> .preview-gallery {
+		margin-block-start: 2rem;
+		inline-size: 28rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		overflow-y: auto;
+
+		> li {
+			> .preview {
+				inline-size: 5.5rem;
+				margin-block-start: 0.3rem;
+				margin-block-end: 0.3rem;
+				aspect-ratio: 1 / 1;
+				border-radius: var(--border-radius-btn);
+				border-style: none;
+
+				> img {
+					border-radius: inherit;
+				}
+			}
+
+			> .preview.selected {
+				outline-style: solid;
+				outline-color: var(--btn-bg-orange);
+				outline-width: 0.3rem;
+			}
+		}
+	}
+}

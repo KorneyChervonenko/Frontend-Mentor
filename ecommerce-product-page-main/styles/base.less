@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+// @font-face {
+// 	font-family: 'Red Hat Text';
+// 	src: url('/assets/fonts/RedHatText-VariableFont_wght.ttf');
+// }
+
+@mobile-width: 23rem;
+// @tablet-width: 45.5rem;
+@desktop-width: 70rem;
+
+// @threshold-width: @desktop-width;
+
+// @threshold-width: 75rem;
+@threshold-width: @desktop-width;
+// @max-width-desktop: 90rem;
+
+:root {
+	--orange: hsl(26, 100%, 55%);
+	--pale-orange: hsl(25, 100%, 94%);
+	--very-dark-blue: hsl(220, 13%, 13%);
+	--dark-grayish-blue: hsl(219, 9%, 45%);
+	--grayish-blue: hsl(220, 14%, 75%);
+	--light-grayish-blue: hsl(223, 64%, 98%);
+
+	font-family: 'Kumbh Sans', sans-serif;
+
+	// --threshold-width: @threshold-width;
+	--mobile-padding: 1.5rem;
+	--border-radius: 1rem;
+	--border-radius-btn: 0.5rem;
+	--btn-bg-orange: var(--orange);
+	--btn-bg-gray: var(--grayish-blue);
+	// --btn-bg-gray: var(--light-grayish-blue); /// ???
+	--text-gray-color: var(--dark-grayish-blue);
+}
+
+button:where(:hover, :focus) {
+	cursor: pointer;
+}
