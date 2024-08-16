@@ -6,22 +6,22 @@ export const STATE = {
 		images: [
 			{
 				thumbnail: './images/image-product-1-thumbnail.jpg',
-				full: './images/image-product-1.jpg/',
+				full: './images/image-product-1.jpg',
 			},
 
 			{
 				thumbnail: './images/image-product-2-thumbnail.jpg',
-				full: './images/image-product-2.jpg/',
+				full: './images/image-product-2.jpg',
 			},
 
 			{
 				thumbnail: './images/image-product-3-thumbnail.jpg',
-				full: './images/image-product-3.jpg/',
+				full: './images/image-product-3.jpg',
 			},
 
 			{
 				thumbnail: './images/image-product-4-thumbnail.jpg',
-				full: './images/image-product-4.jpg/',
+				full: './images/image-product-4.jpg',
 			},
 		],
 
