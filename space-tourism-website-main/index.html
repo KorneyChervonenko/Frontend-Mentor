@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+		<title>Frontend Mentor | Space tourism website</title>
+
+		<!-- <link rel="stylesheet/less" type="text/css" href="./styles/styles.less" /> -->
+
+		<!-- <script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+
+		<!-- <link rel="stylesheet" href="./styles/styles.css" /> -->
+		<link rel="stylesheet" href="./styles/styles-mini.css" />
+
+		<script type="module" src="./js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="./assets/shared/logo.svg" alt="logo" />
+
+			<hr />
+
+			<details class="hamburger">
+				<summary aria-roledescription="open-close button"></summary>
+				<nav class="vertical-menu">
+					<ol start="0" role="menu"></ol>
+				</nav>
+			</details>
+
+			<nav class="horizontal-menu">
+				<ol start="0" role="menu"></ol>
+			</nav>
+		</header>
+
+		<main>
+			<section class="home">
+				<h1>SO, YOU WANT TO TRAVEL TO <span>SPACE</span></h1>
+				<p>
+					Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of
+					on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+				</p>
+				<button class="explore-btn" type="button">EXPLORE</button>
+			</section>
+
+			<section class="destinations hidden">
+				<h1><span>01</span> PICK YOUR DESTINATION</h1>
+
+				<picture class="planet-image">
+					<source srcset="" type="image/webp" />
+					<img src="" alt="" />
+				</picture>
+
+				<form class="planet-menu"></form>
+
+				<div class="planet">
+					<h2 class="name"></h2>
+					<p class="description"></p>
+
+					<hr />
+
+					<div class="data">
+						<div class="datafield distance">
+							<h3>AVG. DISTANCE</h3>
+							<p>
+								<!-- 384,400 KM -->
+							</p>
+						</div>
+
+						<div class="datafield travel">
+							<h3>EST. TRAVEL TIME</h3>
+							<p>
+								<!-- 3 DAYS -->
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="crew hidden">
+				<h1><span>02</span> MEET YOUR CREW</h1>
+
+				<picture class="member-image">
+					<source srcset="" type="image/webp" />
+					<img src="" alt="" />
+				</picture>
+
+				<form class="member-menu"></form>
+
+				<div class="member-info">
+					<p class="member-role"></p>
+					<p class="member-name"></p>
+					<p class="member-bio"></p>
+				</div>
+			</section>
+
+			<section class="technology hidden">
+				<h1><span>03</span> SPACE LAUNCH 101</h1>
+
+				<picture class="tech-image">
+					<source type="image/jpg" />
+					<source type="image/jpg" />
+					<img src="" alt="" />
+				</picture>
+
+				<form class="term-menu"></form>
+
+				<article>
+					<h3>THE TERMINOLOGY…</h3>
+					<h2></h2>
+					<p></p>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>

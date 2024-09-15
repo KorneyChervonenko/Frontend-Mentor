@@ -1,0 +1,44 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+@import 'header.less';
+@import 'home.less';
+@import 'destinations.less';
+@import 'crew.less';
+@import 'technology.less';
+
+html {
+	background-color: black;
+
+	.full-space;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		> main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+// // mobile
+// @media (max-width: @tablet-width) {
+// }
+
+// // tablet
+// @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+// }
+
+// // desktop
+// @media (min-width: @desktop-width) {
+// }

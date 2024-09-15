@@ -1,0 +1,224 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+// .header-home
+header {
+	position: absolute;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	// justify-content: space-around;
+	align-items: center;
+
+	// mobile
+	@media (max-width: @tablet-width) {
+		inline-size: @mobile-width;
+		block-size: 2.5rem;
+		padding-inline: var(--padding-mobile);
+		top: var(--padding-mobile);
+	}
+
+	// tablet
+	@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+		inline-size: @tablet-width;
+		block-size: 6rem;
+		padding-inline-start: var(--padding-tablet);
+	}
+
+	// desktop
+	@media (min-width: @desktop-width) {
+		inline-size: @desktop-width;
+		block-size: 6rem;
+		padding-inline-start: var(--padding-desktop);
+		top: 2.5rem;
+	}
+
+	> img[alt='logo'] {
+		// mobile
+		@media (max-width: @tablet-width) {
+			inline-size: 2.5rem;
+		}
+
+		// tablet
+		@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+			inline-size: 3rem;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			inline-size: 3rem;
+		}
+	}
+
+	> hr {
+		// mobile
+		@media (max-width: @tablet-width) {
+			display: none;
+		}
+
+		// tablet
+		@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+			display: none;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			inline-size: 29.7rem;
+			position: absolute;
+			left: 10rem;
+			z-index: 1;
+		}
+	}
+
+	.hamburger {
+		position: absolute;
+		inline-size: 4rem;
+		block-size: 4rem;
+		right: 0;
+		top: calc(-1 * var(--padding-mobile));
+
+		// mobile
+		@media (max-width: @tablet-width) {
+		}
+
+		// tablet
+		@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+			display: none;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			display: none;
+		}
+
+		> summary {
+			list-style: none;
+
+			inline-size: 1.5rem;
+			block-size: 1.5rem;
+
+			background-image: url('../assets/shared/icon-hamburger.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			position: absolute;
+			right: var(--padding-mobile);
+			top: var(--padding-mobile);
+		}
+
+		> .vertical-menu {
+			display: none;
+		}
+	}
+
+	> .hamburger[open] {
+		background-color: hsla(var(--color-dark));
+		background: hsl(var(--color-white) / 0.05);
+		backdrop-filter: blur(1.5rem);
+
+		inline-size: 16rem;
+		block-size: @mobile-height-short;
+		z-index: 2;
+
+		> summary {
+			list-style: none;
+			background-image: url(../assets/shared/icon-close.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			right: var(--padding-mobile);
+		}
+
+		> .vertical-menu {
+			margin-block-start: 4rem;
+			display: block;
+
+			> ol {
+				display: flex;
+				flex-direction: column;
+				row-gap: 2.5rem;
+				list-style-type: decimal-leading-zero;
+				list-style-position: inside;
+				padding-inline-start: 2rem;
+
+				color: hsl(var(--color-white));
+				font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+				font-size: var(--fs-16);
+				letter-spacing: 2.7px;
+
+				> li:where(:focus, :hover) {
+					cursor: pointer;
+					border-inline-end: solid;
+				}
+
+				> li::marker {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	.horizontal-menu {
+		background: hsl(var(--color-white) / 0.06);
+		backdrop-filter: blur(2rem);
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		// mobile
+		@media (max-width: @tablet-width) {
+			display: none;
+		}
+		// tablet
+		@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+			inline-size: 28rem;
+			block-size: 100%;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			inline-size: 52rem;
+			block-size: 100%;
+		}
+
+		> ol {
+			// background-color: brown;
+			inline-size: 100%;
+			block-size: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+
+			color: hsl(var(--color-white));
+			font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+			font-size: var(--fs-16);
+			letter-spacing: 2.7px;
+
+			> li:where(:focus, :hover) {
+				cursor: pointer;
+				text-decoration-line: underline;
+				text-decoration-thickness: 0.2rem;
+				text-underline-offset: 2rem;
+			}
+
+			// mobile
+			@media (max-width: @tablet-width) {
+			}
+			// tablet
+			@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+			}
+
+			// desktop
+			@media (min-width: @desktop-width) {
+				list-style-type: decimal-leading-zero;
+				list-style-position: inside;
+
+				> li::marker {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
