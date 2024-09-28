@@ -1,0 +1,36 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.thanx {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+	// mobile
+	@media (max-width: @desktop-width) {
+		block-size: 25rem;
+		justify-content: center;
+		row-gap: 1.25rem;
+	}
+
+	// desktop
+	@media (min-width: @desktop-width) {
+		block-size: 100%;
+		justify-content: flex-end;
+		row-gap: 1.5rem;
+	}
+
+	> img {
+		// mobile
+		@media (max-width: @desktop-width) {
+			inline-size: 3.5rem;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			inline-size: 5rem;
+		}
+	}
+}

@@ -1,0 +1,116 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.add-ons {
+	> .add-ons-checklist {
+		display: flex;
+		flex-direction: column;
+
+		// mobile
+		@media (max-width: @desktop-width) {
+			row-gap: 0.75rem;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			row-gap: 1rem;
+		}
+
+		> label {
+			// background-color: chocolate;
+			inline-size: 100%;
+			border-style: solid;
+			border-width: 0.15rem;
+			border-color: lightgrey;
+			border-radius: 0.5rem;
+			font-weight: 500;
+
+			padding-inline: 1.5rem;
+
+			display: grid;
+			grid-template-areas:
+				'checkbox title tariff'
+				'checkbox description tariff';
+
+			grid-template-columns: fit-content(100%) auto fit-content(100%);
+
+			// mobile
+			@media (max-width: @desktop-width) {
+				block-size: 3.8rem;
+				row-gap: 0.2rem;
+			}
+
+			// desktop
+			@media (min-width: @desktop-width) {
+				block-size: 5rem;
+				row-gap: 0.5rem;
+			}
+
+			align-items: center;
+
+			> input[type='checkbox'] {
+				grid-area: checkbox;
+				transform: scale(1.5);
+
+				margin-inline-end: 1.5rem;
+			}
+
+			> .add-on-title {
+				grid-area: title;
+
+				align-self: flex-end;
+				// mobile
+				@media (max-width: @desktop-width) {
+					font-size: 0.9rem;
+				}
+
+				// desktop
+				@media (min-width: @desktop-width) {
+					font-size: 1.025rem;
+				}
+			}
+
+			> .description {
+				grid-area: description;
+				align-self: flex-start;
+
+				color: grey;
+
+				// mobile
+				@media (max-width: @desktop-width) {
+					font-size: 0.75rem;
+				}
+
+				// desktop
+				@media (min-width: @desktop-width) {
+					font-size: 0.875rem;
+				}
+			}
+
+			> .tariff {
+				grid-area: tariff;
+				color: var(--Purplish-blue);
+				font-weight: 500;
+				// mobile
+				@media (max-width: @desktop-width) {
+					font-size: 0.75rem;
+				}
+
+				// desktop
+				@media (min-width: @desktop-width) {
+					font-size: 0.875rem;
+				}
+			}
+		}
+
+		> label:where(:focus, :hover):not(:has(input[type='checkbox']:checked)) {
+			cursor: pointer;
+		}
+
+		> label:has(input[type='checkbox']:checked) {
+			background-color: var(--Magnolia);
+			border-color: var(--Purplish-blue);
+		}
+	}
+}

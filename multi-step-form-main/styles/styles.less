@@ -1,0 +1,121 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+@import 'header.less';
+@import 'footer.less';
+
+@import 'personal-info.less';
+@import 'plans.less';
+@import 'addons.less';
+@import 'summary.less';
+@import 'thanx.less';
+
+html {
+	// background-color: black;
+	background-color: cadetblue;
+
+	.full-space;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// // mobile
+	// @media (max-width: @desktop-width) {
+	// }
+
+	// // desktop
+	// @media (min-width: @desktop-width) {
+	// }
+
+	body {
+		background-color: white;
+
+		// mobile
+		@media (max-width: @desktop-width) {
+			inline-size: @mobile-width;
+			// min-block-size: @mobile-min-height;
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+			inline-size: @desktop-width;
+			block-size: @desktop-height;
+			border-radius: 1rem;
+			padding: var(--padding-desktop);
+
+			display: grid;
+			grid-template-areas:
+				'header main'
+				'header footer';
+		}
+
+		> main {
+			display: flex;
+			flex-direction: column;
+
+			// mobile
+			@media (max-width: @desktop-width) {
+				inline-size: 100%;
+				min-block-size: 28rem;
+				background-color: var(--Light-blue);
+			}
+
+			// desktop
+			@media (min-width: @desktop-width) {
+				inline-size: 28rem;
+			}
+
+			> section {
+				// mobile
+				@media (max-width: @desktop-width) {
+					padding-inline: 1.5rem;
+					padding-block: 2rem;
+					margin-inline: 1rem;
+					border-radius: 0.5rem;
+					position: relative;
+					top: -5rem;
+					background-color: white;
+				}
+
+				// desktop
+				@media (min-width: @desktop-width) {
+					margin-block-start: 2rem;
+				}
+
+				> h1 {
+					// mobile
+					@media (max-width: @desktop-width) {
+						font-size: 1.5rem;
+					}
+
+					// desktop
+					@media (min-width: @desktop-width) {
+						font-size: 2rem;
+					}
+				}
+
+				> p {
+					color: grey;
+					font-size: 1rem;
+					line-height: 1.5rem;
+
+					margin-block-start: 1.25rem;
+					// mobile
+					@media (max-width: @desktop-width) {
+						inline-size: 33ch;
+						margin-block-end: 1.5rem;
+					}
+
+					// desktop
+					@media (min-width: @desktop-width) {
+						margin-block-end: 2.5rem;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+.personal-info {
+	> form {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+
+		> label {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.2rem;
+
+			.label-text {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-end;
+				justify-content: space-between;
+
+				// mobile
+				@media (max-width: @desktop-width) {
+					font-size: 0.75rem;
+				}
+
+				// desktop
+				@media (min-width: @desktop-width) {
+					font-size: 1rem;
+				}
+			}
+
+			.err-msg {
+				color: red;
+			}
+
+			> input {
+				block-size: 2.5rem;
+				border-radius: 0.2rem;
+				border-style: solid;
+
+				padding-inline-start: 1rem;
+			}
+		}
+	}
+}

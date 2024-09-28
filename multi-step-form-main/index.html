@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<title>Frontend Mentor | Multi-step form</title>
+
+		<!-- <link rel="stylesheet/less" type="text/css" href="./styles/styles.less" />
+
+		<script>
+			less = {
+				env: 'development',
+			};
+		</script>
+		<script src="less.min.js" type="text/javascript"></script>
+		<script>
+			less.watch();
+		</script> -->
+
+		<!-- <link rel="stylesheet" href="./styles/styles.css" /> -->
+		<link rel="stylesheet" href="./styles/styles-mini.css" />
+
+		<script type="module" src="./js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<form class="main-menu" role="menu">
+				<!-- <li> -->
+				<label role="menuitem">
+					<input type="radio" name="step" data-index="1" />
+					<span class="menu-item-index"> 1 </span>
+					<span class="menu-item-title">
+						<p>STEP 1</p>
+						<h2>YOUR INFO</h2>
+					</span>
+				</label>
+				<!-- </li> -->
+				<!-- <li> -->
+				<label role="menuitem">
+					<input type="radio" name="step" data-index="2" />
+					<span class="menu-item-index"> 2 </span>
+					<span class="menu-item-title">
+						<p>STEP 2</p>
+						<h2>SELECT PLAN</h2>
+					</span>
+				</label>
+				<!-- </li> -->
+				<!-- <li> -->
+				<label role="menuitem">
+					<input type="radio" name="step" data-index="3" />
+					<span class="menu-item-index"> 3 </span>
+					<span class="menu-item-title">
+						<p>STEP 3</p>
+						<h2>ADD-ONS</h2>
+					</span>
+				</label>
+				<!-- </li> -->
+				<!-- <li> -->
+				<label role="menuitem">
+					<input type="radio" name="step" data-index="4" />
+					<span class="menu-item-index"> 4 </span>
+					<span class="menu-item-title">
+						<p>STEP 4</p>
+						<h2>SUMMARY</h2>
+					</span>
+				</label>
+				<!-- </li> -->
+			</form>
+		</header>
+
+		<main>
+			<section class="personal-info hidden">
+				<h1>Personal info</h1>
+				<p>Please provide your name, email address, and phone number.</p>
+				<form novalidate>
+					<label>
+						<span class="label-text">Name<span class="err-msg" id="name-err"></span></span>
+						<input name="name" type="text" placeholder="e.g. Stephen King" aria-errormessage="name-err" required />
+					</label>
+					<label>
+						<span class="label-text"> Email Address<span class="err-msg" id="email-err"></span> </span>
+						<input
+							name="email"
+							type="email"
+							placeholder="e.g. stephenking@lorem.com"
+							aria-errormessage="email-err"
+							required
+						/>
+					</label>
+					<label>
+						<span class="label-text"> Phone Number<span class="err-msg" id="phone-err"></span> </span>
+						<input
+							name="tel"
+							type="tel"
+							placeholder="e.g. +1 234 567 890"
+							pattern="\+[0-9]{1} [0-9]{3} [0-9]{3} [0-9]{3}"
+							aria-errormessage="phone-err"
+							required
+						/>
+					</label>
+				</form>
+			</section>
+
+			<section class="plans hidden">
+				<h1>Select your plan</h1>
+				<p>You have the option of monthly or yearly billing.</p>
+				<form class="plan-form">
+					<label>
+						<input type="radio" name="plan" value="arcade" checked />
+						<img src="./assets/images/icon-arcade.svg" alt="" />
+						<span class="plan-title">Arcade</span>
+						<span class="tariff monthly">$9/mo</span>
+						<span class="tariff yearly">$90/yr</span>
+						<span class="promo-msg">2 months free</span>
+					</label>
+
+					<label>
+						<input type="radio" name="plan" value="advanced" />
+						<img src="./assets/images/icon-advanced.svg" alt="" />
+						<span class="plan-title">Advanced</span>
+						<span class="tariff monthly">$12/mo</span>
+						<span class="tariff yearly">$120/yr</span>
+						<span class="promo-msg">2 months free</span>
+					</label>
+
+					<label>
+						<input type="radio" name="plan" value="pro" />
+						<img src="./assets/images/icon-pro.svg" alt="" />
+						<span class="plan-title">Pro</span>
+						<span class="tariff monthly">$15/mo</span>
+						<span class="tariff yearly">$150/yr</span>
+						<span class="promo-msg">2 months free</span>
+					</label>
+				</form>
+
+				<div class="period-switch">
+					<span>Monthly</span>
+					<label>
+						<input type="checkbox" class="period-switch-input" />
+						<span class="toggle-lever"></span>
+					</label>
+					<span>Yearly</span>
+				</div>
+			</section>
+
+			<section class="add-ons hidden">
+				<h1>Pick add-ons</h1>
+				<p>Add-ons help enhance your gaming experiance.</p>
+				<form class="add-ons-checklist">
+					<label>
+						<input type="checkbox" value="online-service" />
+						<span class="add-on-title">Online service</span>
+						<span class="description">Access to multiplayer games</span>
+						<span class="tariff monthly">+1$/mo</span>
+						<span class="tariff yearly">+10$/yr</span>
+					</label>
+
+					<label>
+						<input type="checkbox" value="larger-storage" />
+						<span class="add-on-title">Larger storage</span>
+						<span class="description">Extra 1TB of cloud save</span>
+						<span class="tariff monthly">+2$/mo</span>
+						<span class="tariff yearly">+20$/yr</span>
+					</label>
+
+					<label>
+						<input type="checkbox" value="customizable-profile" />
+						<span class="add-on-title">Customizable profile</span>
+						<span class="description">Custom theme on your profile</span>
+						<span class="tariff monthly">+2$/mo</span>
+						<span class="tariff yearly">+20$/yr</span>
+					</label>
+				</form>
+			</section>
+
+			<section class="summary hidden">
+				<h1>Finishing up</h1>
+				<p>Double-check everything looks OK before confirming.</p>
+
+				<div class="summary-table">
+					<div class="table-body">
+						<p class="table-row" id="plan">
+							<span class="table-header">
+								<span>
+									<span class="title">Arcade</span>
+									<span class="yearly">(Yearly)</span>
+									<span class="monthly">(Monthly)</span>
+								</span>
+								<!-- <button type="button">Change</button> -->
+								<label><input type="checkbox" class="period-switch-input" />Change</label>
+							</span>
+							<span class="tariff yearly">$90/yr</span>
+							<span class="tariff monthly">$9/mo</span>
+						</p>
+						<hr />
+						<p class="table-row" id="online-service">
+							<span class="table-header">Online service</span>
+							<span class="tariff yearly">+$10/yr</span>
+							<span class="tariff monthly">+$1/mo</span>
+						</p>
+						<p class="table-row" id="larger-storage">
+							<span class="table-header">Larger storage</span>
+							<span class="tariff yearly">+$20/yr</span>
+							<span class="tariff monthly">+$2/mo</span>
+						</p>
+
+						<p class="table-row" id="customizable-profile">
+							<span class="table-header">Customizable profile</span>
+							<span class="tariff yearly">+$20/yr</span>
+							<span class="tariff monthly">+$2/mo</span>
+						</p>
+					</div>
+					<div class="table-footer">
+						<p class="table-row" id="total">
+							<span class="table-header">
+								Total
+								<span class="yearly">(per year)</span>
+								<span class="monthly">(per month)</span>
+							</span>
+							<span class="tariff yearly">$140/yr</span>
+							<span class="tariff monthly">$14/mo</span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="thanx hidden">
+				<img src="./assets/images/icon-thank-you.svg" alt="" />
+				<h1>Thank you!</h1>
+				<p>
+					Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support,
+					please feel free to email us at support@loremgaming.com
+				</p>
+			</section>
+		</main>
+
+		<footer>
+			<menu>
+				<li><button class="left-button" type="button" data-title="prev">Go Back</button></li>
+				<li><button class="right-button" type="button" data-title="next">Next Step</button></li>
+			</menu>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+@import 'reset.less';
+@import 'helpers.less';
+@import 'base.less';
+
+footer {
+	// mobile
+	@media (max-width: @desktop-width) {
+		inline-size: 100%;
+		block-size: 4.6rem;
+
+		margin-block-start: auto;
+	}
+
+	// desktop
+	@media (min-width: @desktop-width) {
+		inline-size: 28rem;
+		block-size: 5rem;
+
+		grid-area: footer;
+		align-self: flex-end;
+	}
+
+	> menu {
+		.full-space;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		// mobile
+		@media (max-width: @desktop-width) {
+			padding-inline: var(--padding-mobile);
+		}
+
+		// desktop
+		@media (min-width: @desktop-width) {
+		}
+
+		button {
+			border-style: none;
+			font-weight: bold;
+		}
+
+		.left-button {
+			background-color: inherit;
+			color: var(--Cool-gray);
+		}
+
+		.left-button:where(:hover, :focus) {
+			color: var(--Marine-blue);
+		}
+
+		.right-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background-color: var(--Marine-blue);
+			color: white;
+
+			border-radius: 0.5rem;
+
+			// mobile
+			@media (max-width: @desktop-width) {
+				inline-size: 6rem;
+				block-size: 2.5rem;
+			}
+
+			// desktop
+			@media (min-width: @desktop-width) {
+				inline-size: 7.75rem;
+				block-size: 3rem;
+			}
+		}
+	}
+}
