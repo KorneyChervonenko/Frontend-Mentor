@@ -1,0 +1,60 @@
+@import './styles/_reset.scss';
+@import './styles/_helpers.scss';
+@import './styles/_vars.scss';
+
+html {
+	@extend .full-space;
+	// inline-size: 100%;
+	// block-size: 100%;
+
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+
+	background-color: cadetblue;
+}
+
+body {
+	// inline-size: 100%;
+	// block-size: 100%;
+	@extend .full-space;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// background-color: coral;
+	// background-color: inherit;
+	// background-color:
+}
+
+#root {
+	// inline-size: 100%;
+	// block-size: 100%;
+	@extend .full-space;
+
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	justify-content: center;
+	/* background-color: bisque; */
+	// background-color: inherit;
+	background-color: var(--light-pink);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+
+	// mobile
+	// @media (max-width: 37.5rem)
+	@media (width < $threshold-width) {
+		background-image: url(../public/assets/images/background-pattern-mobile.svg);
+	}
+
+	// desktop
+	// @media (min-width: 37.5rem)
+	@media (width >= $threshold-width) {
+		background-image: url(../public/assets/images/background-pattern-desktop.svg);
+	}
+}
