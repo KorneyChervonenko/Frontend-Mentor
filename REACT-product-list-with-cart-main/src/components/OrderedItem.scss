@@ -1,0 +1,61 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.ordered-item {
+	block-size: 5rem; //82px;
+	border-block-end-style: solid;
+	border-color: var(--rose-300);
+	border-width: 1px;
+	background-color: var(--ordered-dessert-bgcolor);
+	display: flex;
+	flex-direction: row;
+
+	> img[alt='dessert'] {
+		inline-size: 3rem; //48px;
+		align-self: center;
+		margin-inline-start: 1.5rem;
+		margin-inline-end: 1rem;
+		// justify-self: center;
+	}
+
+	> .ordered-item-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 0.5rem;
+
+		// mobile
+		@media (width < $threshold-width) {
+			max-inline-size: 10rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			max-inline-size: 13rem;
+		}
+
+		> .ordered-item-name {
+			white-space: nowrap;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+
+		> .ordered-item-qty-price {
+			> .ordered-item-qty {
+				margin-inline-end: 1rem;
+				color: var(--red);
+			}
+		}
+	}
+
+	> .ordered-item-sum {
+		margin-inline-start: auto;
+		margin-inline-end: 1.5rem;
+		align-self: center;
+		font-weight: 600;
+		font-size: large;
+	}
+}

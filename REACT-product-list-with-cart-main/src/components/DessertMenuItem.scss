@@ -1,0 +1,110 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.orange-border {
+	border-color: var(--orange-button-color);
+	border-style: solid;
+}
+
+.dessert-item {
+	display: flex;
+	flex-direction: column;
+
+	> picture {
+		// mobile
+		@media (width < $threshold-width) {
+			inline-size: var(--mobile-section-width); //20.44rem; // 327px;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			inline-size: 15.63rem; //250px;
+		}
+
+		> img {
+			border-radius: 0.5rem;
+		}
+	}
+
+	> .control-button {
+		// inline-size: fit-content;
+		inline-size: 10rem;
+		block-size: 2.75rem;
+
+		align-self: center;
+		position: relative;
+		top: -1rem;
+
+		> .add-to-cart,
+		> .quantity-selector {
+			@extend .full-space;
+			border-style: none;
+			border-radius: 2rem;
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		> .add-to-cart {
+			outline-style: solid;
+			outline-width: calc(1rem / 10);
+			outline-color: var(--rose-500);
+			justify-content: center;
+			column-gap: 0.5rem;
+			background-color: white;
+			font-weight: 600;
+		}
+
+		> .add-to-cart:where(:hover, :focus) {
+			color: var(--orange-button-color);
+			outline-color: var(--orange-button-color);
+		}
+
+		> .quantity-selector {
+			background-color: var(--orange-button-color);
+
+			justify-content: space-around;
+
+			> button {
+				@include circle(1.13rem);
+				background-color: inherit;
+				border-style: none;
+				outline-style: solid;
+				outline-width: calc(1rem / 8);
+				outline-color: white;
+				> svg {
+					> path {
+						fill: white;
+					}
+				}
+			}
+
+			> .quantity {
+				color: white;
+			}
+
+			> button:where(:hover) {
+				background-color: white;
+				> svg {
+					> path {
+						fill: var(--orange-button-color);
+					}
+				}
+			}
+		}
+	}
+
+	> .dessert-category {
+		color: var(--rose-500);
+	}
+
+	> .dessert-name {
+		font-weight: 600;
+	}
+	> .dessert-price {
+		color: var(--orange-button-color);
+		font-weight: 600;
+	}
+}

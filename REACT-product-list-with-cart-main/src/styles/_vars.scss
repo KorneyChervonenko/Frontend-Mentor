@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+// @font-face {
+// 	font-family: 'Ubuntu';
+// 	src: url('../assets/fonts/Ubuntu-Bold.ttf');
+// 	font-weight: 700;
+// }
+
+// @font-face {
+// 	font-family: 'Ubuntu';
+// 	src: url('../assets/fonts/Ubuntu-Medium.ttf');
+// 	font-weight: 500;
+// }
+
+// @font-face {
+// 	font-family: 'Ubuntu';
+// 	src: url('../assets/fonts/Ubuntu-Regular.ttf');
+// 	font-weight: 400;
+// }
+
+// @font-face {
+// 	font-family: 'Red Hat Text';
+// 	src: url('/assets/fonts/RedHatText-VariableFont_wght.ttf');
+// }
+
+$mobile-width: 23.44rem;
+// $mobile-min-height: 42rem;
+// $desktop-width: 59rem;
+// $desktop-height: 37.5rem;
+// $main-width-mobile: 20.5rem;
+// $main-width-desktop: 37.5rem;
+// $threshold-width: $main-width-desktop;
+// $threshold-width: 45rem;
+// @max-width-desktop: 90rem;
+
+// $min-width-desktop: 45rem;
+// $min-width-desktop: 58rem;
+$min-width-desktop: 72rem;
+$threshold-width: $min-width-desktop;
+
+:export {
+	thresholdWidth: $threshold-width;
+}
+
+:root {
+	--mobile-section-width: 20.44rem;
+	// --threshold-width: 45rem; //$threshold-width; //57rem;
+	// --threshold-width: var($threshold-width); //57rem;
+
+	font-family: 'Red Hat Text', sans-serif;
+	font-optical-sizing: auto;
+
+	// font-size: 24px;
+
+	--red: hsl(14, 86%, 42%);
+	--green: hsl(159, 69%, 38%);
+
+	--rose-50: hsl(20, 50%, 98%);
+	--rose-100: hsl(13, 31%, 94%);
+	--rose-300: hsl(14, 25%, 72%);
+	--rose-400: hsl(7, 20%, 60%);
+	--rose-500: hsl(12, 20%, 44%);
+	--rose-900: hsl(14, 65%, 9%);
+
+	--orange-button-color: #cc3300;
+	--ordered-dessert-bgcolor: var(--rose-50);
+
+	// --fs-150: 9.375rem; // 150px
+	// --fs-100: 6.25rem; // 100px
+	// --fs-80: 5rem; // 80px
+	// --fs-56: 3.5rem; // 56px
+	// --fs-40: 2.5rem; // 40px
+	// --fs-38: 2.38rem; // 38px
+	// --fs-32: 2rem; // 32px
+	// --fs-28: 1.75rem; // 28px
+	// --fs-24: 1.5rem; // 24px
+	// --fs-22: 1.38rem; // 22px
+	// --fs-18: 1.125rem; // 18px
+	// --fs-16: 1rem; // 16px
+	// --fs-15: 0.9375rem; // 15px
+	// --fs-14: 0.875rem; // 14px
+	// --fs-10: 0.625rem; // 10px
+
+	// --padding-inline-mobile: 1.5rem;
+	// --padding-tablet: 2.4rem;
+	// --padding-inline-desktop: 2.5rem;
+	// --padding-mobile: 1rem;
+}
+
+// button:where(:hover, :focus) {
+// 	cursor: pointer;
+// }

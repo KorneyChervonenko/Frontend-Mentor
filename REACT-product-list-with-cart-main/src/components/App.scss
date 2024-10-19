@@ -1,0 +1,41 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.App {
+	background-color: bisque;
+	background-color: var(--rose-100);
+	position: relative;
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: $mobile-width;
+		padding-block: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 1rem;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		// position: relative;
+		padding: 7rem;
+		display: grid;
+		grid-template-areas:
+			'header cart'
+			'menu cart';
+	}
+
+	> h1 {
+		font-size: 2.45rem;
+
+		// mobile
+		@media (width < $threshold-width) {
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			grid-area: header;
+		}
+	}
+}
