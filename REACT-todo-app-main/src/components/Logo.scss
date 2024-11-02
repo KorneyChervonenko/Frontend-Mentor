@@ -1,0 +1,71 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: var(--mobile-task-block-width);
+		margin-block-start: 3rem;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: var(--desktop-task-block-width);
+		margin-block-start: 4.4rem;
+	}
+
+	> h1 {
+		color: white;
+
+		// mobile
+		@media (width < $threshold-width) {
+			font-size: var(--fs-20);
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			font-size: var(--fs-40);
+		}
+	}
+
+	> .checkbox {
+		> .checkbox-control {
+			display: none;
+		}
+
+		> .checkbox-emulator {
+			background-image: url('../../public/images/icon-sun.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			display: flex;
+
+			aspect-ratio: 1;
+			// mobile
+			@media (width < $threshold-width) {
+				inline-size: 1.25rem;
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				inline-size: 1.625rem;
+			}
+		}
+
+		> .checkbox-control:checked {
+			+ .checkbox-emulator {
+				background-image: url('../../public/images/icon-moon.svg');
+			}
+		}
+	}
+}
+
+// .header:has(#theme-switch:checked) {
+// 	background-color: coral;
+// }

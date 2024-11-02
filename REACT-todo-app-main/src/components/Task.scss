@@ -1,0 +1,102 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.task {
+	border-color: var(--block-border-color);
+	border-width: calc(1rem / 16);
+	border-block-end-style: solid;
+
+	color: var(--block-text-color);
+
+	display: flex;
+	align-items: center;
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: var(--mobile-task-block-width);
+		block-size: var(--mobile-task-block-height);
+		font-size: var(--fs-12);
+
+		--circle-radius: var(--circle-radius-small);
+		--del-button-size: var(--del-small-button-size);
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: var(--desktop-task-block-width);
+		block-size: var(--desktop-task-block-height);
+		font-size: var(--fs-18);
+
+		--circle-radius: var(--circle-radius-big);
+		--del-button-size: var(--del-big-button-size);
+	}
+
+	> .checkbox {
+		> .checkbox-control {
+			display: none;
+		}
+
+		> .checkbox-emulator {
+			@include circle(var(--circle-radius));
+			margin-inline: var(--circle-radius);
+			background-color: none;
+			border-color: var(--circle-border-color);
+			border-style: solid;
+			border-width: calc(2rem / 16);
+		}
+
+		> .checkbox-emulator:hover {
+			border-color: var(--bright-blue);
+			cursor: pointer;
+		}
+	}
+
+	> .task-title {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+
+		// mobile
+		@media (width < $threshold-width) {
+			max-inline-size: 14rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			max-inline-size: 25rem;
+		}
+	}
+
+	> .del-button {
+		display: none;
+	}
+}
+
+.task.completed {
+	text-decoration: line-through;
+	color: var(--text-crossed-color);
+
+	> .checkbox {
+		> .checkbox-emulator {
+			border-style: none;
+			background-image: url('../../public/images/icon-check.svg'), var(--circle-bg-gradient);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+.task:hover {
+	> .del-button {
+		display: block;
+		inline-size: var(--del-button-size);
+		aspect-ratio: 1;
+		margin-inline-start: auto;
+		margin-inline-end: calc(2 * var(--del-button-size));
+		border-style: none;
+		background-color: inherit;
+		background-image: url('../../public/images/icon-cross.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}

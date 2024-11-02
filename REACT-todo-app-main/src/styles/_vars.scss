@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+$mobile-width: 23.44rem;
+// $mobile-min-height: 42rem;
+// $desktop-width: 59rem;
+// $desktop-height: 37.5rem;
+// $main-width-mobile: 20.5rem;
+$main-width-desktop: 33.75rem;
+$threshold-width: $main-width-desktop + 1rem;
+// @max-width-desktop: 90rem;
+
+:root {
+	font-family: 'Josefin Sans', sans-serif;
+	font-optical-sizing: auto;
+
+	--bright-blue: hsl(220, 98%, 61%);
+	--circle-bg-gradient: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	// Light Theme
+	--very-light-gray: hsl(0, 0%, 98%);
+	--very-light-grayish-blue: hsl(236, 33%, 92%);
+	--light-grayish-blue: hsl(233, 11%, 84%);
+	--dark-grayish-blue: hsl(236, 9%, 61%);
+	--very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+	// Dark Theme
+	--very-dark-blue: hsl(235, 21%, 11%);
+	--very-dark-desaturated-blue: hsl(235, 24%, 19%);
+	--light-grayish-blue: hsl(234, 39%, 85%);
+	--light-grayish-blue-hover: hsl(236, 33%, 92%);
+	--dark-grayish-blue: hsl(234, 11%, 52%);
+	--very-dark-grayish-blue: hsl(233, 14%, 35%);
+	--very-dark-grayish-blue: hsl(237, 14%, 26%);
+
+	--circle-border-color: grey;
+	--text-crossed-color: grey;
+	--block-border-color: grey;
+	--block-shadow: 0 1rem 1.5rem -0.5rem black;
+	--checked-filter-color: var(--bright-blue);
+
+	--fs-150: 9.375rem; // 150px
+	--fs-100: 6.25rem; // 100px
+	--fs-80: 5rem; // 80px
+	--fs-56: 3.5rem; // 56px
+	--fs-40: 2.5rem; // 40px
+	--fs-38: 2.38rem; // 38px
+	--fs-32: 2rem; // 32px
+	--fs-28: 1.75rem; // 28px
+	--fs-24: 1.5rem; // 24px
+	--fs-22: 1.38rem; // 22px
+	--fs-20: 1.25rem; // 20px
+	--fs-18: 1.125rem; // 18px
+	--fs-16: 1rem; // 16px
+	--fs-15: 0.9375rem; // 15px
+	--fs-14: 0.875rem; // 14px
+	--fs-12: 0.75rem; // 12px
+	--fs-10: 0.625rem; // 10px
+
+	--desktop-task-block-width: #{$main-width-desktop};
+	// --desktop-task-block-width: 33.75rem;
+	--desktop-task-block-height: 4rem;
+
+	--mobile-task-block-width: 20.44rem;
+	--mobile-task-block-height: 3rem;
+
+	--block-radius: 0.5rem;
+
+	--circle-radius-small: 1.25rem;
+	--circle-radius-big: 1.5rem;
+	--del-small-button-size: 0.74rem;
+	--del-big-button-size: 1.1rem;
+
+	// --padding-inline-mobile: 1.5rem;
+	// --padding-tablet: 2.4rem;
+	// --padding-inline-desktop: 2.5rem;
+	// --padding-mobile: 1rem;
+
+	// Dark Theme
+	--app-bg-color: #181824;
+	--desktop-bg-image: url('../../public/images/bg-desktop-dark.jpg');
+	--mobile-bg-image: url('../../public/images/bg-mobile-dark.jpg');
+	--block-bg-color: #25273c;
+	--block-text-color: #d3d5ec;
+	--hovered-filter-color: white;
+}
+
+// Light Theme
+:root:has(#theme-switch:checked) {
+	--app-bg-color: #fafafa;
+	--desktop-bg-image: url('../../public/images/bg-desktop-light.jpg');
+	--mobile-bg-image: url('../../public/images/bg-mobile-light.jpg');
+	--block-bg-color: white;
+	--block-text-color: #4b4956;
+	--hovered-filter-color: black;
+}
+
+// button:where(:hover, :focus) {
+// 	cursor: pointer;
+// }

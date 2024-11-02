@@ -1,0 +1,25 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.task-list {
+	background-color: var(--block-bg-color);
+	margin-block-start: 2rem;
+	// inline-size: fit-content;
+
+	box-shadow: var(--block-shadow);
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: var(--mobile-task-block-width);
+		max-block-size: 18rem;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: var(--desktop-task-block-width);
+		max-block-size: 24rem;
+	}
+}
