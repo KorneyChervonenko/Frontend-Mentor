@@ -1,0 +1,22 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.job-list {
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+
+	// mobile
+	@media (width < $threshold-width) {
+		margin-block-start: 3.5rem;
+		row-gap: var(--mobile-row-gap);
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		margin-block-start: 2.5rem;
+		inline-size: 90%;
+		row-gap: var(--desktop-row-gap);
+	}
+}

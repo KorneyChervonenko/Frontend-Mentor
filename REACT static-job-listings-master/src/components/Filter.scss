@@ -1,0 +1,33 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.filter {
+	background-color: var(--filter-bg-color);
+	border-radius: var(--tag-border-radius);
+	block-size: 2rem;
+	display: flex;
+	align-items: center;
+
+	> .filter__title {
+		padding-inline: 0.4rem;
+		color: var(--company-title-color);
+		font-weight: 700;
+	}
+
+	> .filter__del-btn {
+		background-color: var(--company-title-color);
+		block-size: 100%;
+		aspect-ratio: 1;
+		border-style: none;
+		border-start-end-radius: inherit;
+		border-end-end-radius: inherit;
+		background-image: url('../../public/images/icon-remove.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&:where(:hover) {
+			background-color: var(--very-dark-grayish-cyan);
+		}
+	}
+}

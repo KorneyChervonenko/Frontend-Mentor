@@ -1,0 +1,43 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.App {
+	min-block-size: 100vh;
+	background-color: var(--light-grayish-cyan1);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block-end: 1rem;
+	position: relative;
+
+	// // mobile
+	// @media (width < $threshold-width) {
+	// 	// background-image: url('../../public/images/bg-header-mobile.svg');
+	// }
+
+	// // desktop
+	// @media (width >= $threshold-width) {
+	// 	// background-image: url('../../public/images/bg-header-desktop.svg');
+	// }
+
+	> .bg-header {
+		position: absolute;
+		inline-size: 100%;
+		block-size: 10rem;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: var(--desaturated-dark-cyan);
+		// mobile
+		@media (width < $threshold-width) {
+			background-image: url('../../public/images/bg-header-mobile.svg');
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			background-image: url('../../public/images/bg-header-desktop.svg');
+		}
+	}
+}

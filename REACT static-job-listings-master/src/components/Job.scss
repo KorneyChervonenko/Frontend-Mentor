@@ -1,0 +1,190 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.job {
+	background-color: white;
+	box-shadow: var(--block-shadow);
+	border-radius: 0.3rem;
+
+	display: flex;
+
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: var(--mobile-block-width);
+		min-block-size: var(--mobile-min-block-height);
+		padding: var(--mobile-padding);
+		flex-direction: column;
+		position: relative;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: 100%;
+		block-size: minmax(var(--desktop-min-block-height), fit-content);
+		padding: var(--desktop-padding);
+		flex-direction: row;
+		align-items: center;
+		column-gap: 1.5rem;
+	}
+
+	> .company-logo {
+		aspect-ratio: 1;
+		// mobile
+		@media (width < $threshold-width) {
+			inline-size: 3rem;
+			position: absolute;
+			top: -1.5rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			inline-size: 5.5rem;
+		}
+	}
+
+	> .vacancy {
+		display: flex;
+		flex-direction: column;
+
+		// mobile
+		@media (width < $threshold-width) {
+			row-gap: 1rem;
+			margin-block-start: 0.5rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			row-gap: 0.5rem;
+		}
+
+		> .company {
+			// background-color: aliceblue;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			column-gap: 1rem;
+
+			> .company__title {
+				font-weight: 700;
+				color: var(--company-title-color);
+
+				// mobile
+				@media (width < $threshold-width) {
+					font-size: var(--fs-16);
+				}
+
+				// desktop
+				@media (width >= $threshold-width) {
+					font-size: var(--fs-20);
+				}
+			}
+
+			> .company__tag {
+				// background-color: cadetblue;
+				color: white;
+				font-weight: 700;
+				block-size: 1.5rem;
+				padding-inline: 0.7rem;
+				border-radius: 0.7rem;
+				display: flex;
+				align-items: center;
+			}
+
+			> .company__tag-green {
+				background-color: var(--green-tag-color);
+			}
+
+			> .company__tag-black {
+				background-color: black;
+			}
+		}
+
+		> .position {
+			// text-overflow: ellipsis;
+			// overflow: hidden;
+			white-space: nowrap;
+
+			// mobile
+			@media (width < $threshold-width) {
+				font-size: var(--fs-16);
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				font-size: var(--fs-22);
+			}
+		}
+
+		> .posted-contract-location {
+			color: grey;
+			display: flex;
+			flex-direction: row;
+			// mobile
+			@media (width < $threshold-width) {
+				column-gap: 0.8rem;
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				column-gap: 0.6rem;
+			}
+		}
+	}
+
+	> hr {
+		// mobile
+		@media (width < $threshold-width) {
+			margin-block: 1rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			display: none;
+		}
+	}
+
+	> .job-tags {
+		background-color: white;
+		// background-color: cadetblue;
+		// mobile
+		@media (width < $threshold-width) {
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			// margin-inline-start: 1.5rem;
+
+			margin-inline-start: auto;
+			// margin-inline-start: minmax(1.5rem, auto);
+		}
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		> .job-tag {
+			background-color: var(--filter-bg-color);
+			color: var(--company-title-color);
+			font-weight: 700;
+			block-size: 2rem;
+			display: flex;
+			align-items: center;
+			padding-inline: 0.5rem;
+			border-radius: var(--tag-border-radius);
+
+			&:where(:hover) {
+				cursor: pointer;
+				color: var(--filter-bg-color);
+				background-color: var(--company-title-color);
+			}
+		}
+	}
+}
+
+.job-featured {
+	border-inline-start-style: solid;
+	border-color: var(--desaturated-dark-cyan);
+	border-width: 0.4rem;
+}

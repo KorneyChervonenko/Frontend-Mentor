@@ -1,0 +1,54 @@
+@import '../fonts/LeagueSpartanFont.scss';
+
+// $threshold-width: 72rem;
+$threshold-width: 52rem;
+
+:root {
+	font-family: 'League Spartan', sans-serif;
+	font-optical-sizing: auto;
+
+	--mobile-block-width: 20.5rem;
+	--desktop-block-width: 69.5rem;
+
+	// --desktop-block-width: 40rem;
+
+	--mobile-min-block-height: 8.6rem;
+	--desktop-min-block-height: 9.5rem;
+
+	--mobile-row-gap: 2.4rem;
+	--desktop-row-gap: 1.5rem;
+
+	--mobile-padding: 1.5rem;
+	--desktop-padding: 2rem;
+
+	--tag-border-radius: 0.2rem;
+
+	// --fs-150: 9.375rem; // 150px
+	// --fs-100: 6.25rem; // 100px
+	// --fs-80: 5rem; // 80px
+	// --fs-56: 3.5rem; // 56px
+	// --fs-40: 2.5rem; // 40px
+	// --fs-38: 2.38rem; // 38px
+	// --fs-32: 2rem; // 32px
+	// --fs-28: 1.75rem; // 28px
+	// --fs-24: 1.5rem; // 24px
+	--fs-22: 1.38rem; // 22px
+	--fs-20: 1.25rem; // 20px
+	// --fs-18: 1.125rem; // 18px
+	--fs-16: 1rem; // 16px
+	// --fs-15: 0.9375rem; // 15px
+	// --fs-14: 0.875rem; // 14px
+	// --fs-10: 0.625rem; // 10px
+
+	--desaturated-dark-cyan: hsl(180, 29%, 50%);
+	--light-grayish-cyan1: hsl(180, 52%, 96%); //Background
+	--light-grayish-cyan2: hsl(180, 31%, 95%); // Filter Tablets
+	--dark-grayish-cyan: hsl(180, 8%, 52%);
+	--very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+	--company-title-color: var(--desaturated-dark-cyan);
+	--green-tag-color: var(--desaturated-dark-cyan);
+	--filter-bg-color: var(--light-grayish-cyan2);
+
+	--block-shadow: 0 0.5rem 1rem 0 var(--dark-grayish-cyan);
+}
