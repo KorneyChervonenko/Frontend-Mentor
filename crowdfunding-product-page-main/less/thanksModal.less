@@ -1,0 +1,49 @@
+@import "reset";
+@import "helper";
+
+section.thanks {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  .flex-block(var(--block-width), 24rem, 0.5rem);
+  box-shadow: 0 0 0 1000px rgba(101, 101, 101, 0.5);
+  justify-content: space-evenly;
+  padding: 3rem;
+  background-color: white;
+
+  > img {
+    inline-size: 4rem;
+    block-size: 4rem;
+  }
+
+  > h2 {
+    font-size: large;
+  }
+
+  > p {
+    color: var(--Dark-gray);
+    text-align: center;
+    font-size: small;
+    line-height: 1.5rem;
+  }
+
+  > button {
+    .flex-block(7rem, 3rem, 3rem);
+    background-color: var(--button-bgcolor);
+    color: white;
+
+    :where(:focus, :hover) {
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: var(--min-width)) {
+    .flex-block(34rem, 28rem, 0.5rem);
+    > img {
+      inline-size: 5.6rem;
+      block-size: 5.6rem;
+    }
+    > p {
+      line-height: 1.8rem;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.card {
+  outline-style: solid;
+  outline-color: grey;
+  outline-width: 0.1rem;
+  inline-size: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  row-gap: 1rem;
+
+  > h3 {
+    // outline-style: solid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-size: 1.2rem;
+  }
+
+  > h4 {
+    // outline-style: solid;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    font-size: medium;
+    color: var(--button-bgcolor);
+  }
+
+  > p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    color: grey;
+  }
+
+  > .in-stock {
+    // outline-style: solid;
+
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+
+    .flex-block;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+
+    > .qty {
+      // outline-style: solid;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+  }
+
+  > button {
+    .flex-block(10rem, 3rem, 3rem);
+    background-color: var(--button-bgcolor);
+    color: white;
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+
+  > button:after {
+    content: "Select Reward";
+  }
+
+  > button:where(:focus, :hover) {
+    cursor: pointer;
+    background-color: var(--button-bgcolor-focus);
+  }
+}
+
+@media (min-width: var(--min-width)) {
+  color: lightgrey;
+  outline-color: lightgrey;
+
+  > h4 {
+    color: lightblue;
+  }
+
+  > button {
+    background-color: lightgrey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  > button:after {
+    content: "Out of Stock";
+  }
+}
