@@ -1,0 +1,42 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.input-form {
+	// background-color: coral;
+	block-size: 3.6rem;
+	border-radius: 0.875rem;
+	display: flex;
+
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: 21rem;
+		border-radius: var(--border-radius-mobile);
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: 35rem;
+		border-radius: var(--border-radius-desktop);
+	}
+
+	> input {
+		// inline-size: 100%;
+		flex-grow: 1;
+		border-top-left-radius: inherit;
+		border-bottom-left-radius: inherit;
+		border-style: none;
+		padding-inline: 1rem;
+		font-size: var(--fs-18);
+	}
+
+	> button[type='submit'] {
+		block-size: 100%;
+		aspect-ratio: 1;
+		background-color: black;
+		margin-inline-start: auto;
+		border-top-right-radius: inherit;
+		border-bottom-right-radius: inherit;
+		border-style: none;
+	}
+}

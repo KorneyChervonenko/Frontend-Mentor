@@ -1,0 +1,56 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.App {
+	/* text-align: center; */
+	background-color: cadetblue;
+	inline-size: 100%;
+	min-block-size: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// background-image: url('../../images/pattern-bg-desktop.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	// background-size: auto auto;
+	// background-size: auto 30%;
+	// background-size: contain 18rem;
+	// background-size: 100vw 30%;
+	background-size: 100vw 30vh;
+
+	position: relative;
+
+	// mobile
+	@media (width < $mobile-width) {
+		// background-image: url('../../images/pattern-bg-mobile.png');
+		background-image: url('../images/pattern-bg-mobile.png');
+		row-gap: 1rem;
+	}
+
+	// desktop
+	@media (width >= $mobile-width) {
+		background-image: url('../images/pattern-bg-desktop.png');
+		row-gap: 2rem;
+	}
+
+	// large screen
+	@media (width >= 1440px) {
+		background-image: url('../images/pattern-bg-desktop.png');
+		// background-size: 100vw 17.6rem;
+		// background-size: 100vw 30%;
+		row-gap: 2rem;
+	}
+
+	// // mobile
+	// @media (width < $threshold-width) {
+	// 	background-image: url('../../images/pattern-bg-mobile.png');
+	// }
+
+	// // desktop
+	// @media (width >= $threshold-width) {
+	// 	background-image: url('../../images/pattern-bg-desktop.png');
+	// }
+}

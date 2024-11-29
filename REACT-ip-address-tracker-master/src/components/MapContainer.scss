@@ -1,0 +1,14 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.map-container {
+	// block-size: 80vh;
+	// block-size: 40rem;
+	block-size: 70vh;
+	inline-size: 100%;
+
+	position: absolute;
+	top: 30%;
+	z-index: 0;
+}

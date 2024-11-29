@@ -1,0 +1,90 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.info-panel {
+	// background-color: coral;
+	background-color: white;
+
+	display: flex;
+	// align-items: center;
+	justify-content: space-evenly;
+	z-index: 2;
+
+	// mobile
+	@media (width < $threshold-width) {
+		inline-size: 21rem;
+		// min-block-size: 18rem;
+		border-radius: var(--border-radius-mobile);
+		flex-direction: column;
+		row-gap: 1rem;
+		padding-block: 1rem;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		inline-size: 69rem;
+		// min-block-size: 10rem;
+
+		border-radius: var(--border-radius-desktop);
+		flex-direction: row;
+		// align-items: baseline;
+		align-items: stretch;
+		padding-block: 2rem;
+	}
+
+	> .cell {
+		// background-color: bisque;
+		display: flex;
+		flex-direction: column;
+		border-width: 0.1rem;
+		border-color: grey;
+		overflow: auto;
+
+		// mobile
+		@media (width < $threshold-width) {
+			align-items: center;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			// max-inline-size: 13rem;
+			// block-size: 6rem;
+			// block-size: 100%;
+
+			&:not(:first-of-type) {
+				border-inline-start-style: solid;
+				padding-inline-start: 2rem;
+			}
+		}
+
+		> .cell-title {
+			color: grey;
+			font-weight: 500;
+			inline-size: fit-content;
+
+			// mobile
+			@media (width < $threshold-width) {
+				font-size: var(--fs-13);
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				font-size: var(--fs-15);
+			}
+		}
+		> .cell-content {
+			// mobile
+			@media (width < $threshold-width) {
+				font-size: var(--fs-20);
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				font-size: var(--fs-28);
+			}
+
+			font-weight: 500;
+		}
+	}
+}

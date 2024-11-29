@@ -1,0 +1,20 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+h1 {
+	// background-color: coral;
+	margin-block-start: 2rem;
+
+	color: white;
+	font-weight: 500;
+
+	// mobile
+	@media (width < $threshold-width) {
+		font-size: var(--fs-26);
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+	}
+}
