@@ -1,0 +1,14 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.App {
+	/* text-align: center; */
+	// background-color: cadetblue;
+	background-color: var(--main-bg-color);
+	inline-size: 100%;
+	min-block-size: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

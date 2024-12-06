@@ -1,0 +1,145 @@
+@import '../styles/_reset.scss';
+@import '../styles/_helpers.scss';
+@import '../styles/_vars.scss';
+
+.back-button {
+	padding: 0.5rem;
+	background-color: var(--element-bg-color);
+	color: var(--text-color);
+	border-style: none;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 0.2rem 0 black;
+
+	margin-block-start: 2.5rem;
+	align-self: flex-start;
+
+	// mobile
+	@media (width < $threshold-width-header) {
+		margin-inline-start: var(--padding-inline-mobile);
+	}
+
+	// desktop
+	@media (width >= $threshold-width-header) {
+		margin-inline-start: var(--padding-inline-desktop);
+	}
+}
+
+.country-details {
+	background-color: var(--main-bg-color);
+	color: var(--text-color);
+
+	margin-block-start: 2.5rem;
+
+	display: flex;
+	// mobile
+	@media (width < $threshold-width) {
+		padding-inline: var(--padding-inline-mobile);
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// desktop
+	@media (width >= $threshold-width) {
+		padding-inline: var(--padding-inline-desktop);
+		flex-direction: row;
+		justify-content: center;
+		column-gap: 8.5rem;
+		// margin-block-start: 5%;
+	}
+
+	> .country-flag {
+		block-size: 100%;
+
+		// mobile
+		@media (width < $threshold-width) {
+			// inline-size: 20rem;
+			inline-size: 100%;
+			max-inline-size: 35rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			inline-size: 35rem;
+		}
+	}
+
+	> .country-statistic {
+		margin-block-start: 2.5rem;
+		// background-color: coral;
+		display: flex;
+		flex-direction: column;
+		// justify-content: flex-start;
+		align-items: flex-start;
+
+		// mobile
+		@media (width < $threshold-width) {
+			inline-size: 100%;
+			max-inline-size: 35rem;
+		}
+
+		// desktop
+		@media (width >= $threshold-width) {
+			justify-content: center;
+		}
+
+		> .statistic-table {
+			// background-color: bisque;
+			> tbody {
+				// background-color: bisque;
+
+				display: flex;
+				flex-direction: column;
+
+				column-gap: 2rem;
+
+				// mobile
+				@media (width < $threshold-width) {
+				}
+
+				// desktop
+				@media (width >= $threshold-width) {
+					block-size: 7rem;
+
+					flex-wrap: wrap;
+				}
+			}
+		}
+
+		> .neighbor-countries {
+			display: flex;
+
+			// mobile
+			@media (width < $threshold-width) {
+				// inline-size: 20rem;
+				inline-size: 100%;
+				max-inline-size: 35rem;
+				flex-direction: column;
+			}
+
+			// desktop
+			@media (width >= $threshold-width) {
+				// inline-size: 35rem;
+				flex-direction: row;
+				margin-block-start: 4rem;
+			}
+
+			th {
+				white-space: nowrap;
+				// background-color: cadetblue;
+				// display: flex;
+				// flex-direction: column;
+				// align-items: center;
+				// justify-items: center;
+			}
+
+			.neighbor-countries-list {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				justify-content: flex-start;
+				gap: 0.5rem;
+			}
+		}
+	}
+}
