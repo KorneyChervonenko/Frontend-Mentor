@@ -3,36 +3,36 @@
 @import './styles/_vars.scss';
 
 html {
-	@extend .full-space;
+	// @extend .full-space;
 
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center; */
-	align-items: center;
+	// display: flex;
+	// flex-direction: column;
+	// /* justify-content: center; */
+	// align-items: center;
 
-	background-color: cadetblue;
+	// background-color: cadetblue;
 }
 
 body {
-	@extend .full-space;
+	// @extend .full-space;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: coral;
-	// background-color: inherit;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// background-color: coral;
+	// // background-color: inherit;
 }
 
 #root {
-	@extend .full-space;
+	// @extend .full-space;
 
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center; */
-	align-items: center;
-	justify-content: center;
-	background-color: bisque;
-	// background-color: inherit;
+	// display: flex;
+	// flex-direction: column;
+	// /* justify-content: center; */
+	// align-items: center;
+	// justify-content: center;
+	// background-color: bisque;
+	// // background-color: inherit;
 
 	// mobile
 	@media (width < $threshold-width) {

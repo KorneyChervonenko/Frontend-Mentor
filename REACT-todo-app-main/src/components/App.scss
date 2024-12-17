@@ -3,7 +3,9 @@
 @import '../styles/_vars.scss';
 
 .App {
-	@extend .full-space;
+	// @extend .full-space;
+	block-size: 100vh;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;

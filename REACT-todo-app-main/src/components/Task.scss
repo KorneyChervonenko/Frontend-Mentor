@@ -56,14 +56,21 @@
 		overflow: hidden;
 		white-space: nowrap;
 
+		background-color: inherit;
+		color: inherit;
+		text-decoration: inherit;
+		border-style: none;
+
 		// mobile
 		@media (width < $threshold-width) {
-			max-inline-size: 14rem;
+			// max-inline-size: 14rem;
+			inline-size: 14rem;
 		}
 
 		// desktop
 		@media (width >= $threshold-width) {
-			max-inline-size: 25rem;
+			// max-inline-size: 25rem;
+			inline-size: 25rem;
 		}
 	}
 

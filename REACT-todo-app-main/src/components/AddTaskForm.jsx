@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import './AddTaskForm.scss';
 
-function AddTaskForm({ onAddTask }) {
+function AddTaskForm({ dispatch }) {
 	const [taskTitle, setTaskTitle] = useState('');
 
 	function handleSubmit(event) {
 		event.preventDefault();
 		if (taskTitle.length === 0) return;
 		const newTask = { title: taskTitle, isCompleted: false, id: crypto.randomUUID() };
-		onAddTask(newTask);
+		// onAddTask(newTask);
+		dispatch({ type: 'add_task', payload: { taskToAdd: newTask } });
 		setTaskTitle('');
 	}
 

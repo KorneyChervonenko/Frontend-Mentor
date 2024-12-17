@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useReducer } from 'react';
 import Logo from './Logo.jsx';
 import AddTaskForm from './AddTaskForm.jsx';
 import TaskList from './TaskList.jsx';
@@ -17,47 +18,60 @@ const tasksTitles = [
 	'Very very very very very very very very long string',
 ];
 
-const initTasks = tasksTitles.map((taskTitle) => ({ title: taskTitle, isCompleted: false, id: crypto.randomUUID() }));
+const initTasks = tasksTitles.map((taskTitle) => ({
+	title: taskTitle,
+	isCompleted: false,
+	id: crypto.randomUUID(),
+}));
 initTasks.at(2).isCompleted = true;
 
+function reducer(state, action) {
+	switch (action.type) {
+		case 'add_task':
+			return [...state, action.payload.taskToAdd];
+
+		case 'del_task':
+			return state.filter((task) => task.id !== action.payload.selectedTask.id);
+
+		case 'del_all_completed':
+			return state.filter((task) => !task.isCompleted);
+
+		case 'toggle_completed':
+			return state.map((task) =>
+				task.id === action.payload.selectedTask.id
+					? { ...task, isCompleted: !task.isCompleted }
+					: task
+			);
+
+		case 'replace_tasks_list':
+			return action.payload.newTasks;
+
+		case 'change_title':
+			return state.map((task) =>
+				task.id === action.payload.selectedTask.id
+					? { ...task, title: action.payload.newTitle }
+					: task
+			);
+
+		default:
+			throw new Error('Unknown action type');
+	}
+}
+
 export default function App() {
-	const [tasks, setTasks] = useState([...initTasks]);
+	const [tasks, dispatch] = useReducer(reducer, [...initTasks]);
 	const [filterType, setFilterType] = useState('all');
-
-	function handleAddTask(taskToAdd) {
-		setTasks((currentTasks) => [...currentTasks, taskToAdd]);
-	}
-
-	function handleDelTask(taskToDel) {
-		setTasks((currentTasks) => currentTasks.filter((task) => task.id !== taskToDel.id));
-	}
-
-	function handleClearCompleted() {
-		setTasks((currentTasks) => currentTasks.filter((task) => !task.isCompleted));
-	}
-
-	function handleCompleteTask(taskToComplete) {
-		setTasks((currentTasks) =>
-			currentTasks.map((task) => (task.id === taskToComplete.id ? { ...task, isCompleted: !task.isCompleted } : task))
-		);
-	}
 
 	return (
 		<div className="App">
 			<Logo />
-			<AddTaskForm onAddTask={handleAddTask} />
-			<TaskList
-				tasks={tasks}
-				onDelTask={handleDelTask}
-				onCompleteTask={handleCompleteTask}
-				filterType={filterType}
-				setTasks={setTasks}
-			/>
+			<AddTaskForm dispatch={dispatch} />
+			<TaskList tasks={tasks} filterType={filterType} dispatch={dispatch} />
 			<Control
 				tasks={tasks}
-				onClearCompleted={handleClearCompleted}
 				filterType={filterType}
 				setFilterType={setFilterType}
+				dispatch={dispatch}
 			/>
 			<p className="dnd-promo">Drag and drop to reorder list</p>
 		</div>
